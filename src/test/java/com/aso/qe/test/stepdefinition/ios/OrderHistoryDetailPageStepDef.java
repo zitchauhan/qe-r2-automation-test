@@ -174,6 +174,45 @@ public void user_sees_on_cancellation_screen(String element) throws Throwable {
 	assertTrue(orderPage.isCancellationScreenElementDisplayed(element));
 }
 
+/* created by Nirmal Jain - OMNI-28213 07/05/2021 */
+@Then("^User sees \"([^\"]*)\" with chevron button in order tile section$")
+public void user_sees_with_chevron_button_in_order_tile_section(String element) throws Throwable {
+    assertTrue(orderDetailPage.isOrderTileElementsDisplayed(element));
+}
+
+
+@Then("^User sees \"([^\"]*)\" filter in order listing tile section$")
+public void user_sees_filter_in_order_listing_tile_section(String element) throws Throwable {
+    assertTrue(orderDetailPage.isOrderListingTileElementDisplay(element));
+}
+
+@Then("^User sees \"([^\"]*)\" in order listing tile section$")
+public void user_sees_in_order_listing_tile_section(String element) throws Throwable {
+	assertTrue(orderDetailPage.isOrderListingTileElementDisplay(element));
+}
+
+
+@Then("^User sees \"([^\"]*)\" order component tile section$")
+public void user_sees_order_component_tile_section(String element) throws Throwable {
+	assertTrue(orderDetailPage.isOrderProductTileElementDisplay(element));
+}
+
+@When("^User taps on the  \"([^\"]*)\" button$")
+public void user_taps_on_the_button(String element) throws Throwable {
+    orderDetailPage.tapOnElement(element);
+}
+
+@Then("^User sees \"([^\"]*)\" page$")
+public void user_sees_page(String element) throws Throwable {
+	assertTrue(orderDetailPage.isOrderTileElementsDisplayed(element));
+}
+
+
+@Then("^User see order detail page$")
+public void user_see_order_detail_page() throws Throwable {
+   
+}
+
 
 
 }

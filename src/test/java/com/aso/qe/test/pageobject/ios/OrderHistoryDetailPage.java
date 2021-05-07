@@ -144,7 +144,7 @@ public void isOrderDetailPageDisplay() {
 		return GlobalMobileHelper.getElementText(Locators.OrderDetail.ErrorMesageOrderCancel);
 	}
 	
-	/* created by Nirmal - 06.04.2021 OMNI-33836 */
+	/* created by Nirmal - 06.05.2021 OMNI-33836 */
 	public boolean isOrderCancelMessageDisplay() {
 		MobileElement  orderCancelMsg = driver.findElement(Locators.OrderDetail.msgOrderCancel);
 		return GlobalMobileHelper.isElementDisplayed(orderCancelMsg);
@@ -160,4 +160,88 @@ public void isOrderDetailPageDisplay() {
 		return GlobalMobileHelper.isElementDisplayed(orderCancelDateDisplay);
 	}
 
+	/* created by Nirmal - OMNI-28213 -07.05.2021 */
+
+	
+	public boolean isOrderTileElementsDisplayed(String element) {
+		switch(element) {
+		case "Can’t find your order":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.labelFindYourorderwithChevron);
+		case "Add a store receipt":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.LabelAddStoreReceiptwithChevron);
+		case "No order existing":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.NoExistingOrderMsg);
+		case "OrderLookup":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.lookupOrder);
+		default:
+			throw new IllegalStateException("Invalid Element");
+		}
+	}
+
+	public boolean isOrderListingTileElementDisplay(String element) {
+		switch(element) {
+		case "All Order":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.filterAllOrder);
+		case "In Store":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.filterInStore);
+		case "On line":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.filterOnline);
+		case "Order count":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.labelOrderCount);
+		case "Sorted By Most Recent":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.SortedOrder);
+		case "Order List":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.OrderList);
+		
+		default:
+			throw new IllegalStateException("Invalid Element");
+		}
+	}
+
+	public boolean isOrderProductTileElementDisplay(String element) {
+		switch(element) {
+		case "Order Status":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.OrderStatus);
+		case "Order detail":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.buttonOrderId);
+		case "Order Number":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.labelOrderNumber);
+		case "Order Date":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.labelOrderDate);
+		case "Order Total":
+			return GlobalMobileHelper.isElementDisplayed(Locators.OrderDetail.labelOrderTotal);
+		
+		default:
+			throw new IllegalStateException("Invalid Element");
+		}
+	}
+	
+	public void tapOnElement(String element) {
+		switch(element) {
+		case "Can’t find your order":
+			GlobalMobileHelper.tapOnElement(Locators.OrderDetail.labelFindYourorderwithChevron);
+		case "Add a store receipt":
+			GlobalMobileHelper.tapOnElement(Locators.OrderDetail.LabelAddStoreReceiptwithChevron);
+		case "All Order":
+			 GlobalMobileHelper.tapOnElement(Locators.OrderDetail.filterAllOrder);
+		case "In Store":
+			 GlobalMobileHelper.tapOnElement(Locators.OrderDetail.filterInStore);
+		case "On line":
+			GlobalMobileHelper.tapOnElement(Locators.OrderDetail.filterOnline);
+		case "Order Number":
+			GlobalMobileHelper.tapOnElement(Locators.OrderDetail.buttonOrderId);
+		case "Sort":
+			GlobalMobileHelper.tapOnElement(Locators.OrderDetail.SortedOrder);
+		default:
+			throw new IllegalStateException("Invalid Element");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	}
