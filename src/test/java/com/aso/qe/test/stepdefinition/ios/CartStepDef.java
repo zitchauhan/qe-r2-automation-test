@@ -462,6 +462,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIcon));
 	    } else if(arg.equalsIgnoreCase("Free with purchase tool tip modal")) {
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIconmodal));
+	    } else if(arg.equalsIgnoreCase("item moved to wishlist sucess message")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.sucessmessageitemaddedtowishlist));
 	    }
 	}
 

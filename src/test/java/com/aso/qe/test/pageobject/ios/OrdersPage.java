@@ -140,4 +140,40 @@ private AppiumDriver<MobileElement> driver;
 			}
 		}
     }
+    
+    public void verifyElementsOnOrderConfirmationPage(List<String> elementsList) {
+		for (String element: elementsList){
+			switch (element.toLowerCase()){
+				case "shipping address tile":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.shippingAddressTile));
+					break;
+				case "home delivery tile":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.homeDeliveryTile));
+					break;
+				case "store pickup tile":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.storePickUpTile));
+					break;
+				case "user first name":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.firstName));
+					break;
+				case "user last name":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.lastName));
+					break;	
+				case "sla message":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.slaMessage));
+					break;	
+				case "packages label":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.packageLabel));
+					break;	
+				case "items count":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.itemsCount));
+					break;	
+				case "shipping address":
+					assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.shippingAddress));
+					break;	
+				default:
+					throw new UnsupportedOperationException("Element is not present");
+			}
+		}
+    }
 }
