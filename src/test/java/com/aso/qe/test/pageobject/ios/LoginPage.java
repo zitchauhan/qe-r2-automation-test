@@ -63,6 +63,92 @@ public class LoginPage {
 		GlobalMobileHelper.tapOnElement(loginButton);
 	}
 	
+	// --------------------------------- password change 
+
+
+	public void tapOnProfile() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		MobileElement tapProfile = driver.findElement(Locators.ChangePassword.tapOnProfile);
+		//first clicking on password
+		GlobalMobileHelper.tapOnElement(tapProfile);
+		//clicking on password  
+		GlobalMobileHelper.tapOnElement(tapProfile);
+	}
+
+	
+	
+	public void tapOnPassword() {
+		//driver.hideKeyboard();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		MobileElement tapOnPassword = driver.findElement(Locators.ChangePassword.taponPassword);
+		//first clicking on password
+		GlobalMobileHelper.tapOnElement(tapOnPassword);
+		//clicking on password  
+		GlobalMobileHelper.tapOnElement(tapOnPassword);
+	}
+	
+	public void isvisibleChangePasspage  () {
+		assertTrue(driver.findElement(Locators.ChangePassword.changeyourpassword).isDisplayed());
+		logger.debug("Change pass is  Displayed on Log In screen");
+	}
+	
+	public void currentPassword(String currentpassword) {
+		MobileElement currentpasswordField = driver.findElement(Locators.ChangePassword.currentpassword);
+		currentpasswordField.sendKeys(currentpassword);
+		passwordFieldType = currentpasswordField.getAttribute("type");
+		logger.debug(passwordFieldType);
+	}
+	
+	
+	
+	public void newPassword(String newpassword) {
+		MobileElement currentpasswordField = driver.findElement(Locators.ChangePassword.newpassword);
+		currentpasswordField.sendKeys(newpassword);
+		passwordFieldType = currentpasswordField.getAttribute("type");
+		logger.debug(passwordFieldType);
+	}
+	
+	
+	public void tapOnUpdate() {
+		//driver.hideKeyboard();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		MobileElement tapOnUpdate = driver.findElement(Locators.ChangePassword.updatebutton);
+		//first clicking on update  button to hide the keypad
+		GlobalMobileHelper.tapOnElement(tapOnUpdate);
+		//clicking on update button again to tap on login 
+		GlobalMobileHelper.tapOnElement(tapOnUpdate);
+	}
+		
+	
+	public void IsVisibleChangeYourPassword() {
+		assertTrue(driver.findElement(Locators.ChangePassword.changeyourpassword).isDisplayed());
+		assertTrue(driver.getTitle().contains("Change Your Password"));
+		logger.debug("chage your password Displayed on Password screen");
+	}
+	
+	public void Errormsg() throws InterruptedException {
+		assertTrue(driver.findElement(Locators.ChangePassword.errormsg).isDisplayed());
+		assertTrue(driver.getTitle().contains("For maximum security, please enter a Password different from your Email Address"));
+		Thread.sleep(10000);
+		
+	}
+
+	
+	//---------------------------
+	
 	public void isOnLoginScreen() {
 		// to be removed later
 		GlobalMobileHelper.tapOnElement(Locators.AccountPage.accountTitle);
@@ -237,4 +323,9 @@ public class LoginPage {
 		tapOnLogin();
     }
 
+
+
+    
+    
+    
 }

@@ -36,6 +36,19 @@ public class Locators {
 		public static By cancelButton = By.id("btn_header_cancel");
 	}
 	
+	public static class ChangePassword {
+		public static By tapOnProfile = By.id("");
+		public static By taponPassword = By.id("TODO by dev ");
+		public static By changeyourpassword = By.id("TODO by dev ");
+		public static By currentpassword = By.id("TODO by dev ");
+		public static By newpassword = By.id("TODO by dev ");
+		public static By updatebutton = By.id("TODO by dev ");
+		public static By backnavigation = By.id("TODO by dev ");
+		public static By Changeyourpasswordtitle = By.id("TODO by dev ");
+		public static By errormsg = By.id("TODO by dev ");
+		
+		
+	}
 	public static class HomePage{
 		public static By buttonGoToPDP = By.xpath("//*[contains(@label,\"Adidas Men's Designed2Move Polo Shirt\")]");
 		public static By buttonPdp = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[11]");
