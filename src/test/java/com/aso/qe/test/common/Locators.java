@@ -59,9 +59,7 @@ public class Locators {
 		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		public static By homeButton = By.xpath("//*[contains(@label,'Home')]");
 		public static By homeBtn = By.xpath("//*[contains(@label,'Home')]");
-
 		public static By heroBanner = By.xpath("//*[contains(@label,'Hero Image')]");
-
 
 		public static By bannerTitle = By.id("lbl_info_banner_title");
 		public static By bannerSubtitle = By.id("lbl_info_banner_sub_title");
@@ -260,8 +258,8 @@ public class Locators {
 	    
 		
 		//OMNI-29377 - GC Cart Component -13.04.2021 -Nirmal
-		public static By labelcardAmount=By.id(""); 
-		public static By listCardAmount=By.id("");
+		public static By labelcardAmount=By.id("lbl_card_price"); 
+		public static By listCardAmount=By.id("price_list_item_Card_Amount_0");
 		public static By labelDefaultCardAmount=By.id("");
 		public static By btncardOptionAsAmount=By.id("");
 		public static By btncartOptionOther=By.id("");
@@ -298,6 +296,10 @@ public class Locators {
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
+		public static By alertGiftCardError;
+		public static By liveChatBtn;
+		public static By liveChatUrlTitle;
+		public static By bulkGiftCardBtnAlert;
 		public static By purchaseBtn = By.id("lbl_purchase_btn");
 
 		// alert modal on pdp
