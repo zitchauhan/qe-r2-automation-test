@@ -192,6 +192,7 @@ public class Locators {
 		public static By largeSize = By.id("size_list_item_3");
 		public static By xLargeSize= By.id("size_list_item_4");
 		public static By btnSizeChart = By.id("btn_size_chart");
+		public static By buttonaddtowishlist = By.id("btn_buttonaddtowishlist");
 		//public static By sizeChartTitle =By.id("lbl_size_chart");
 		public static By sizeChartTitle =By.id("lbl_page_title");
 		public static By btnCancelSizeChart = By.id("btn_back");

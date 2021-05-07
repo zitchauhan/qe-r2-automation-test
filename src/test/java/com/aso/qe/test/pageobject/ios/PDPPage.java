@@ -820,6 +820,10 @@ public class PDPPage {
 		if(elementname.equalsIgnoreCase("addtocart")) {
 			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonAddToCart);
+		}
+		else if(elementname.equalsIgnoreCase("buttonaddtowishlist")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonaddtowishlist);
 
 		}else {
 
@@ -853,6 +857,9 @@ public class PDPPage {
 					}else if(elementname.equalsIgnoreCase("Cancelbutton")){
 			
 			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.CloseAlertmodal);
+					}else if(elementname.equalsIgnoreCase("buttonaddtowishlist")){
+						
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.buttonaddtowishlist);
 
 			
 		}else {
