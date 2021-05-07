@@ -878,6 +878,47 @@ public class CartPage {
 	public boolean isOrderSummaryLabelDisplayed() {
 		return GlobalMobileHelper.swipeTillElementDisplayed(Direction.UP, Locators.CartPage.orderSummaryLabel);
 	}
+
+	public static void clickonButtononcartpage(String btnName) {
+	     if(btnName.equalsIgnoreCase("Add to Wish list")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.CartPage.Addtowishlist);
+
+
+			}else {
+				
+				throw new UnsupportedOperationException("Given button type not defined");
+	 
+			}
+		
+	}
+
+	public static boolean VarifyUserisonwishlistpage(String elementName) {
+		if(elementName.equalsIgnoreCase("Wish list")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.wishlisticon);
+	}else {
+		
+		throw new UnsupportedOperationException("Given button type not defined");
+
+	}
+}
+
+	public static void clickonButtononcartwishpage (String btnName) {
+	     if(btnName.equalsIgnoreCase("login")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.CartPage.loginoncartwishlist);
+	     }else if(btnName.equalsIgnoreCase("existingwishlist")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.CartPage.existingwishlist);
+
+			}else {
+				
+				throw new UnsupportedOperationException("Given button type not defined");
+	 
+			}
+		
+	}
 }
 	
 
