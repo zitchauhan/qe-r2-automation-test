@@ -85,6 +85,13 @@ public class SearchPage {
 		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
 
 	}
+
+
+	
+	public boolean isFilterOptionDisplayed() {
+	   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.filterOption);	}
+
+
 	public boolean VarifyElementPresenseOnSearchPage(String elementname) {
 if(elementname.equalsIgnoreCase("showing result for label")) {
 			
@@ -120,6 +127,7 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
  
 		}
 	}
+
 	public void navigateBackToSearchPage() {
 		GlobalMobileHelper.tapOnElement(Locators.SearchPage.navigateBack);
 		
@@ -293,14 +301,49 @@ if(pagename.equalsIgnoreCase("see No product found")) {
 			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.noresultlabel);
 	}else {
 		
-		throw new UnsupportedOperationException("User is not on result page ");
+		throw new UnsupportedOperationException("User is not on result page ");}
+	}
 		
+
+	
+
+	public boolean isSortOptionDisplayed() {
+		   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.sortOption);	
+		}
+	
+	public boolean isSearchCountDisplayed() {
+		   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.searchCount);	
+		}
+	
+	public String getSearchCount() {
+		isSearchCountDisplayed();
+		return GlobalMobileHelper.getElementText(Locators.SearchPage.searchCount);
 	}
 	
-	}	
+
+	public boolean isNullSearchPaageDisplayed(String msg) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		MobileElement searchError = driver.findElement(Locators.SearchPage.nullSearchPage);
+		return searchError.getText().contains(msg);
+		}
+
+
+
+	
+
+	
+	  public void swipeDown() {
+		  GlobalMobileHelper.swipeScreen(Direction.DOWN, 5);
+	  }
 	}
 
 
 	
+
 
 
