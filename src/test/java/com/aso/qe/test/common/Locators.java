@@ -859,6 +859,34 @@ public class Locators {
 		public static By productqty=By.id("lbl_productqty");
 		public static By productprice=By.id("lbl_product_price");
 		public static By skunumber=By.id("lbl_product_sku");
+		
+		public static By msgOrderCancel=By.id("TODO by dev");
+		public static By msgConfirmationEmail=By.id("TODO by dev");
+		public static By labelcancelOrderDate=By.id("TODO by dev");
+		
+		/* created by Nirmal - OMNI-28213 - 5/7/2021 */
+		public static By labelFindYourorderwithChevron=By.id("label_can_not_find_order");
+		public static By LabelAddStoreReceiptwithChevron=By.id("label_addstore_receipt");
+		
+		public static By filterAllOrder=By.id("filter_allOrder");
+		public static By filterOnline=By.id("filter_online");
+		public static By filterInStore=By.id("filter_insore");
+		
+		public static By labelOrderCount=By.id("label_orderCount");
+		public static By SortedOrder=By.id("button_sortOrder");
+		public static By OrderStatus=By.id("label_orderstatus");
+		public static By labelOrderNumber=By.id("label_order_number");
+		public static By labelOrderDate=By.id("label_orderDate");
+		public static By labelOrderTotal=By.id("label_order_total");
+		public static By OrderList=By.id("list_Order");
+    
+
+		public static By labelAddstoreReceiptScreen=By.id("label_add_store_receipt_Screen");
+		public static By NoExistingOrderMsg=By.id("no_order_message");
+
+	
+
+		
 	}
 		//   Order history page for logged in user where all order will list 
 		
@@ -882,28 +910,8 @@ public class Locators {
 		
 		}
 		
-		public static By msgOrderCancel=By.id("TODO by dev");
-		public static By msgConfirmationEmail=By.id("TODO by dev");
-		public static By labelcancelOrderDate=By.id("TODO by dev");
 		
-		/* created by Nirmal - OMNI-28213 - 5/7/2021 */
-		public static By labelFindYourorderwithChevron=By.id("TODO by dev");
-		public static By LabelAddStoreReceiptwithChevron=By.id("TODO by dev");
 		
-		public static By filterAllOrder=By.id("TODO by dev");
-		public static By filterOnline=By.id("TODO by dev");
-		public static By filterInStore=By.id("TODO by dev");
-		
-		public static By labelOrderCount=By.id("TODO by dev");
-		public static By SortedOrder=By.id("TODO by dev");
-		public static By OrderStatus=By.id("TODO by dev");
-		public static By labelOrderNumber=By.id("TODO by dev");
-		public static By labelOrderDate=By.id("TODO by dev");
-		public static By labelOrderTotal=By.id("TODO by dev");
-		public static By OrderList=By.id("TODO by dev");
-    
-		public static By labelAddstoreReceiptScreen=By.id("TODO by dev");
-		public static By NoExistingOrderMsg=By.id("TODO by dev");
 
 
    
@@ -914,6 +922,7 @@ public class Locators {
 
 
 	
+
 
 	public static class OrdersPage {
 		public static By orderSummarylabel = By.id("lbl_order_summary");
