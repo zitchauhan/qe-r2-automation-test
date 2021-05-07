@@ -830,7 +830,7 @@ public class Locators {
 		public static By buttonOrder = By.id("button_Order");
 		public static By listOrder=By.id("list_Order");
 		public static By buttonOrderId=By.id("order_id");
-		//public static By lookupOrder= By.id("");
+		public static By lookupOrder= By.id("TODO by dev");;
 		public static By labelOrderDetailPage= By.id("label_order_detail_page");
 		public static By buttonCancelOrder=By.id("button_cancel_order");
 		public static By buttonChevronCancelOrder=By.id("button_chevron_cancel_order");
@@ -848,7 +848,31 @@ public class Locators {
 		public static By msgConfirmationEmail=By.id("TODO by dev");
 		public static By labelcancelOrderDate=By.id("TODO by dev");
 		
+		/* created by Nirmal - OMNI-28213 - 5/7/2021 */
+		public static By labelFindYourorderwithChevron=By.id("TODO by dev");
+		public static By LabelAddStoreReceiptwithChevron=By.id("TODO by dev");
 		
+		public static By filterAllOrder=By.id("TODO by dev");
+		public static By filterOnline=By.id("TODO by dev");
+		public static By filterInStore=By.id("TODO by dev");
+		
+		public static By labelOrderCount=By.id("TODO by dev");
+		public static By SortedOrder=By.id("TODO by dev");
+		public static By OrderStatus=By.id("TODO by dev");
+		public static By labelOrderNumber=By.id("TODO by dev");
+		public static By labelOrderDate=By.id("TODO by dev");
+		public static By labelOrderTotal=By.id("TODO by dev");
+		public static By OrderList=By.id("TODO by dev");
+    
+		public static By labelAddstoreReceiptScreen=By.id("TODO by dev");
+		public static By NoExistingOrderMsg=By.id("TODO by dev");
+
+
+   
+
+		
+
+
 
 
 
