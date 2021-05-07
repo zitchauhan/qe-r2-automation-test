@@ -169,6 +169,16 @@ public class SearchPageStepDef extends GlobalMobileHelper {
 		assertFalse(searchPage.isPopularSearchesDisplayed());
 	}
 
+
+
+	@Then("^User sees the elipses when Character are more than (\\d+)$")
+	public void user_sees_the_elipses_when_Character_are_more_than(int characterCount ) throws Throwable {
+	   assertTrue( searchPage.isElipsesDisplayed(characterCount));
+	}
+
+
+	
+
 	
 	@Then("^i choose to click on \"([^\"]*)\" on search result page$")
 	public void i_choose_to_click_on_on_search_result_page(String elementname) throws Throwable {

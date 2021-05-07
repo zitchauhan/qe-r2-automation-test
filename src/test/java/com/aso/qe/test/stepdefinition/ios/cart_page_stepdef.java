@@ -105,4 +105,19 @@ public class cart_page_stepdef extends GlobalMobileHelper{
 	public void tapCartIconBottomNav() throws Throwable{
 		cart.clickCartIconBottomNav();
 	}
+	
+	
+	@Then("^user click on \"([^\"]*)\"  button on cart page$")
+	public void user_click_on_button_on_cart_page(String btnName) throws Throwable {
+		 CartPage.clickonButtononcartpage(btnName);
+	}
+	@Then("^user see \"([^\"]*)\" page$")
+	public void user_see_page(String pagename) throws Throwable {
+		assertTrue(CartPage.VarifyUserisonwishlistpage(pagename));
+	}
+	
+	@Then("^user click on \"([^\"]*)\" on wish list page$")
+	public void user_click_on_on_wish_list_page(String btnName) throws Throwable {
+		 CartPage.clickonButtononcartwishpage(btnName);
+	}
 }

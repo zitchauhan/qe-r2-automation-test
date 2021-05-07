@@ -184,7 +184,7 @@ public class LoginPage {
 	public static void  enterLoginDetails(String fieldName) {
 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
  		String element = null;
- 		if(fieldName.equalsIgnoreCase("email")){
+ 		if(fieldName.contains("email")){
  			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,Locators.LoginPage.passwordEditBox);
 
  			
