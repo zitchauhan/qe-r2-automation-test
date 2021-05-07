@@ -820,7 +820,10 @@ public class PDPPage {
 		if(elementname.equalsIgnoreCase("addtocart")) {
 			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonAddToCart);
-
+		}else if(elementname.equalsIgnoreCase("homedeliveryradiobutton")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.homeDeliveryRadioBtn);
+			
 		}else {
 
 			throw new UnsupportedOperationException("Given element not found on PDP");
