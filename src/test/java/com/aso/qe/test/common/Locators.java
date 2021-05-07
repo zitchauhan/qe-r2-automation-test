@@ -59,9 +59,7 @@ public class Locators {
 		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		public static By homeButton = By.xpath("//*[contains(@label,'Home')]");
 		public static By homeBtn = By.xpath("//*[contains(@label,'Home')]");
-
 		public static By heroBanner = By.xpath("//*[contains(@label,'Hero Image')]");
-
 
 		public static By bannerTitle = By.id("lbl_info_banner_title");
 		public static By bannerSubtitle = By.id("lbl_info_banner_sub_title");
@@ -129,20 +127,37 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
+
+
+		public static By searchCount =By.id("search_count");
+		public static By sortOption =By.id("sort_option");
+		public static By filterOption =By.id("filter_option");
+		public static By nullSearchPage= By.id("null_search_page");
+
 		public static By navigateBack = By.id("btn_Back");
-		public static By recentSearchesTitle=By.id("lbl_shop_by_category_title");;
+		public static By recentSearchesTitle=By.id("lbl_shop_by_category_title");
 		public static By clearAll=By.xpath("//XCUIElementTypeOther[@name='Clear All']");
+
 		// labels for did u mean 
 		public static By showingresultforlabel =  By.id("lbl_show_result_for");
 		public static By showingresultforlabelvalue =  By.id("lbl_show_result_forvalue");
 		public static By searchinsteedof =  By.id("lbl_search_instead_for");
 		public static By searchinsteedofvalue =  By.id("btn_search_instead_forvalue");
 		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
-        public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
+
+		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
+		//public static By navigateBack = By.id("btn_back");
+		//public static By recentSearchesTitle=By.id("TODO by dev");;
+		//public static By clearAll=By.id("TODO by dev");;
+		//public static By recentSearches=By.id("TODO by dev");;
+
+       // public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 		public static By recentSearches=By.id("lbl_shop_by_category_title");;
+
 		public static By popularSearchesTitle=By.id("TODO by dev");;
 		public static By popularsearchesItem=By.id("TODO by dev");;
 		public static By noresultlabel=By.id("txt_empty_result_title");;
+
 	}
 	
 	public static class OnBoardingScreen{
@@ -243,8 +258,8 @@ public class Locators {
 	    
 		
 		//OMNI-29377 - GC Cart Component -13.04.2021 -Nirmal
-		public static By labelcardAmount=By.id(""); 
-		public static By listCardAmount=By.id("");
+		public static By labelcardAmount=By.id("lbl_card_price"); 
+		public static By listCardAmount=By.id("price_list_item_Card_Amount_0");
 		public static By labelDefaultCardAmount=By.id("");
 		public static By btncardOptionAsAmount=By.id("");
 		public static By btncartOptionOther=By.id("");
@@ -281,6 +296,10 @@ public class Locators {
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
+		public static By alertGiftCardError;
+		public static By liveChatBtn;
+		public static By liveChatUrlTitle;
+		public static By bulkGiftCardBtnAlert;
 		public static By purchaseBtn = By.id("lbl_purchase_btn");
 
 		// alert modal on pdp
@@ -656,8 +675,8 @@ public class Locators {
 
 	//Use this for my account welcome page after login
 	public static class MyAccountwelcomePage{
-		public static By MyAcademy = By.id("lbl_myacademy_title");
-		public static By buttonOrders = By.id("btn_Myaccount_orders");
+		public static By MyAcademy = By.id("lbl_my_academy");
+		public static By buttonOrders = By.id("btn_orders");
 		public static By buttonProfile = By.id("btn_Myaccount_profile");
 		public static By buttonAddressbook = By.id("btn_Myaccount_addressbook");
 		public static By buttonWishlist = By.id("btn_Myaccount_wishlist");
@@ -778,10 +797,32 @@ public class Locators {
 
 	}
 
+	
+	// created by Nirmal Jain - 06.05.2021  OMNI-28637
 	public static class UserProfile {
 		public static By switchSubscribeToEmailsFromAcademy = By.id("switch_subscribe_email");
 		public static By labelSubscribeToEmailsFromAcademy = By.id("lbl_subscribe_email_title");
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
+		public static By labelPeronalInformation= By.id("perfonal_informaiton_label");
+		public static By labelEditName=By.id("edit_name_label");
+		public static By labelChangeEmail=By.id("edit_change_email");
+		public static By msgChangeEmail=By.id("msg_change_email");
+		public static By inputEmail=By.id("input_email");
+		public static By inputConfirmEmail=By.id("input_confirmEmail");
+		public static By inputFirstName=By.id("input_firstName");
+		public static By inputLastName=By.id("input_lastName");
+		public static By buttonUpdate=By.id("button_update");
+		public static By buttonBack=By.id("button_back");
+		public static By buttonName=By.id("profile_name_button");
+		public static By buttonEmail=By.id("profile_email_button");
+		public static By buttonPassword=By.id("profile_password_button");
+		public static By txtCurrentName= By.id("profile_current_name");
+		public static By txtCurrentEmail= By.id("profile_current_email");
+		public static By msgErrorEmail= By.id("msg_error_email");
+		public static By msgErrorFirstName= By.id("msg_error_FirstName");
+		public static By msgErrorLastName= By.id("msg_error_LastName");
+		
+		
 	}
 
 	public static class OrderDetail{
@@ -789,7 +830,7 @@ public class Locators {
 		public static By buttonOrder = By.id("button_Order");
 		public static By listOrder=By.id("list_Order");
 		public static By buttonOrderId=By.id("order_id");
-		//public static By lookupOrder= By.id("");
+		public static By lookupOrder= By.id("TODO by dev");;
 		public static By labelOrderDetailPage= By.id("label_order_detail_page");
 		public static By buttonCancelOrder=By.id("button_cancel_order");
 		public static By buttonChevronCancelOrder=By.id("button_chevron_cancel_order");
@@ -802,10 +843,21 @@ public class Locators {
 		public static By buttonBackOrderCancel=By.id("back_orderCancel");
 		public static By ErrorMesageOrderCancel=By.id("error_msg_order_cancel");
 		public static By labelOrderPage=By.id("label_order_page");
-		
-		public static By msgOrderCancel=By.id("TODO by dev");
-		public static By msgConfirmationEmail=By.id("TODO by dev");
-		public static By labelcancelOrderDate=By.id("TODO by dev");
+		public static By Orderdetailheading=By.xpath("//*[contains(@label,'Order Detail')]");
+		public static By Ordernumber=By.id("lbl_order_number");
+		public static By orderdate=By.id("lbl_order_date");
+		public static By ordertotal=By.id("Orderdetail_label_order_total");
+		public static By cancelorderbutton=By.id("Orderdetail_btncancelorder");
+		public static By homedelivery=By.id("Orderdetail_label_homedelivery");
+		public static By customername=By.id("Orderdetail_label_customername");
+		public static By shippingaddress=By.id("Orderdetail_label_shipping_address");
+		public static By orderstatus=By.id("Orderdetail_label_shipping_status");
+		public static By inprocessing=By.id("Orderdetail_label_shippinginprocessing");
+		public static By shippingmethode=By.id("Orderdetail_label_shippingmethode");
+		public static By producttitle=By.id("lbl_product_title");
+		public static By productqty=By.id("lbl_productqty");
+		public static By productprice=By.id("lbl_product_price");
+		public static By skunumber=By.id("lbl_product_sku");
 		
 		/*created by Nirmal - OMNI-33184 07/06/2021 */
 		public static By buttonTrackDelivery=By.id("button_track_delivery");
@@ -814,7 +866,70 @@ public class Locators {
 		public static By inputZipCode=By.id("input_zipcode");
 		public static By buttonCheck=By.id("button_check");
 		public static By labelOrderLookupOrder=By.id("label_orderlookup");
+		
+		/* created by Nirmal - OMNI-28213 - 5/7/2021 */
+		public static By labelFindYourorderwithChevron=By.id("TODO by dev");
+		public static By LabelAddStoreReceiptwithChevron=By.id("TODO by dev");
+		
+		public static By filterAllOrder=By.id("TODO by dev");
+		public static By filterOnline=By.id("TODO by dev");
+		public static By filterInStore=By.id("TODO by dev");
+		
+		public static By labelOrderCount=By.id("TODO by dev");
+		public static By SortedOrder=By.id("TODO by dev");
+		public static By OrderStatus=By.id("TODO by dev");
+		public static By labelOrderNumber=By.id("TODO by dev");
+		public static By labelOrderDate=By.id("TODO by dev");
+		public static By labelOrderTotal=By.id("TODO by dev");
+		public static By OrderList=By.id("TODO by dev");
+    
+		public static By labelAddstoreReceiptScreen=By.id("TODO by dev");
+		public static By NoExistingOrderMsg=By.id("TODO by dev");
+		
+		public static By msgOrderCancel=By.id("TODO by dev");
+		public static By msgConfirmationEmail=By.id("TODO by dev");
+		public static By labelcancelOrderDate=By.id("TODO by dev");
+
+
+   
+
+		
+
+
 	}
+		//   Order history page for logged in user where all order will list 
+		
+		public static class OrderHistoryloggedInuser{
+			public static By orderheading=By.id("lbl_ordersheading");
+			public static By orderlabel=By.id("lbl_order");
+			public static By lookupyourorderbutton=By.id("btn_lookup_your_order");
+			public static By addastorereciptbutton=By.id("btn_addastorereciptbutton");
+			public static By orderpurchagetype=By.id("lbl_orderpurchagetype");
+			public static By orderstatusprocessing=By.id("lbl_orderstatusprocessing");
+			public static By orderstatusdelivered=By.id("lbl_orderstatusdelivered");
+			public static By ordernumberlabel=By.id("lbl_ordernumberlabel");
+			public static By ordernumber=By.id("lbl_ordernumber");
+			public static By orderdate=By.id("lbl_orderdate");
+			public static By orderdatelabel=By.id("lbl_orderdatelabel");
+			public static By ordertotallabel=By.id("lbl_ordertotallabel");
+			public static By ordertotal=By.id("lbl_ordertotal");
+			
+			
+		
+		
+		}
+		
+		
+		
+
+		
+	
+
+		
+
+
+	
+
 
 	public static class OrdersPage {
 		public static By orderSummarylabel = By.id("lbl_order_summary");
