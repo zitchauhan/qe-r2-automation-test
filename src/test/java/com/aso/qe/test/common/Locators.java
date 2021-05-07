@@ -8,7 +8,10 @@ public class Locators {
 	public static class BottomNav{
 		public static By home = By.id("lbl_home");
 		public static By shop = By.id("lbl_shop");
-		public static By wishlist = By.id("lbl_wishlist");
+		//This is rewuest change. wish list button is changing 
+		public static By wishlist = By.id("lbl_profile");
+		
+		//public static By wishlist = By.id("lbl_wishlist");
 		public static By cart = By.id("lbl_cart");
 		public static By account = By.id("lbl_account");
 		public static By Login = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
@@ -343,7 +346,8 @@ public class Locators {
 		public static By deleteBtn = By.id("");
 		public static By cancelbtn = By.id("");
 		public static By textInputWishlist = By.id("textinput_wishlist");
-		public static By wishlist = By.id("lbl_wishlist");
+		//public static By wishlist = By.id("lbl_wishlist");  frequent changeby dev
+		public static By wishlist = By.xpath("//*[contains(@label, 'Wish List')]");
 		public static By wishlistIcon = By.id("btn_add_to_wishlist");
 	  //public static By addWishlist = By.id("");
 		public static By wishlistTextInput = By.id("textinput_wishlist");
@@ -366,6 +370,18 @@ public class Locators {
 		public static By bannerSubTitle = By.id("lbl_banner_sub_title");
 		public static By bannerCTA = By.id("lbl_banner_cta");
 		public static By webViewBanner = By.id("lbl_web_view_banner");
+		public static By itemcountinwishlist = By.id("lbl_item_count");
+		public static By producttitlewishlist = By.id("lbl_product_title");
+		public static By Removefromwishlistbutton = By.id("btn_remove");
+		public static By conformationmessage = By.xpath("//*[contains(@label,'Are you sure you want to remove this')]");
+		public static By wishlistempty = By.id("lbl_wishlist_empty");
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	public static class ShopNewPage{
@@ -682,11 +698,14 @@ public class Locators {
 		public static By buttonOrders = By.id("btn_orders");
 		public static By buttonProfile = By.id("btn_Myaccount_profile");
 		public static By buttonAddressbook = By.id("btn_Myaccount_addressbook");
-		public static By buttonWishlist = By.id("btn_Myaccount_wishlist");
+		// dev are changing this wish list button name 
+		//public static By buttonWishlist = By.id("lbl_profile");
+		public static By buttonWishlist = By.xpath("//*[contains(@label, 'Wish List')]");
 		public static By buttonPayment = By.id("btn_Myaccount_Payment");
 		public static By buttoncontactus = By.id("btn_contact_us");
 		public static By CSMobilenumber = By.xpath("//XCUIElementTypeButton[@name=\"1888-922-2336\"]");
 		public static By CallCancelbutton = By.xpath("//XCUIElementTypeButton[@name=\"Cancel\"]");
+		
 
 
 	}
