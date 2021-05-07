@@ -824,6 +824,11 @@ public class PDPPage {
 			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.homeDeliveryRadioBtn);
 			
+		}
+		else if(elementname.equalsIgnoreCase("buttonaddtowishlist")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonaddtowishlist);
+
 		}else {
 
 			throw new UnsupportedOperationException("Given element not found on PDP");
@@ -856,6 +861,9 @@ public class PDPPage {
 					}else if(elementname.equalsIgnoreCase("Cancelbutton")){
 			
 			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.CloseAlertmodal);
+					}else if(elementname.equalsIgnoreCase("buttonaddtowishlist")){
+						
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.buttonaddtowishlist);
 
 			
 		}else {
