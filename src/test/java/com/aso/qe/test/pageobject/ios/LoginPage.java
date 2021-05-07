@@ -184,7 +184,7 @@ public class LoginPage {
 	public static void  enterLoginDetails(String fieldName) {
 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
  		String element = null;
- 		if(fieldName.equalsIgnoreCase("email")){
+ 		if(fieldName.contains("email")){
  			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,Locators.LoginPage.passwordEditBox);
 
  			
@@ -213,6 +213,11 @@ public class LoginPage {
 		}else if(btnName.equalsIgnoreCase("account")){
 			
 			GlobalMobileHelper.tapOnElement(Locators.BottomNav.account);
+}	else if(btnName.equalsIgnoreCase("gotologin")){
+
+			
+
+			GlobalMobileHelper.tapOnElement(Locators.BottomNav.Login);
 
 		}else {
 			

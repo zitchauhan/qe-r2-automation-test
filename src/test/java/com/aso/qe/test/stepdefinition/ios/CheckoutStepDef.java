@@ -139,11 +139,7 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 	@And("User sees Shipping Method label")
 	public void userSeesShippingMethodLabel() {
 		assertTrue(isElementDisplayed(Locators.CheckoutPage.labelShippingHeader));
-		try {
-			Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		waitForDefaultTime();
 	}
 
 	@When("^User sees the shipping disclaimer \"([^\"]*)\"$")
@@ -234,4 +230,10 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 		String AlertMessageXpath= String.format("//XCUIElementTypeStaticText[@name=%s]",message);
 		assertTrue("Alert is not displayed",isElementDisplayed(By.xpath(AlertMessageXpath)));
 	}
+
+    @When("User has placed an Order")
+    public void userHasPlacedAnOrder() {
+        /* Created By jitsingh7 on 29/04/21 */
+		tapOnElement(Locators.CheckoutPage.buttonPlaceOrder);
+    }
 }
