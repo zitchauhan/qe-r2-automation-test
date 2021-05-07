@@ -808,12 +808,12 @@ public class Locators {
 		public static By labelcancelOrderDate=By.id("TODO by dev");
 		
 		/*created by Nirmal - OMNI-33184 07/06/2021 */
-		public static By buttonTrackDelivery=By.id("TODO by dev");
-		public static By narvarScreen=By.id("TODO by dev");
-		public static By inputOrderId=By.id("TODO by dev");
-		public static By inputZipCode=By.id("TODO by dev");
-		public static By buttonCheck=By.id("TODO by dev");
-		public static By labelOrderLookupOrder=By.id("TODO by dev");
+		public static By buttonTrackDelivery=By.id("button_track_delivery");
+		public static By narvarScreen=By.id("narvar_screen");
+		public static By inputOrderId=By.id("input_orderId");
+		public static By inputZipCode=By.id("input_zipcode");
+		public static By buttonCheck=By.id("button_check");
+		public static By labelOrderLookupOrder=By.id("label_orderlookup");
 	}
 
 	public static class OrdersPage {
