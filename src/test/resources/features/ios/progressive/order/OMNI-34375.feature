@@ -1,6 +1,6 @@
 Feature: Order Confirmation Screen - Notification, eDelivery & Order Summary Tile
 
-  @Sprint6 @ST-OMNI-34375
+  @Sprint6 @ST-OMNI-34375 @TC-OMNI-37307
   Scenario Outline: As a user I should be able to place order STH and should be redirected to order confirmation screen
     Given User launches the application
     And User logs into the application as "<user_name>"
@@ -24,8 +24,8 @@ Feature: Order Confirmation Screen - Notification, eDelivery & Order Summary Til
   
  
 
-  @Sprint6 @ST-OMNI-34375
-  Scenario Outline: As a user I should be able to place order STH and should see details on order confirmation page
+  @Sprint6 @ST-OMNI-34375 @TC-OMNI-37308
+  Scenario Outline: User is able to move to order confirmation page and is able to see, SLA, package and other labels for STH order
   Given User launches the application
     And User logs into the application as "<user_name>"
     And User has an empty cart
