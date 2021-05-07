@@ -129,20 +129,37 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
+
+
+		public static By searchCount =By.id("search_count");
+		public static By sortOption =By.id("sort_option");
+		public static By filterOption =By.id("filter_option");
+		public static By nullSearchPage= By.id("null_search_page");
+
 		public static By navigateBack = By.id("btn_Back");
-		public static By recentSearchesTitle=By.id("lbl_shop_by_category_title");;
+		public static By recentSearchesTitle=By.id("lbl_shop_by_category_title");
 		public static By clearAll=By.xpath("//XCUIElementTypeOther[@name='Clear All']");
+
 		// labels for did u mean 
 		public static By showingresultforlabel =  By.id("lbl_show_result_for");
 		public static By showingresultforlabelvalue =  By.id("lbl_show_result_forvalue");
 		public static By searchinsteedof =  By.id("lbl_search_instead_for");
 		public static By searchinsteedofvalue =  By.id("btn_search_instead_forvalue");
 		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
-        public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
+
+		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
+		//public static By navigateBack = By.id("btn_back");
+		//public static By recentSearchesTitle=By.id("TODO by dev");;
+		//public static By clearAll=By.id("TODO by dev");;
+		//public static By recentSearches=By.id("TODO by dev");;
+
+       // public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 		public static By recentSearches=By.id("lbl_shop_by_category_title");;
+
 		public static By popularSearchesTitle=By.id("TODO by dev");;
 		public static By popularsearchesItem=By.id("TODO by dev");;
 		public static By noresultlabel=By.id("txt_empty_result_title");;
+
 	}
 	
 	public static class OnBoardingScreen{
