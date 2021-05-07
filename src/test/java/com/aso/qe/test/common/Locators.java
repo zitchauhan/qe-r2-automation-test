@@ -402,6 +402,8 @@ public class Locators {
 		public static By greetingMessage = By.id("lbl_greeting_message");
 		public static By setAsDefaultCheckBox = By.id("Checkbox_Setasdefault");
 		public static By defaultAddressCheckbox = By.id("TODO by dev");
+		public static By asoCardInforMationTile= By.id("TODO by dev");
+		public static By cardNoEditBox=By.id("TODO by dev");
 	}
 	
 	public static class CartPage{

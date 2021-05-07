@@ -510,6 +510,11 @@ public class AccountPage {
 		return isElementDisplayed(Locators.AccountPage.greetingMessage);
 	}
 
+	public void isComponenetDisplayedOnAsoCardPage(String field) {
+		if(field.contains("CardInforMation")) {
+		GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.asoCardInforMationTile);
+		}else if(field.contains("CardNumberEditBox")) {
+			GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.cardNoEditBox);
 	public void tabOnButtonOnTrackorderPage(String btnName) {
 		if(btnName.equalsIgnoreCase("Check button")) {
 			
