@@ -20,8 +20,8 @@ Scenario: As an ASO Mobile App login user,
 	When User taps on Yes Order button 
 	Then User sees order cancellation confirmation screen
 	
-@Sprint-6 @ST-OMNI-33836	
-Scenario: As an ASO Mobile App login user, 
+@Sprint-6 @ST-OMNI-33836	@TestRun
+Scenario Outline: As an ASO Mobile App login user, 
 	I want to see the Order cancellation message with date
 	Given User launches the application 
 	And User continues as guest user 
@@ -39,9 +39,13 @@ Scenario: As an ASO Mobile App login user,
 	Then User sees Yes button on alert confrimation screen 
 	When User taps on Yes Order button 
 	Then User sees order cancellation confirmation screen
-	Then User sees order cancellation message as "Your order cancellation request has been received"
-	Then User sees order cancellation message as "Your Confirmation mail is on its way."
+	Then User sees order cancellation message as "<Cancel_confirm_msg>"
+	Then User sees order cancellation message as "<Confirmation_email_msg>"
 	Then User sees order cancellation date
+	
+	Examples:
+	|Cancel_confirm_msg|Confirmation_email_msg|
+	|Your order cancellation request has been received|Your Confirmation mail is on its way.|
 	
 @Sprint-6 @ST-OMNI-33836
 	Scenario: As an ASO Mobile App login user, 
