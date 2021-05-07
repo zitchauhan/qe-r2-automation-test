@@ -42,7 +42,8 @@ public class Locators {
 		//public static By homeBtn = By.id("lbl_home");
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
-		public static By searchBox = By.id("search_bar");
+		//public static By searchBox = By.id("search_bar");this is frquent change b/dev
+		public static By searchBox = By.id("btn_Search");
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
 		public static By shopNewTitle = By.id("lbl_shopNew_title");
@@ -128,20 +129,17 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
+		public static By navigateBack = By.id("btn_Back");
+		public static By recentSearchesTitle=By.id("lbl_shop_by_category_title");;
+		public static By clearAll=By.xpath("//XCUIElementTypeOther[@name='Clear All']");
 		// labels for did u mean 
 		public static By showingresultforlabel =  By.id("lbl_show_result_for");
 		public static By showingresultforlabelvalue =  By.id("lbl_show_result_forvalue");
 		public static By searchinsteedof =  By.id("lbl_search_instead_for");
 		public static By searchinsteedofvalue =  By.id("btn_search_instead_forvalue");
 		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
-
-		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
-		
-		
-		public static By navigateBack = By.id("btn_back");
-		public static By recentSearchesTitle=By.id("TODO by dev");;
-		public static By clearAll=By.id("TODO by dev");;
-		public static By recentSearches=By.id("TODO by dev");;
+        public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
+		public static By recentSearches=By.id("lbl_shop_by_category_title");;
 		public static By popularSearchesTitle=By.id("TODO by dev");;
 		public static By popularsearchesItem=By.id("TODO by dev");;
 		public static By noresultlabel=By.id("txt_empty_result_title");;
@@ -447,6 +445,14 @@ public class Locators {
 		public static By freeGiftToolTipIcon = By.id("img_free_Gift_Tool_Tip");
 		public static By freeGiftToolTipIconmodal = By.id("lbl_free_Gift_Tool_Tip_modal");
 		public static By freeGiftProductImage = By.id("img_free_Product");
+		public static By Addtowishlist = By.id("btn_add_to_wishlist");
+		public static By wishlisticon = By.id("icon_wishlist");
+		public static By loginoncartwishlist = By.id("btn_login");
+		public static By existingwishlist = By.id("btn_list_Item");
+		public static By sucessmessageitemaddedtowishlist = By.xpath("//*[contains(@label, 'item added to')]");
+		
+		
+		
 
 	}
 	public static class AcademyExclusivePage{
@@ -870,6 +876,16 @@ public class Locators {
 		public static By labelColorAttribute = By.id("TODO by dev");
 		public static By eGiftQty = By.id("TODO by dev");
 		public static By eGiftCardMoreRecipientMessage = By.id("TODO by dev");
+		public static By shippingAddressTile = By.id("lbl_shippingAddressTile");
+		public static By homeDeliveryTile = By.id("lbl_homeDeliveryTile");
+		public static By storePickUpTile = By.id("lbl_storePickUpTile");
+		public static By firstName = By.id("TODO by dev");
+		public static By lastName = By.id("TODO by dev");
+		public static By shippingAddress = By.id("TODO by dev");
+		public static By slaMessage = By.id("TODO by dev");
+		public static By packageLabel = By.id("TODO by dev");
+		public static By itemsCount = By.id("TODO by dev");
+		
 	}
 
 	public static class SavedAddresses {

@@ -7,6 +7,8 @@ import com.aso.qe.test.pageobject.ios.OrdersPage;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -62,5 +64,12 @@ public class OrdersStepDefs extends GlobalMobileHelper {
         /* Created By jitsingh7 on 01/05/2021 */
         List<List<String>> elementList  = dataTable.raw();
         ordersPage.verifyElementsEDeliveryTitle(elementList.get(0));
+    }
+    
+    @Then("User sees elements on order confirmation screen")
+    public void userSeesElementOnOrderConfirmationScreen(DataTable dataTable) {
+    	List<List<String>> elementList = dataTable.raw();
+    	ordersPage.verifyElementsOnOrderConfirmationPage(elementList.get(0));
+    	
     }
 }

@@ -135,13 +135,15 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 		String [] searchItem = {searchItem1,searchItem2,searchItem3,searchItem4,searchItem5};
 		boolean flag=false;
 		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
-		for(int i =0; i<=lsRecentSearches.size(); i++) {
+		System.out.println(lsRecentSearches.size());
+		for(int i =0; i<=lsRecentSearches.size()-1; i++) {
+			if(i<=4) {
 			if(lsRecentSearches.get(i).getText().contains(searchItem[i])) {
 				flag = true;
 			}else {
 				flag = false;
 			}
-			
+			}
 		
 		}
 		return flag;
@@ -173,11 +175,9 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
 		for(int i =1;i<=lsRecentSearches.size();i++) {
 			
-				try {
-					lsRecentSearches.get(lsRecentSearches.size()).click();
-				} catch (Exception e) {
-					GlobalMobileHelper.swipeScreen(Direction.LEFT);
-				}
+				
+					GlobalMobileHelper.swipeTillElementDisplayed(Direction.LEFT, By.id("btn_category"));
+				
 			
 		}
 	}
@@ -186,15 +186,21 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 		
 	}
 	public boolean isRecentSearchesDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.recentSearches);
+	String s =	driver.findElement(Locators.SearchPage.recentSearches).getText();
+	if(s.contains("Recent Searches")) {
+		return true;
+	}else {
+		return false;
+	}
+		
 		
 	}
 	public boolean isAllPopularSearchesDisplayed(String searchItem1, String searchItem2, String searchItem3,
 			String searchItem4, String searchItem5) {
 		String [] searchItem = {searchItem1,searchItem2,searchItem3,searchItem4,searchItem5};
 		boolean flag=false;
-		List<MobileElement> lsPopularSearches = driver.findElements(Locators.SearchPage.popularsearchesItem);
-		for(int i =0; i<=lsPopularSearches.size(); i++) {
+		List<MobileElement> lsPopularSearches = driver.findElements(By.id("btn_category"));
+		for(int i =0; i<=lsPopularSearches.size()-1; i++) {
 			if(lsPopularSearches.get(i).getText().contains(searchItem[i])) {
 				flag = true;
 			}else {
@@ -223,7 +229,7 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 			String s =lsPopularSearches.get(i).getText();
 			count = count + s.length();
 		}
-		if(count==characterCount) {
+		if(count<=characterCount) {
 			return true;
 		}else {
 			return false;
@@ -245,6 +251,39 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 	
 	public boolean isPopularSearchesDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.popularsearchesItem);
+	}
+	public boolean isElipsesDisplayed(int characterCount) {
+		List<MobileElement> lsSearches = driver.findElements(By.id("btn_category"));
+		boolean flag = false;
+        for(MobileElement searchTerms: lsSearches ) 
+        {
+        	int count=0;
+        	String searchTermValue =searchTerms.getText();
+        	for(int i =0; i<=searchTermValue.length()-1;i++) 
+        	{
+        		 if(searchTermValue.charAt(i) != ' ') 
+        		 {
+        			 count++;
+        		 }
+        	} 
+        	System.out.println(searchTermValue);
+        	System.out.println(count);
+        	if(count>characterCount) {
+        		String s= "";
+        		for(int i=searchTermValue.length()-2; i>=searchTermValue.length(); i++) {
+        			 s = s + searchTermValue.charAt(i); 
+        	    }
+        		if(s.contains("***")) {
+        			flag = true;
+        		}else {
+        			flag= false;
+        		}
+        	}else {
+        		flag= true;
+        	}
+        }
+		return flag;
+		
 	}
 	
 	
