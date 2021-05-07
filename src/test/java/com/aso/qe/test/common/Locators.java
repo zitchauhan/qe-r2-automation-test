@@ -802,6 +802,12 @@ public class Locators {
 		public static By buttonBackOrderCancel=By.id("back_orderCancel");
 		public static By ErrorMesageOrderCancel=By.id("error_msg_order_cancel");
 		public static By labelOrderPage=By.id("label_order_page");
+		
+		public static By msgOrderCancel=By.id("TODO by dev");
+		public static By msgConfirmationEmail=By.id("TODO by dev");
+		public static By labelcancelOrderDate=By.id("TODO by dev");
+		
+		
 
 
 
