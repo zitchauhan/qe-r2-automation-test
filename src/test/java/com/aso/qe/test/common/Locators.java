@@ -904,6 +904,10 @@ public class Locators {
 		public static By productqty = By.id("lbl_productqty");
 		public static By productprice = By.id("lbl_product_price");
 		public static By skunumber = By.id("lbl_product_sku");
+		
+		public static By msgOrderCancel=By.id("TODO by dev");
+		public static By msgConfirmationEmail=By.id("TODO by dev");
+		public static By labelcancelOrderDate=By.id("TODO by dev");	
 
 		/* created by Nirmal - OMNI-33184 07/06/2021 */
 		public static By buttonTrackDelivery = By.id("button_track_delivery");
