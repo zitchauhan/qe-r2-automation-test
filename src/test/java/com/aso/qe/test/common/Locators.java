@@ -421,7 +421,7 @@ public class Locators {
 	}
 	public static class AccountPage{
 		public static By accountTitle = By.id("lbl_account");
-		public static By loginLink = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
+		public static By loginLink = By.id("btn_sign_in");
 		public static By findStoreLink = By.xpath("//XCUIElementTypeButton[@name=\"FIND STORE\"]");
 		public static By buttonAddressBook = By.xpath("//XCUIElementTypeButton[@name='ADDRESS BOOK']");
 		public static By buttonCreateAccount = By.xpath("//XCUIElementTypeButton[@name='CREATE AN ACCOUNT']");
