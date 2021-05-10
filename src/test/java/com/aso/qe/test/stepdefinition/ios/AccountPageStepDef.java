@@ -260,6 +260,12 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void isGreetingMessageDisplayed() {
 		assertTrue(accountPage.isGreetingMessageDisplayed());
 	}
+	@Then("^User sees the \"([^\"]*)\" at ASO card Page$")
+	public void user_sees_the_at_ASO_card_Page(String field) throws Throwable {
+	   accountPage.isComponenetDisplayedOnAsoCardPage(field);
+	}
+	
+
 	@Then("^User taps on \"([^\"]*)\" On Order Page$")
 	public void tabOnButtonOnTrackorderPage(String btnName) {
 		accountPage.tabOnButtonOnTrackorderPage(btnName);

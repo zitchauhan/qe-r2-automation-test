@@ -4,7 +4,9 @@ import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.CartPage;
 import com.aso.qe.test.pageobject.ios.HomePage;
+import com.aso.qe.test.pageobject.ios.PDPPage;
 import com.aso.qe.test.pageobject.ios.WishlistPage;
 
 import cucumber.api.java.en.Then;
@@ -148,4 +150,16 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void i_choose_to_verify_user_navigated_to_Web() {
 		assertTrue(wishlistPage.isNavigatedToWeb());
 	}
+	
+	@Then("^User sees \"([^\"]*)\" on existing wishlist$")
+	public void user_sees_on_existing_wishlist(String elementname) throws Throwable {
+		assertTrue(wishlistPage.VarifyElementPresenseOnexistingwishlist(elementname));
+
+	}
+	
+	@Then("^user click on \"([^\"]*)\" on existing wishlist$")
+	public void user_click_on_on_existing_wishlist(String btnName) throws Throwable {
+		wishlistPage.clickonButtononexistingwishlist(btnName);
+	}
+	
 }

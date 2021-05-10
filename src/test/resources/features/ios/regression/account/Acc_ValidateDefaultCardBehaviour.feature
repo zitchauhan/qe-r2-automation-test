@@ -18,7 +18,7 @@ Feature: Save Academy Credit Card or Credit Card as Default
 		Then Set as default checkbox is not visible to the user
 		
 	@Sprint5 @Regression
-  Scenario: Set as default is unchecked when user has prior saved cards
+  Scenario: Set as default is unchecked for new ACC card when user has prior saved cards
     Given User launches the application
     And User continues as guest user
 		And User is on Log In screen
@@ -36,7 +36,7 @@ Feature: Save Academy Credit Card or Credit Card as Default
 		And Default checkbox is unchecked
 	
 	@Sprint5 @Regression
-  Scenario: Set as default checkbox not visble to user when is is editing a single saved card
+  Scenario: Set as default checkbox not visble to user when user is editing a single saved card
     Given User launches the application
     And User continues as guest user
 		And User is on Log In screen
