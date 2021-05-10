@@ -389,6 +389,15 @@ public class CartStepDef extends GlobalMobileHelper{
 	    logger.debug("submit button on change zip code is displayed");
 	}
 
+	@Then("^User sees change zip code submit button Disable$")
+	public void user_sees_change_zip_code_submit_button_Disable() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		assertFalse(isElementEnabled(Locators.CartPage.buttonSubmit));
+		logger.debug("Submit Button on Change zip code is Not enable ");
+	    throw new PendingException();
+	}
+	
+	
 	@When("^User notes down estimated shipping charges$")
 	public void user_notes_down_estimated_shipping_charges() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
