@@ -172,5 +172,9 @@ public class HomeStepDef extends GlobalMobileHelper{
     public void user_continues_as_on_onboarding_page (String btnName) throws Throwable {
    	 homePage.tapOnButtonOnOnboarding(btnName);
     }
-
-}
+    
+    @And("^User sees phone setting$")
+    public void user_sees_phone_setting() {
+    	homePage.isPhoneSettingDisplayed();
+    	}
+    }

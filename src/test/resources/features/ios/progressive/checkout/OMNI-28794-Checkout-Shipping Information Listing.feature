@@ -1,4 +1,4 @@
-Feature: Checkout
+	Feature: Checkout - Shipping Information Listing
 
   @Sprint2 @ST-OMNI-28794 @TC-OMNI-31926
  Scenario: Verify the following scenarios when user is a registered user with no address in their address book

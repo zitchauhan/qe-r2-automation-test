@@ -3,6 +3,9 @@
  @Sprint2 @ST-OMNI-29011 @TC-32948
    Scenario: Verify when user taps on Details link next to default store 
     Given User launches the application
+    Then User taps on "ALLOW LOCATION SERVICES" option
+    And User verifies location service popup is displayed
+    And User taps on "Allow while using app" option
     And User continues as guest user
 	Then User taps on account in bottom nav
 	And User sees the account page
@@ -22,6 +25,9 @@
      @Sprint2 @ST-OMNI-29011 @TC-32949
    Scenario: Verify when user taps Details link corresponding to a new store 
      Given User launches the application
+     Then User taps on "ALLOW LOCATION SERVICES" option
+    And User verifies location service popup is displayed
+    And User taps on "Allow while using app" option
     And User continues as guest user
 	Then User taps on account in bottom nav
 	And User sees the account page
@@ -42,6 +48,9 @@
    @Sprint2 @ST-OMNI-29011 	@TC-32953
    Scenario: Verify MAKE MY STORE button is disabled when user has made a store selection and tapped - MAKE MY STORE in the change store process	
     Given User launches the application
+    Then User taps on "ALLOW LOCATION SERVICES" option
+    And User verifies location service popup is displayed
+    And User taps on "Allow while using app" option
     And User continues as guest user
 	Then User taps on account in bottom nav
 	And User sees the account page
