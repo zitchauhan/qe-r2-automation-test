@@ -279,4 +279,9 @@ public class HomePage {
 		
 	}
 
+	public void isPhoneSettingDisplayed() {
+		assertTrue("Phone setting is not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Phone.phoneNotification));
+		
+	}
+
 }

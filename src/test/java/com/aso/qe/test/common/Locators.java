@@ -1008,7 +1008,7 @@ public class Locators {
 		public static By slaMessage = By.id("TODO by dev");
 		public static By packageLabel = By.id("TODO by dev");
 		public static By itemsCount = By.id("TODO by dev");
-		
+		public static By getNotificationLink = By.id("TODO by dev");
 	}
 
 	public static class SavedAddresses {
@@ -1016,6 +1016,10 @@ public class Locators {
 		public static By radioButtonAddress = By.xpath("//XCUIElementTypeOther[contains(@name,'CheckBox')]");
 		public static By labelAddressUsername = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
+	}
+
+	public static class Phone{
+		public static By phoneNotification= By.id("TODO by dev");
 	}
 
 }
