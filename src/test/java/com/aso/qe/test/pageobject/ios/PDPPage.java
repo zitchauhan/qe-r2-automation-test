@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
 import java.lang.UnsupportedOperationException;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+
+import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
@@ -792,6 +797,7 @@ public class PDPPage {
 
 	@iOSXCUITFindBy(id="lbl_cart")
 	public MobileElement labelItemCount;
+	private int CCheckbox;
 
 	public boolean ItemsCountOnCartBadge(String arg1) {
 		String qtyCartPage = labelItemCount.getText();
@@ -921,4 +927,151 @@ if(elementname.equalsIgnoreCase("Store Delivery Heading")) {
 
 		}
 	}
+
+	public void tapOnRatingAndReview() {
+		while(true)
+		try {
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.ratingAndReviewBtn);
+			break;
+		} catch (Exception e) {
+			GlobalMobileHelper.swipeScreen(Direction.UP);
+		}
+		
+	}
+
+	public void isRatingsAndReviewDisplayed() {
+		/*List<MobileElement> ratings = driver.findElements(Locators.ReviewPage.ratingsAndReview);
+		for(int i = 1; i<=ratings.size(); i++) {
+			
+		}*/
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.ratingsAndReview);
+	}
+
+	public void tapOnWriteReviewBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.writeReviewBtn);
+		
+	}
+
+	public boolean isReviewPageDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.ReviewPageTitle);
+		
+	}
+
+	public void enterRatingValue(int ratingValue) {
+		List<MobileElement> ls = driver.findElements(Locators.ReviewPage.ratingValue);
+		for(int i =1; i<=ls.size();i++) {
+			if(ratingValue==i) {
+				ls.get(i).click();
+			}
+		}
+	}
+   public void enteValuesOnReviewPage(String editBoxType, String value) {
+	   String EditValue = PropertiesHelper.getInstance().getMobileTestDataProperty(value);
+	   switch(editBoxType.toLowerCase())
+		{
+		case "ReviewTitle":
+			GlobalMobileHelper.setText(Locators.ReviewPage.reviewTitleEditBox, EditValue);
+		case "ReviewDetails":
+			GlobalMobileHelper.setText(Locators.ReviewPage.reviewDetailsEditBox, EditValue);
+		case "NickName":
+			GlobalMobileHelper.setText(Locators.ReviewPage.nickNameEditBox, EditValue);
+		case "Location":
+			GlobalMobileHelper.setText(Locators.ReviewPage.LocationEditBox, EditValue);
+		case "Email":
+			GlobalMobileHelper.setText(Locators.ReviewPage.emailEditBox, EditValue);
+		case "Recommendation":
+			if(value.contains("Yes")) {
+				GlobalMobileHelper.tapOnElement(Locators.ReviewPage.yesOption);
+			}else {
+				GlobalMobileHelper.tapOnElement(Locators.ReviewPage.NoOption);
+			}
+		case "Fit":
+			List<MobileElement> ls = driver.findElements(Locators.ReviewPage.fitValue);
+			for(int i =1; i<=ls.size();i++) {
+				if(Integer.parseInt(EditValue)==i) {
+					ls.get(i).click();
+					}
+			}
+		case "sweepstackDropdown":
+		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.sweepstackDropdown);
+		if(EditValue.contains("Yes")) {
+		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.yesOption);
+		}else {
+		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.NoOption);	
+		}
+	}
+   }
+
+public void clickOnCheckBox(String checkBoxType) {
+	if(checkBoxType.contains("SweepstackTermsCondition")) {
+	GlobalMobileHelper.tapOnElement(Locators.ReviewPage.sweepstackTermCondCheckbox);
+	}else {
+		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.termCondCheckbox);
+	}
+}
+
+public void tapOnPostReviewBtn() {
+	GlobalMobileHelper.tapOnElement(Locators.ReviewPage.postReviewBtn);
+	
+}
+
+public boolean isRatingAndReviewDetailsPageDisplayed() {
+	return GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.reviewDetailsPageTitle);
+}
+
+public void isFieldDisplayedOnReviewDetailsPage(String fieldType) {
+	switch(fieldType)
+	{
+	case "SortOption":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.sortOption);
+	case "UserName":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.reviewerName);
+	case "PostedTime":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.postedTimeText);
+	case "StarRating":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.starRatingValue);
+	case "ReviewTitle":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.reviewTitle);
+	case "VerifiedPurchaserMark":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.verifiedPurchaserMark);
+	case "yesIRecommend":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.yesIRecommend);
+	case "Helpfullquestion":
+		GlobalMobileHelper.isElementDisplayed(Locators.ReviewPage.helpfullquestion);
+	
+}
+	
+}
+
+public void isElementEnabled(String yesStat, String noStat, String reportStat) {
+	boolean yesEl =GlobalMobileHelper.isElementEnabled(null);
+	boolean noEl =GlobalMobileHelper.isElementEnabled(null);
+	boolean reportEl =GlobalMobileHelper.isElementEnabled(null);
+	if(yesStat.contains("Active")) {
+	
+	assertEquals(true, yesEl);
+	}else {
+		assertEquals(false, yesEl);		
+	}
+	if(noStat.contains("Active")) {
+		assertEquals(true, noEl);
+	}else {
+		assertEquals(false, noEl);
+	}
+	if(reportStat.contains("Active")) {
+		assertEquals(true, reportEl);
+	}else {
+		assertEquals(false, reportEl);
+	}
+}
+
+public void tabOnHelpfullReviewQn(String answer) {
+	if(answer.contains("Yes")) {
+		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.yesOption);
+	}else {
+		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.NoOption);
+	}
+	
+}
+	
 }

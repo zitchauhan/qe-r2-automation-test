@@ -2,6 +2,7 @@ package com.aso.qe.test.common;
 
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class Locators {
 
@@ -340,8 +341,10 @@ public class Locators {
 		public static By productTite = By.id("lbl_product_title");
 		public static By backBtn = By.id("btn_back");
 
-		public static By labelItemCount = By.id("lbl_cart");
-		public static By CounterBadgeOnCartIcon = By.id("TODO dev");
+		public static By labelItemCount  = By.id("lbl_cart");
+		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
+		public static By ratingAndReviewBtn=  By.id("TODO dev");
+
 
 	}
 
@@ -1090,5 +1093,38 @@ public class Locators {
 	public static class Phone{
 		public static By phoneNotification= By.id("TODO by dev");
 	}
+
+	public static class ReviewPage {
+
+		public static By LocationEditBox = By.id("TODO by dev");
+		public static By ratingsAndReview= By.id("TODO by dev");
+		public static By writeReviewBtn= By.id("TODO by dev");
+		public static By ReviewPageTitle=By.id("TODO by dev");
+		public static By ratingValue = By.id("TODO by dev");
+		public static By reviewTitleEditBox= By.id("TODO by dev");
+		public static By reviewDetailsEditBox=By.id("TODO by dev");
+		public static By nickNameEditBox=By.id("TODO by dev");
+		public static By emailEditBox=By.id("TODO by dev");
+		public static By sweepstackDropdown= By.id("TODO by dev");
+		public static By dropdownOptionYes= By.id("TODO by dev");
+		public static By fitValue= By.id("TODO by dev");
+		public static By yesOption= By.id("TODO by dev");
+		public static By NoOption= By.id("TODO by dev");
+		public static By sweepstackTermCondCheckbox= By.id("TODO by dev");
+		public static By termCondCheckbox= By.id("TODO by dev");
+		public static By postReviewBtn= By.id("TODO by dev");
+		public static By reviewDetailsPageTitle= By.id("TODO by dev");
+		public static By sortOption= By.id("TODO by dev");
+		public static By reviewerName= By.id("TODO by dev");
+		public static By postedTimeText= By.id("TODO by dev");
+		public static By starRatingValue= By.id("TODO by dev");
+		public static By reviewTitle= By.id("TODO by dev");
+		public static By verifiedPurchaserMark= By.id("TODO by dev");
+		public static By yesIRecommend= By.id("TODO by dev");
+		public static By helpfullquestion= By.id("TODO by dev");
+		
+		
+	}
+	
 
 }
