@@ -176,4 +176,14 @@ private AppiumDriver<MobileElement> driver;
 			}
 		}
     }
+
+	public void isGetNotificationToTrackOrderDisplayed() {
+		assertTrue("Get notification to track order link isnot displayed",GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.getNotificationLink));
+		
+	}
+
+	public void tapOnGetNotificationToTrackOrder() {
+		GlobalMobileHelper.tapOnElement(Locators.OrdersPage.getNotificationLink);
+		
+	}
 }

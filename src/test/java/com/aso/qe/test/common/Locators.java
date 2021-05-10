@@ -4,27 +4,25 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 
 public class Locators {
-	
-	public static class BottomNav{
+
+	public static class BottomNav {
 		public static By home = By.id("lbl_home");
 		public static By shop = By.id("lbl_shop");
-		//This is rewuest change. wish list button is changing 
+		// This is rewuest change. wish list button is changing
 		public static By wishlist = By.id("lbl_profile");
-		
-		//public static By wishlist = By.id("lbl_wishlist");
+
+		// public static By wishlist = By.id("lbl_wishlist");
 		public static By cart = By.id("lbl_cart");
 		public static By account = By.id("lbl_account");
 		public static By Login = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 	}
-	
-	
-	public static class Onboarding{
+
+	public static class Onboarding {
 		public static By Continueasguest = By.id("btn_continue_as_guest");
-		
-		
+
 	}
-	
-	public static class LoginPage{
+
+	public static class LoginPage {
 		public static By HomeLogin = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 		public static By emailEditBox = By.id("tf_email");
 		public static By passwordEditBox = By.id("tf_password");
@@ -38,7 +36,7 @@ public class Locators {
 		public static By screenPasswordError = By.id("lbl_password_error");
 		public static By cancelButton = By.id("btn_header_cancel");
 	}
-	
+
 	public static class ChangePassword {
 		public static By tapOnProfile = By.id("");
 		public static By taponPassword = By.id("");
@@ -50,11 +48,11 @@ public class Locators {
 		public static By backnavigation = By.id("TODO by dev ");
 		public static By Changeyourpasswordtitle = By.id("TODO by dev ");
 		public static By errormsg = By.id("TODO by dev ");
-		
-		
+
 	}
-	public static class SignUpForDeals{
-		
+
+	public static class SignUpForDeals {
+
 		public static By SingUpButton = By.id("");
 		public static By inputZipCode = By.id("TODO by dev ");
 		public static By emailTextBox = By.id("TODO by dev ");
@@ -62,16 +60,17 @@ public class Locators {
 		public static By backNavigation = By.id("TODO by dev ");
 		public static By errorMsg = By.id("TODO by dev ");
 		public static By getMoreDeals = By.id("TODO by dev ");
-		public static By errorMsgOninvalid= By.id("TODO by dev");
-		
+		public static By errorMsgOninvalid = By.id("TODO by dev");
+
 	}
-	public static class HomePage{
+
+	public static class HomePage {
 		public static By buttonGoToPDP = By.xpath("//*[contains(@label,\"Adidas Men's Designed2Move Polo Shirt\")]");
 		public static By buttonPdp = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[11]");
-		//public static By homeBtn = By.id("lbl_home");
-		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
+		// public static By homeBtn = By.id("lbl_home");
+		// public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
-		//public static By searchBox = By.id("search_bar");this is frquent change b/dev
+		// public static By searchBox = By.id("search_bar");this is frquent change b/dev
 		public static By searchBox = By.id("btn_Search");
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
@@ -104,7 +103,7 @@ public class Locators {
 
 	}
 
-	public static class PLPPage{
+	public static class PLPPage {
 		public static By productTitle = By.id("lbl_product_title");
 		public static By PLPHeader = By.id("lbl_product_listing_header_title");
 		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
@@ -117,8 +116,10 @@ public class Locators {
 		public static By buttonShippingPolicy = By.id("btn_shipping_policy");
 		public static By buttonReturnPolicy = By.id("btn_return_policy");
 		public static By labelFreeStoreReturn = By.id("lbl_header");
-		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
-		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
+		public static By pageTitleShippingPolicy = By
+				.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
+		public static By pageTitleReturnPolicy = By
+				.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
 		public static By labelFreeSStoreReturn = By.id("lbl_header");
 		public static By PLP_Page__Instore_CurbSideBaner = By.id("lbl_banner_title");
@@ -127,73 +128,73 @@ public class Locators {
 		public static By PLP_Page_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		public static By WebViewBannerTitleFreeShipping = By.id("lbl_page_title");
 		public static By WebViewBannerTitle_Instore_CurbSideBaner = By.id("lbl_page_title");
-        public static By rating= By.xpath("//XCUIElementTypeOther[contains(@label,'4')]");
+		public static By rating = By.xpath("//XCUIElementTypeOther[contains(@label,'4')]");
 		public static By toggleOOS = By.id("switch_out_of_stock");
 		public static By sortAndFilterOutOfStockTitle = By.id("lbl_out_of_stock");
 		public static By sortAndFilterFilterIcon = By.id("icon_filter");
 		public static By editSearch = By.id("edit_search");
 		// OMNI-20323 15.04.2021
-		public static By FilterButton=By.id("filter_button");
-		public static By FilterScreenText=By.id("filter_Screen_text");
-		public static By FilterApplyButton=By.id("filter_apply_button");
-		public static By FilterCancel=By.id("filter_cancel");
-		public static By pickupDeliveryFilter=By.id("fitler_delivery_pickup");
-		public static By categoryFilter=By.id("filter_Category");
-		public static By brandFilter=By.id("filter_brand");
-		public static By sizeFilter=By.id("filter_size");
-		public static By styleFilter=By.id("fitler_style");
-		public static By colorFilter=By.id("filter_color");
-		public static By priceFilter=By.id("filter_price");
-		public static By ratingFilter=By.id("filter_rating");
-		public static By dealsFilter=By.id("filter_deals");
-		public static By promoAdImage=By.id("img_promo_ad_0");
-    }
+		public static By FilterButton = By.id("filter_button");
+		public static By FilterScreenText = By.id("filter_Screen_text");
+		public static By FilterApplyButton = By.id("filter_apply_button");
+		public static By FilterCancel = By.id("filter_cancel");
+		public static By pickupDeliveryFilter = By.id("fitler_delivery_pickup");
+		public static By categoryFilter = By.id("filter_Category");
+		public static By brandFilter = By.id("filter_brand");
+		public static By sizeFilter = By.id("filter_size");
+		public static By styleFilter = By.id("fitler_style");
+		public static By colorFilter = By.id("filter_color");
+		public static By priceFilter = By.id("filter_price");
+		public static By ratingFilter = By.id("filter_rating");
+		public static By dealsFilter = By.id("filter_deals");
+		public static By promoAdImage = By.id("img_promo_ad_0");
+	}
 
-	public static class SearchPage{
-	    //public static By searchBar = By.id("btn_Search");
+	public static class SearchPage {
+		// public static By searchBar = By.id("btn_Search");
 		public static By searchBar = By.id("search_bar");
 		public static By cancelBtn = By.id("btn_cancel");
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
-		public static By searchErrormsg =  By.id("txt_empty_result_body");
+		public static By searchErrormsg = By.id("txt_empty_result_body");
 
-
-		public static By searchCount =By.id("search_count");
-		public static By sortOption =By.id("sort_option");
-		public static By filterOption =By.id("filter_option");
-		public static By nullSearchPage= By.id("null_search_page");
+		public static By searchCount = By.id("search_count");
+		public static By sortOption = By.id("sort_option");
+		public static By filterOption = By.id("filter_option");
+		public static By nullSearchPage = By.id("null_search_page");
 
 		public static By navigateBack = By.id("btn_Back");
-		public static By recentSearchesTitle=By.id("lbl_shop_by_category_title");
-		public static By clearAll=By.xpath("//XCUIElementTypeOther[@name='Clear All']");
+		public static By recentSearchesTitle = By.id("lbl_shop_by_category_title");
+		public static By clearAll = By.xpath("//XCUIElementTypeOther[@name='Clear All']");
 
-		// labels for did u mean 
-		public static By showingresultforlabel =  By.id("lbl_show_result_for");
-		public static By showingresultforlabelvalue =  By.id("lbl_show_result_forvalue");
-		public static By searchinsteedof =  By.id("lbl_search_instead_for");
-		public static By searchinsteedofvalue =  By.id("btn_search_instead_forvalue");
+		// labels for did u mean
+		public static By showingresultforlabel = By.id("lbl_show_result_for");
+		public static By showingresultforlabelvalue = By.id("lbl_show_result_forvalue");
+		public static By searchinsteedof = By.id("lbl_search_instead_for");
+		public static By searchinsteedofvalue = By.id("btn_search_instead_forvalue");
 		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
 
 		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
-		//public static By navigateBack = By.id("btn_back");
-		//public static By recentSearchesTitle=By.id("TODO by dev");;
-		//public static By clearAll=By.id("TODO by dev");;
-		//public static By recentSearches=By.id("TODO by dev");;
+		// public static By navigateBack = By.id("btn_back");
+		// public static By recentSearchesTitle=By.id("TODO by dev");;
+		// public static By clearAll=By.id("TODO by dev");;
+		// public static By recentSearches=By.id("TODO by dev");;
 
-       // public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
-		public static By recentSearches=By.id("lbl_shop_by_category_title");;
+		// public static By searchsuggestionkeywordbutton =
+		// By.id("btn_searchsuggestionkeywordbutton");
+		public static By recentSearches = By.id("lbl_shop_by_category_title");;
 
-		public static By popularSearchesTitle=By.id("TODO by dev");;
-		public static By popularsearchesItem=By.id("TODO by dev");;
-		public static By noresultlabel=By.id("txt_empty_result_title");;
+		public static By popularSearchesTitle = By.id("TODO by dev");;
+		public static By popularsearchesItem = By.id("TODO by dev");;
+		public static By noresultlabel = By.id("txt_empty_result_title");;
 
 	}
-	
-	public static class OnBoardingScreen{
+
+	public static class OnBoardingScreen {
 		public static By maybeLaterButton = By.id("btn_maybe_later");
 	}
 
-	public static class PDPPage{
+	public static class PDPPage {
 		public static By GreyColor = By.id("color_list_item_Color_2");
 		public static By imageHero = By.id("img_hero");
 		public static By labelProductTitle = By.id("lbl_product_title");
@@ -211,38 +212,42 @@ public class Locators {
 		public static By shoeSizeVariant = By.id("lbl_size_title_Shoe_Size");
 		public static By colorValueWhite = By.id("lbl_color_value_White");
 		public static By colorValueGrey = By.id("lbl_color_value_Gray_Six");
-		public static By firstColor= By.id("color_list_item_0");
-		public static By sizeVariant =By.id("lbl_size_title_Size");
+		public static By firstColor = By.id("color_list_item_0");
+		public static By sizeVariant = By.id("lbl_size_title_Size");
 		public static By sizeValue = By.id("lbl_size_value");
 		public static By sizeValueLarge = By.id("lbl_size_value_Large");
 		public static By xSmallSize = By.id("size_list_item_0");
 		public static By smallSize = By.id("size_list_item_1");
 		public static By mediumSize = By.id("size_list_item_Size_2");
 		public static By largeSize = By.id("size_list_item_3");
-		public static By xLargeSize= By.id("size_list_item_4");
+		public static By xLargeSize = By.id("size_list_item_4");
 		public static By btnSizeChart = By.id("btn_size_chart");
 		public static By buttonaddtowishlist = By.id("btn_buttonaddtowishlist");
-		//public static By sizeChartTitle =By.id("lbl_size_chart");
-		public static By sizeChartTitle =By.id("lbl_page_title");
+		// public static By sizeChartTitle =By.id("lbl_size_chart");
+		public static By sizeChartTitle = By.id("lbl_page_title");
 		public static By btnCancelSizeChart = By.id("btn_back");
-		//public static By btnCancelSizeChart = By.id("btn_cancel");
+		// public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By cancelBtn = By.id("cancel_btn_find_store");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
 		public static By pickUpAndDeliveryTitle = By.id("lbl_p_and_d_options");
 		public static By homeDeliveryTitle = By.id("lbl_home_delivery");
-		public static By subLabel =By.id("lbl_order_by");
+		public static By subLabel = By.id("lbl_order_by");
 		public static By whiteColor = By.id("color_list_item_Color_1");
 		public static By shoeSize = By.id("size_list_item_Shoe_Size_2");
 		public static By AppStoreGuidelines = By.id("lbl_fire_arm");
 		public static By ProductSafetyInformation = By.id("lbl_detail_spec_important_product_and_safety_information");
-		public static By ProductSafetyInformationPara1 = By.id("lbl_detail_spec_important_product_and_safety_information_value 0");
-		public static By ProductSafetyInformationPara2 = By.id("lbl_detail_spec_important_product_and_safety_information_value 1");
-		public static By ProductSafetyInformationPara3 = By.id("lbl_detail_spec_important_product_and_safety_information_value 2");
-		public static By ProductSafetyInformationPara4 = By.id("lbl_detail_spec_important_product_and_safety_information_value 3");
-		// labls of store section 
+		public static By ProductSafetyInformationPara1 = By
+				.id("lbl_detail_spec_important_product_and_safety_information_value 0");
+		public static By ProductSafetyInformationPara2 = By
+				.id("lbl_detail_spec_important_product_and_safety_information_value 1");
+		public static By ProductSafetyInformationPara3 = By
+				.id("lbl_detail_spec_important_product_and_safety_information_value 2");
+		public static By ProductSafetyInformationPara4 = By
+				.id("lbl_detail_spec_important_product_and_safety_information_value 3");
+		// labls of store section
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");
-	    public static By storeAddress = By.id("lbl_store_address");
+		public static By storeAddress = By.id("lbl_store_address");
 		public static By storetime = By.id("lbl_time");
 		public static By storePhone = By.id("lbl_phone");
 		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
@@ -260,66 +265,55 @@ public class Locators {
 		public static By FindAvailabilityonotherStoreCTA = By.id("btn_FindAvailabilityonotherStoreCTA");
 		public static By Notifymewhenavailablelabel = By.id("lbl_Notifymewhenavailablelabel");
 		public static By limitedstocklabel = By.id("lbl_limitedstocklabel");
-		
-		
+
 		// store label section
 		public static By OverLayCartSKU = By.id("lbl_product_sku_value");
 		public static By OverLayCartPrice = By.id("lbl_product_price");
 		public static By OverLayCartQty = By.id("lbl_product_qty_value");
 		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
-		public static By WebViewBannerPDP = By.xpath("//XCUIElementTypeStaticText[@name=\"Glock G27 Gen3 40 S&W Sub-Compact 9-Round Pistol\"]");
+		public static By WebViewBannerPDP = By
+				.xpath("//XCUIElementTypeStaticText[@name=\"Glock G27 Gen3 40 S&W Sub-Compact 9-Round Pistol\"]");
 		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
 
-
-		// OMNI-22048 - Gift card locators  -11.04.2021- Nirmal 	
+		// OMNI-22048 - Gift card locators -11.04.2021- Nirmal
 		public static By GiftCardDesc = By.id("lbl_product_description");
-		public static By GiftCardTitle =By.id("lbl_gc_title");
-		public static By GiftCardDetails=By.id("lbl_detail_spec_title");
-		public static By GiftCardHeroImage=By.id("lbl_gc_heroImage");
-		
-		// OMNI-29409 - GC ATC & OOS -12.04.2021-Nirmal
-	    
-	    public static By overLayAddedToCartText= By.id("lbl_added_to_cart");
-	    public static By overLayShippingInformation= By.id("lbl_shipping_infomation");
-	    public static By overLayProductImage=By.id("img_product_thumbnail _OverLayCart");
-	    public static By buttonContinueShopping = By.id("btn_continue_shopping");
-	    public static By OutofStock=By.id("");
-	    
-	    
-		
-		//OMNI-29377 - GC Cart Component -13.04.2021 -Nirmal
-		public static By labelcardAmount=By.id("lbl_card_price"); 
-		public static By listCardAmount=By.id("price_list_item_Card_Amount_0");
-		public static By labelDefaultCardAmount=By.id("");
-		public static By btncardOptionAsAmount=By.id("");
-		public static By btncartOptionOther=By.id("");
-		public static By labelInstructionMsg=By.id("");
-		public static By inputEnterAmount=By.id("");
-		public static By inputEnterAmountDefaultValue=By.id("");
-		public static By labelErrorMessage=By.id("");
-	   
-	    
-	    
-	    
-	    
+		public static By GiftCardTitle = By.id("lbl_gc_title");
+		public static By GiftCardDetails = By.id("lbl_detail_spec_title");
+		public static By GiftCardHeroImage = By.id("lbl_gc_heroImage");
 
+		// OMNI-29409 - GC ATC & OOS -12.04.2021-Nirmal
+
+		public static By overLayAddedToCartText = By.id("lbl_added_to_cart");
+		public static By overLayShippingInformation = By.id("lbl_shipping_infomation");
+		public static By overLayProductImage = By.id("img_product_thumbnail _OverLayCart");
+		public static By buttonContinueShopping = By.id("btn_continue_shopping");
+		public static By OutofStock = By.id("");
+
+		// OMNI-29377 - GC Cart Component -13.04.2021 -Nirmal
+		public static By labelcardAmount = By.id("lbl_card_price");
+		public static By listCardAmount = By.id("price_list_item_Card_Amount_0");
+		public static By labelDefaultCardAmount = By.id("");
+		public static By btncardOptionAsAmount = By.id("");
+		public static By btncartOptionOther = By.id("");
+		public static By labelInstructionMsg = By.id("");
+		public static By inputEnterAmount = By.id("");
+		public static By inputEnterAmountDefaultValue = By.id("");
+		public static By labelErrorMessage = By.id("");
 
 		public static By freeStrorePickupRadioButton = By.id("rd_free_store_pickup");
 
 		public static By searchStoreBox = By.id("search_btn_find_store");
 		public static By searchBtn = By.id("Search");
-		public static By widthSizeD= By.id("size_list_item_Shoe_Width_0");
+		public static By widthSizeD = By.id("size_list_item_Shoe_Width_0");
 		public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
 		public static By continueShopping = By.xpath("//XCUIElementTypeOther[@name='btn_continue_shopping']");
-
-
 
 		public static By freeStorePickUpTitle = By.id("lbl_free_store_pickup");
 		public static By deailsSpecTitle = By.id("lbl_detail_spec_title");
 		public static By skuDetailTitle = By.xpath("//*[contains(@label,'SKU')]");
 		public static By itemTitle = By.xpath("//*[contains(@label,'ITEM')]");
 		public static By productDetails = By.id("lbl_detail_spec_description");
-		
+
 		public static By OverLayCartDileveryMethoD = By.id("lbl_shipping_infomation");
 		public static By OverLayCartTitle = By.id("lbl_product_title");
 		public static By OverLayCartImage = By.id("img_product_thumbnail _OverLayCart");
@@ -346,13 +340,12 @@ public class Locators {
 		public static By productTite = By.id("lbl_product_title");
 		public static By backBtn = By.id("btn_back");
 
-		public static By labelItemCount  = By.id("lbl_cart");
-		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
-
+		public static By labelItemCount = By.id("lbl_cart");
+		public static By CounterBadgeOnCartIcon = By.id("TODO dev");
 
 	}
 
-	public static class ShopPage{
+	public static class ShopPage {
 		public static By shopPageTitle = By.id("lbl_shop");
 		public static By subcat = By.id("lbl_category_list_item");
 		public static By shopAll = By.id("btn_shop_all");
@@ -362,8 +355,8 @@ public class Locators {
 		public static By categorytitle = By.id("lbl_category_title");
 		public static By shopAllLink = By.id("btn_shop_all");
 	}
-	
-	public static class WishlistPage{
+
+	public static class WishlistPage {
 		public static By wishlistTitle = By.id("lbl_wish_list");
 		public static By editBtn = By.id("btn_edit");
 		public static By renameWishlistTitle = By.id("text_rename_wishlist");
@@ -372,10 +365,10 @@ public class Locators {
 		public static By deleteBtn = By.id("");
 		public static By cancelbtn = By.id("");
 		public static By textInputWishlist = By.id("textinput_wishlist");
-		//public static By wishlist = By.id("lbl_wishlist");  frequent changeby dev
+		// public static By wishlist = By.id("lbl_wishlist"); frequent changeby dev
 		public static By wishlist = By.xpath("//*[contains(@label, 'Wish List')]");
 		public static By wishlistIcon = By.id("btn_add_to_wishlist");
-	  //public static By addWishlist = By.id("");
+		// public static By addWishlist = By.id("");
 		public static By wishlistTextInput = By.id("textinput_wishlist");
 		public static By wishlistAddButton = By.id("btn_add_wishlist");
 		public static By wishlistTileTitle = By.id("txt_wishlist_name");
@@ -401,27 +394,22 @@ public class Locators {
 		public static By Removefromwishlistbutton = By.id("btn_remove");
 		public static By conformationmessage = By.xpath("//*[contains(@label,'Are you sure you want to remove this')]");
 		public static By wishlistempty = By.id("lbl_wishlist_empty");
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
-	public static class ShopNewPage{
+	public static class ShopNewPage {
 		public static By shopNewTitle = By.id("lbl_page_title");
 		public static By oKBtnLocation = By.xpath("//*[contains(@label,'OK')]");
 		public static By allowOnceBtn = By.xpath("//*[contains(@label,'Allow Once')]");
 		public static By backBtn = By.id("btn_back");
-		public static By defaultAddressCheckbox=By.id("check_box_message");
-		public static By addNewAddressBtn=By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
+		public static By defaultAddressCheckbox = By.id("check_box_message");
+		public static By addNewAddressBtn = By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
 
 	}
-	public static class AccountPage{
+
+	public static class AccountPage {
 		public static By accountTitle = By.id("lbl_account");
-		public static By loginLink = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
+		public static By loginLink = By.id("btn_sign_in");
 		public static By findStoreLink = By.xpath("//XCUIElementTypeButton[@name=\"FIND STORE\"]");
 		public static By buttonAddressBook = By.xpath("//XCUIElementTypeButton[@name='ADDRESS BOOK']");
 		public static By buttonCreateAccount = By.xpath("//XCUIElementTypeButton[@name='CREATE AN ACCOUNT']");
@@ -434,21 +422,21 @@ public class Locators {
 		public static By billingZipCode = By.id("input_blling_zip_code");
 		public static By buttonCheck = By.id("btn_check");
 		public static By buttonLogOut = By.xpath("//XCUIElementTypeButton[@label=\"Log Out\"]");
-		public static By creditCardHOlderName=By.id("TODO by dev");
-		public static By creditCardNumber=By.id("TODO by dev");
-		public static By creditCardExpiry=By.id("TODO by dev");
-		public static By creditCardCvvNumber=By.id("TODO by dev");
-		public static By creditCardPageTitle=By.id("TODO by dev");
-		public static By alertPopUPCreditCard=By.id("TODO by dev");
+		public static By creditCardHOlderName = By.id("TODO by dev");
+		public static By creditCardNumber = By.id("TODO by dev");
+		public static By creditCardExpiry = By.id("TODO by dev");
+		public static By creditCardCvvNumber = By.id("TODO by dev");
+		public static By creditCardPageTitle = By.id("TODO by dev");
+		public static By alertPopUPCreditCard = By.id("TODO by dev");
 		public static By billingAddressTitle = By.id("lbl_billing_address");
 		public static By greetingMessage = By.id("lbl_greeting_message");
 		public static By setAsDefaultCheckBox = By.id("Checkbox_Setasdefault");
 		public static By defaultAddressCheckbox = By.id("TODO by dev");
-		public static By asoCardInforMationTile= By.id("TODO by dev");
-		public static By cardNoEditBox=By.id("TODO by dev");
+		public static By asoCardInforMationTile = By.id("TODO by dev");
+		public static By cardNoEditBox = By.id("TODO by dev");
 	}
-	
-	public static class CartPage{
+
+	public static class CartPage {
 		public static By qtyDecrementStepper = By.id("minus_btn_id");
 		public static By labelYourCart = By.id("lbl_your_cart");
 		public static By labelItems = By.id("lbl_item_count");
@@ -476,7 +464,7 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
-        public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
+		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
 		public static By cartColorVariant = By.id("lbl_product_attribute_value_Color");
 		public static By userIcon = By.id("icon_user");
 		public static By guestCheckoutLabel = By.id("lbl_guest_checkout");
@@ -496,8 +484,10 @@ public class Locators {
 		public static By buttonShippingPolicy = By.id("btn_shipping_policy");
 		public static By buttonReturnPolicy = By.id("btn_return_policy");
 		public static By labelFreeStoreReturn = By.id("lbl_header");
-		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
-		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
+		public static By pageTitleShippingPolicy = By
+				.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
+		public static By pageTitleReturnPolicy = By
+				.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 		public static By widthVariant = By.id("lbl_product_attribute_value_Shoe");
 		public static By FreeWithPurchageHeading = By.id("lbl_freeWithPurchageHeading");
 		public static By ToolTipFreeWithPurchageInfo = By.id("tooltip_toolTipFreeWithPurchageInfo");
@@ -514,29 +504,29 @@ public class Locators {
 		public static By loginoncartwishlist = By.id("btn_login");
 		public static By existingwishlist = By.id("btn_list_Item");
 		public static By sucessmessageitemaddedtowishlist = By.xpath("//*[contains(@label, 'item added to')]");
-		
-		
-		
 
 	}
-	public static class AcademyExclusivePage{
+
+	public static class AcademyExclusivePage {
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
 
 	}
 
-	public static class CheckoutPage{
-		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
+	public static class CheckoutPage {
+		public static By productThumbNail = By
+				.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
-		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
+		public static By productSKU = By.xpath("//*[contains(@name,'S K U')]");
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("CHECKOUT");
-		public static By addNewAddress =By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
-		public static By addYourShippingInformation =By.xpath("//XCUIElementTypeOther[contains(@name,'Location Icon')]");
+		public static By addNewAddress = By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
+		public static By addYourShippingInformation = By
+				.xpath("//XCUIElementTypeOther[contains(@name,'Location Icon')]");
 		public static By shippingMessage = By.id("lbl_list_zip_code0");
 		public static By savedAddress = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
-		public static By saveAddressBtn= By.xpath("//*[contains(@label,'Save address']");
+		public static By saveAddressBtn = By.xpath("//*[contains(@label,'Save address']");
 		public static By defaultAddressLabel = By.id("shipping_container");
-		public static By editAddressLink=By.xpath("//XCUIElementTypeOther[@name='Edit']");
+		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 		public static By labelTitle = By.id("lbl_checkout");
 		public static By contactInformation = By.id("lbl_checkout_information_header");
 		public static By emailField = By.id("tf_email");
@@ -545,15 +535,18 @@ public class Locators {
 		public static By signInButton = By.id("btn_sign_in");
 		public static By continueAsGuestButton = By.id("btn_guest_checkout");
 		public static By emailFieldLabel = By.id("lbl_email_field");
-		public static By productQuantity=By.xpath("//XCUIElementTypeOther[contains(@name,'Q t y')]");
-		public static By orderProcesssingMessage=By.id("shipping_method_desc_id");
-		public static By shippingMethod=By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
+		public static By productQuantity = By.xpath("//XCUIElementTypeOther[contains(@name,'Q t y')]");
+		public static By orderProcesssingMessage = By.id("shipping_method_desc_id");
+		public static By shippingMethod = By
+				.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
 		public static By labelShippingHeader = By.id("lbl_delivery_option_name0");
 		public static By labelShippingMethod = By.id("lbl_shipping_method");
 		public static By labelShippingMethodDisclaimer = By.id("lbl_service_desciption");
-		public static By labelShippingMethods = By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
-		public static By radioButtonShippingMethods = By.xpath("//XCUIElementTypeOther[contains(@value,'checkbox') and contains(@id,'shipping_method_check_box_id')]");
-        public static By buttonPlaceOrder = By.id("btn_place_order");
+		public static By labelShippingMethods = By
+				.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
+		public static By radioButtonShippingMethods = By.xpath(
+				"//XCUIElementTypeOther[contains(@value,'checkbox') and contains(@id,'shipping_method_check_box_id')]");
+		public static By buttonPlaceOrder = By.id("btn_place_order");
 		public static By paypal = By.id("btn_pay_withPaypal");
 		public static By paypalEmail = By.xpath("//*[contains(@value,'Email or mobile number')]");
 		public static By paypalNext = By.xpath("//*[contains(@label,'Next')]");
@@ -561,9 +554,9 @@ public class Locators {
 		public static By paypalLoginButton = By.xpath("//*[contains(@label,'Log In')]");
 		public static By paypalPayNowButton = By.xpath("//*[contains(@label,'Pay Now')]");
 		public static By paypalCancelButton = By.xpath("//*[contains(@label,'Cancel')]");
-    }
+	}
 
-	public static class storePickup{
+	public static class storePickup {
 		public static By findYourStoreMessage = By.xpath("//*[contains(@label, 'Find Your nearest stores')]");
 		public static By allowLocationService = By.id("btn_allow_location");
 		public static By enterCityOrZipcode = By.id("btn_enter_city");
@@ -571,23 +564,25 @@ public class Locators {
 		public static By allowOnce = By.id("Allow Once");
 		public static By allowWhileUsingApp = By.id("Allow While Using App");
 		public static By doNotAllow = By.id("Don�t Allow");
-		public static By storeNameFindStore = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_check_box_find_store')]");
+		public static By storeNameFindStore = By
+				.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_check_box_find_store')]");
 		public static By storeRadioBtn = By.xpath("//XCUIElementTypeOther[contains(@name,'check_box_find_store')]");
-		public static By storeDetailsLink = By.xpath("//XCUIElementTypeOther[contains(@name,'lbl_details_find_store')]");
+		public static By storeDetailsLink = By
+				.xpath("//XCUIElementTypeOther[contains(@name,'lbl_details_find_store')]");
 		public static By availibilityMessage;
 		public static By errorMessage = By.xpath("//XCUIElementTypeStaticText[contains(@name,'no stores')]");
-		public static By addressOnDetailsPage=By.id("lbl_store_detail_address");
-		public static By phoneNumOnDetailsPage=By.id("lbl_store_detail_phone");
-		public static By storeHoursOnDetailsPage=By.id("lbl_store_detail_timing");
-		public static By makeMyStoreOnDetailsPage=By.id("lbl_store_detail_make_my_store");
-		public static By copyAddressLink=By.xpath("//XCUIElementTypeButton[@name='Copy address']");
-		public static By openInGoogleMap=By.xpath("//XCUIElementTypeButton[@name='Open in google Maps']");;
-		public static By openInMaps=By.xpath("//XCUIElementTypeButton[@name='Open in Maps']");
-		public static By cancelBtn=By.id("cancel_btn_find_store");
-		public static By defaultStoreName=By.id("lbl_details_find_store");
+		public static By addressOnDetailsPage = By.id("lbl_store_detail_address");
+		public static By phoneNumOnDetailsPage = By.id("lbl_store_detail_phone");
+		public static By storeHoursOnDetailsPage = By.id("lbl_store_detail_timing");
+		public static By makeMyStoreOnDetailsPage = By.id("lbl_store_detail_make_my_store");
+		public static By copyAddressLink = By.xpath("//XCUIElementTypeButton[@name='Copy address']");
+		public static By openInGoogleMap = By.xpath("//XCUIElementTypeButton[@name='Open in google Maps']");;
+		public static By openInMaps = By.xpath("//XCUIElementTypeButton[@name='Open in Maps']");
+		public static By cancelBtn = By.id("cancel_btn_find_store");
+		public static By defaultStoreName = By.id("lbl_details_find_store");
 	}
 
-	public static class AddAddressPage{
+	public static class AddAddressPage {
 		public static By addAddressHeader = By.id("header_add_address");
 		public static By textFirstName = By.id("tf_first_name");
 		public static By textLastName = By.id("tf_last_name");
@@ -601,7 +596,7 @@ public class Locators {
 		public static By buttonSaveAddress = By.id("btn_add_new_address");
 	}
 
-	public static class AddAddress{
+	public static class AddAddress {
 		public static By addAddressHeader = By.id("header_add_address");
 		public static By inputFirstName = By.id("tf_first_name");
 		public static By inputLastName = By.id("tf_last_name");
@@ -612,8 +607,8 @@ public class Locators {
 		public static By inputPhone = By.id("tf_phone_no");
 		public static By inputState = By.id("tf_state");
 		public static By buttonAddNewAddress = By.id("btn_add_new_address");
-		public static By errorPopUp= By.xpath("//*[contains(@label,'OK')]");
-		//Errors
+		public static By errorPopUp = By.xpath("//*[contains(@label,'OK')]");
+		// Errors
 		public static By lblFirstNameError = By.id("lbl_first_name_error");
 		public static By lblLastNameError = By.id("lbl_last_name_error");
 		public static By lblAddressError = By.id("lbl_address_error");
@@ -626,16 +621,17 @@ public class Locators {
 		public static By buttonUpdateAddress = By.id("btn_add_new_address");
 		public static By buttonAlertOK = By.name("OK");
 
-		public static By savedAddresses= By.id("");
+		public static By savedAddresses = By.id("");
 	}
 
-	public static class FindStore{
+	public static class FindStore {
 		public static By findStoreHeader = By.id("title_find_store");
 		public static By searchBox = By.id("search_btn_find_store");
 		public static By noStoreAvailableMessage = By.id("lbl_no_store_available");
 		public static By cancelButton = By.id("cancel_btn_find_store");
 	}
-	public static class Category{
+
+	public static class Category {
 		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
 		public static By l2_catgoryElelnt = By.id("lbl_category_list_item");
 		public static By l3_catgoryElelnt = By.id("lbl_category_list_item");
@@ -654,11 +650,11 @@ public class Locators {
 		public static By ShopByBrandyTxt = By.id("ShopByBrandyTxt");
 		public static By clp_catgoryElelnt = By.id("clp_catgoryElelnt");
 
- // locators for PLP
+		// locators for PLP
 		public static By labelLProductPrice = By.id("lbl_list_price");
 		public static By lbl_clearance_price_range = By.id("lbl_clearance_price_range");
 		public static By labelProductTitle = By.id("lbl_product_title");
-	//	 public static By labelratingsReviews = By.id("lbl_category_list_item");
+		// public static By labelratingsReviews = By.id("lbl_category_list_item");
 		public static By labelImage = By.id("RNE__Image");
 		public static By labelProductCoLourVariantSwatch = By.id("labelProductCoLourVariantSwatch");
 		public static By label_PLPbadge = By.id("lbl_badge_text");
@@ -676,7 +672,7 @@ public class Locators {
 		public static By CLP_Page_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 	}
 
-	public static class SignUp{
+	public static class SignUp {
 		public static By signUpHeader = By.id("lbl_header_title");
 		public static By firstName = By.id("input_first_name");
 		public static By lastName = By.id("input_last_name");
@@ -695,7 +691,8 @@ public class Locators {
 		public static By inputPassword = By.id("input_passowrd");
 		public static By labelAccountAlreadyRegistered = By.id("");
 	}
-	public static class AddressBook{
+
+	public static class AddressBook {
 		public static By buttonAddNewAddress = By.name("Add New Address");
 		public static By labelSavedAddresses = By.id("lbl_saved_address");
 		public static By addressBookButton = By.id("btn_address_book");
@@ -705,7 +702,8 @@ public class Locators {
 
 	public static class AddressVerification {
 		public static By titleAddressVerification = By.id("title_address_verification");
-		public static By warningAddressVerification = By.xpath("//*[contains(@label,'We were unable to verify your address']");
+		public static By warningAddressVerification = By
+				.xpath("//*[contains(@label,'We were unable to verify your address']");
 		public static By labelSuggestedAddress = By.id("address_option_name_id0");
 		public static By labelYouEntered = By.id("address_option_name_id1");
 		public static By buttonUseSelectedAddress = By.id("btn_use_selected_address");
@@ -725,100 +723,95 @@ public class Locators {
 
 	}
 
-	//Use this for my account welcome page after login
-	public static class MyAccountwelcomePage{
+	// Use this for my account welcome page after login
+	public static class MyAccountwelcomePage {
 		public static By MyAcademy = By.id("lbl_my_academy");
 		public static By buttonOrders = By.id("btn_orders");
 		public static By buttonProfile = By.id("btn_Myaccount_profile");
 		public static By buttonAddressbook = By.id("btn_Myaccount_addressbook");
-		// dev are changing this wish list button name 
-		//public static By buttonWishlist = By.id("lbl_profile");
+		// dev are changing this wish list button name
+		// public static By buttonWishlist = By.id("lbl_profile");
 		public static By buttonWishlist = By.xpath("//*[contains(@label, 'Wish List')]");
 		public static By buttonPayment = By.id("btn_Myaccount_Payment");
 		public static By buttoncontactus = By.id("btn_contact_us");
 		public static By CSMobilenumber = By.xpath("//XCUIElementTypeButton[@name=\"1888-922-2336\"]");
 		public static By CallCancelbutton = By.xpath("//XCUIElementTypeButton[@name=\"Cancel\"]");
-		
-
 
 	}
 
-	//Use this for my account Payment section
-		public static class MyAccountPayment{
-			public static By buttonback = By.id("btn_payment_back");
-			public static By Paymenttitle = By.id("lbl_payment_title");
-			public static By SavedCardslabel = By.id("lbl_SavedCard");
-			public static By savedCards = By.id("btn_saved_card");
-			public static By SavedCardsDefault = By.id("btn_saved_card_default");
-			public static By existingasocard = By.id("btn_existingaso_card");
-			public static By buttonaddacacemycard = By.id("btn_addaso_card");
-			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
-			public static By setAsDefaultCheckbox = By.id("chk_set_as_default");
-		}
+	// Use this for my account Payment section
+	public static class MyAccountPayment {
+		public static By buttonback = By.id("btn_payment_back");
+		public static By Paymenttitle = By.id("lbl_payment_title");
+		public static By SavedCardslabel = By.id("lbl_SavedCard");
+		public static By savedCards = By.id("btn_saved_card");
+		public static By SavedCardsDefault = By.id("btn_saved_card_default");
+		public static By existingasocard = By.id("btn_existingaso_card");
+		public static By buttonaddacacemycard = By.id("btn_addaso_card");
+		public static By buttonaddcreditcard = By.id("btn_adddredit_card");
+		public static By setAsDefaultCheckbox = By.id("chk_set_as_default");
+	}
 
-		//Use this for my account add new cc section
-				public static class Addnewcreditcard{
-					public static By buttonAddNewCreditCard= By.id("button_add_new_credit_card");
-					public static By buttonback = By.id("btn_payment_back");
-					public static By AddnewcrerditCardlabel = By.id("lbl_addnewcreditcard");
-					public static By imgVisa=By.id("img_visa");
-					public static By imgDisover=By.id("img_Discover");
-					public static By imgAmex=By.id("img_Amex");
-					public static By imgMasterCard=By.id("img_MasterCard");
-					public static By inputCardHolderName=By.id("input_cardholder_name");
-					public static By inputCardNumberField=By.id("input_card_number");
-					public static By inputCVV=By.id("input_cvv");
-					public static By inputExpiryDate=By.id("input_expiry_date");
-					public static By checkboxSaveForFutureAddress=By.id("checkbox_save_future_address");
+	// Use this for my account add new cc section
+	public static class Addnewcreditcard {
+		public static By buttonAddNewCreditCard = By.id("button_add_new_credit_card");
+		public static By buttonback = By.id("btn_payment_back");
+		public static By AddnewcrerditCardlabel = By.id("lbl_addnewcreditcard");
+		public static By imgVisa = By.id("img_visa");
+		public static By imgDisover = By.id("img_Discover");
+		public static By imgAmex = By.id("img_Amex");
+		public static By imgMasterCard = By.id("img_MasterCard");
+		public static By inputCardHolderName = By.id("input_cardholder_name");
+		public static By inputCardNumberField = By.id("input_card_number");
+		public static By inputCVV = By.id("input_cvv");
+		public static By inputExpiryDate = By.id("input_expiry_date");
+		public static By checkboxSaveForFutureAddress = By.id("checkbox_save_future_address");
 
+		public static By labelBillingAddress = By.id("label_billing_address");
+		public static By radioSameAsShippingAddress = By.id("radio_same_as_shipping_address");
+		public static By radioAddBillingAddress = By.id("radio_add_billing_address");
+		public static By buttonSaveCreditCard = By.id("button_save_credit_card");
+		public static By listSavedAddress = By.id("list_saved_address");
+		public static By listSavedAddressFirst = By.id("list_saved_address_first");
 
-					public static By labelBillingAddress=By.id("label_billing_address");
-					public static By radioSameAsShippingAddress=By.id("radio_same_as_shipping_address");
-					public static By radioAddBillingAddress=By.id("radio_add_billing_address");
-					public static By buttonSaveCreditCard=By.id("button_save_credit_card");
-					public static By listSavedAddress=By.id("list_saved_address");
-					public static By listSavedAddressFirst=By.id("list_saved_address_first");
+		public static By popupWarning = By.id("popup_warning");
+		public static By buttonContinueWarning = By.id("button_continue_warning");
+		public static By buttonCancelWarning = By.id("button_cancel_warning");
+		public static By msgAlertPopupHeading = By.id("msg_alert_popup_heading");
+		public static By msgAlertPopupSubHeading = By.id("msg_alert_popup_subheading");
 
+		public static By errorMsgInvalidCard = By.id("invalid_card_error");
+	}
 
-					public static By popupWarning= By.id("popup_warning");
-					public static By buttonContinueWarning = By.id("button_continue_warning");
-					public static By buttonCancelWarning= By.id("button_cancel_warning");
-					public static By msgAlertPopupHeading=By.id("msg_alert_popup_heading");
-					public static By msgAlertPopupSubHeading=By.id("msg_alert_popup_subheading");
+	// Use this for my account add new ASO cc section
+	public static class Addnewasocreditcard {
+		public static By buttonback = By.id("btn_payment_back");
+		public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
+		public static By Asocardtextbox = By.id("textbox_asocreditcard");
+		public static By Setasdefaultcheckbox = By.id("Checkbox_Setasdefault");
+		public static By ErrorModal = By.id("popup_errormodal");
+		public static By AreYousurewanttoleavelabel = By.id("lbl_SureWantToLeave");
+		public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
+		public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
+		public static By Continuealertbutton = By.id("btn_continuealeartbutton");
+		public static By DeleteCardbutton = By.id("btn_deletecardbutton");
 
-					public static By errorMsgInvalidCard=By.id("invalid_card_error");
-				}
+	}
 
+	// Use this for my account Billing address
+	public static class MyAccountBillingAddress {
+		public static By BilingFirstName = By.id("tf_first_name");
+		public static By BilingLastName = By.id("tf_last_name");
+		public static By BilingAddressText = By.id("tf_address");
+		public static By BilingAptName = By.id("tf_additional_address");
+		public static By BilingZipCode = By.id("tf_zip_code");
+		public static By BilingCity = By.id("tf_city");
+		public static By BilingPhoneNumber = By.id("tf_phone_no");
+		public static By SaveCreditcardbutton = By.id("btn_savecreditcard");
+		public static By LabelBillingAddress = By.id("lbl_billing_address");
 
-				//Use this for my account add new ASO cc section
-				public static class Addnewasocreditcard{
-					public static By buttonback = By.id("btn_payment_back");
-					public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
-					public static By Asocardtextbox = By.id("textbox_asocreditcard");
-					public static By Setasdefaultcheckbox = By.id("Checkbox_Setasdefault");
-					public static By ErrorModal = By.id("popup_errormodal");
-					public static By AreYousurewanttoleavelabel = By.id("lbl_SureWantToLeave");
-					public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
-					public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
-					public static By Continuealertbutton = By.id("btn_continuealeartbutton");
-					public static By DeleteCardbutton = By.id("btn_deletecardbutton");
+	}
 
-				}
-
-				//Use this for my account Billing address
-				public static class MyAccountBillingAddress{
-					public static By BilingFirstName = By.id("tf_first_name");
-					public static By BilingLastName = By.id("tf_last_name");
-					public static By BilingAddressText = By.id("tf_address");
-					public static By BilingAptName = By.id("tf_additional_address");
-					public static By BilingZipCode = By.id("tf_zip_code");
-					public static By BilingCity = By.id("tf_city");
-					public static By BilingPhoneNumber = By.id("tf_phone_no");
-					public static By SaveCreditcardbutton = By.id("btn_savecreditcard");
-					public static By LabelBillingAddress = By.id("lbl_billing_address");
-
-
-               }
 	public static class WelcomeScreen {
 		public static By HomeButton = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 	}
@@ -852,131 +845,112 @@ public class Locators {
 
 	}
 
-	
-	// created by Nirmal Jain - 06.05.2021  OMNI-28637
+	// created by Nirmal Jain - 06.05.2021 OMNI-28637
 	public static class UserProfile {
 		public static By switchSubscribeToEmailsFromAcademy = By.id("switch_subscribe_email");
 		public static By labelSubscribeToEmailsFromAcademy = By.id("lbl_subscribe_email_title");
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
-		public static By labelPeronalInformation= By.id("perfonal_informaiton_label");
-		public static By labelEditName=By.id("edit_name_label");
-		public static By labelChangeEmail=By.id("edit_change_email");
-		public static By msgChangeEmail=By.id("msg_change_email");
-		public static By inputEmail=By.id("input_email");
-		public static By inputConfirmEmail=By.id("input_confirmEmail");
-		public static By inputFirstName=By.id("input_firstName");
-		public static By inputLastName=By.id("input_lastName");
-		public static By buttonUpdate=By.id("button_update");
-		public static By buttonBack=By.id("button_back");
-		public static By buttonName=By.id("profile_name_button");
-		public static By buttonEmail=By.id("profile_email_button");
-		public static By buttonPassword=By.id("profile_password_button");
-		public static By txtCurrentName= By.id("profile_current_name");
-		public static By txtCurrentEmail= By.id("profile_current_email");
-		public static By msgErrorEmail= By.id("msg_error_email");
-		public static By msgErrorFirstName= By.id("msg_error_FirstName");
-		public static By msgErrorLastName= By.id("msg_error_LastName");
-		
-		
+		public static By labelPeronalInformation = By.id("perfonal_informaiton_label");
+		public static By labelEditName = By.id("edit_name_label");
+		public static By labelChangeEmail = By.id("edit_change_email");
+		public static By msgChangeEmail = By.id("msg_change_email");
+		public static By inputEmail = By.id("input_email");
+		public static By inputConfirmEmail = By.id("input_confirmEmail");
+		public static By inputFirstName = By.id("input_firstName");
+		public static By inputLastName = By.id("input_lastName");
+		public static By buttonUpdate = By.id("button_update");
+		public static By buttonBack = By.id("button_back");
+		public static By buttonName = By.id("profile_name_button");
+		public static By buttonEmail = By.id("profile_email_button");
+		public static By buttonPassword = By.id("profile_password_button");
+		public static By txtCurrentName = By.id("profile_current_name");
+		public static By txtCurrentEmail = By.id("profile_current_email");
+		public static By msgErrorEmail = By.id("msg_error_email");
+		public static By msgErrorFirstName = By.id("msg_error_FirstName");
+		public static By msgErrorLastName = By.id("msg_error_LastName");
+
 	}
 
-	public static class OrderDetail{
+	public static class OrderDetail {
 
 		public static By buttonOrder = By.id("button_Order");
-		public static By listOrder=By.id("list_Order");
-		public static By buttonOrderId=By.id("order_id");
-		public static By lookupOrder= By.id("TODO by dev");;
-		public static By labelOrderDetailPage= By.id("label_order_detail_page");
-		public static By buttonCancelOrder=By.id("button_cancel_order");
-		public static By buttonChevronCancelOrder=By.id("button_chevron_cancel_order");
-		public static By alertMessageOrderScreen=By.id("alert_order_screen");
-		public static By alertMessageText=By.id("alert_message_txt");
-		public static By buttonYesAlertMessage=By.id("button_Yes_alert");
-		public static By labelSucessOrderCancellationMesage=By.id("label_sucess_cancel_message");
-		public static By buttonNoAlertMessage=By.id("button_No_alert");
-		public static By OrderCancelConfirmationScreen=By.id("cancel_confirmation_screen");
-		public static By buttonBackOrderCancel=By.id("back_orderCancel");
-		public static By ErrorMesageOrderCancel=By.id("error_msg_order_cancel");
-		public static By labelOrderPage=By.id("label_order_page");
-		public static By Orderdetailheading=By.xpath("//*[contains(@label,'Order Detail')]");
-		public static By Ordernumber=By.id("lbl_order_number");
-		public static By orderdate=By.id("lbl_order_date");
-		public static By ordertotal=By.id("Orderdetail_label_order_total");
-		public static By cancelorderbutton=By.id("Orderdetail_btncancelorder");
-		public static By homedelivery=By.id("Orderdetail_label_homedelivery");
-		public static By customername=By.id("Orderdetail_label_customername");
-		public static By shippingaddress=By.id("Orderdetail_label_shipping_address");
-		public static By orderstatus=By.id("Orderdetail_label_shipping_status");
-		public static By inprocessing=By.id("Orderdetail_label_shippinginprocessing");
-		public static By shippingmethode=By.id("Orderdetail_label_shippingmethode");
-		public static By producttitle=By.id("lbl_product_title");
-		public static By productqty=By.id("lbl_productqty");
-		public static By productprice=By.id("lbl_product_price");
-		public static By skunumber=By.id("lbl_product_sku");
-		
-		public static By msgOrderCancel=By.id("TODO by dev");
-		public static By msgConfirmationEmail=By.id("TODO by dev");
-		public static By labelcancelOrderDate=By.id("TODO by dev");
-		
+		public static By listOrder = By.id("list_Order");
+		public static By buttonOrderId = By.id("order_id");
+		public static By lookupOrder = By.id("TODO by dev");;
+		public static By labelOrderDetailPage = By.id("label_order_detail_page");
+		public static By buttonCancelOrder = By.id("button_cancel_order");
+		public static By buttonChevronCancelOrder = By.id("button_chevron_cancel_order");
+		public static By alertMessageOrderScreen = By.id("alert_order_screen");
+		public static By alertMessageText = By.id("alert_message_txt");
+		public static By buttonYesAlertMessage = By.id("button_Yes_alert");
+		public static By labelSucessOrderCancellationMesage = By.id("label_sucess_cancel_message");
+		public static By buttonNoAlertMessage = By.id("button_No_alert");
+		public static By OrderCancelConfirmationScreen = By.id("cancel_confirmation_screen");
+		public static By buttonBackOrderCancel = By.id("back_orderCancel");
+		public static By ErrorMesageOrderCancel = By.id("error_msg_order_cancel");
+		public static By labelOrderPage = By.id("label_order_page");
+		public static By Orderdetailheading = By.xpath("//*[contains(@label,'Order Detail')]");
+		public static By Ordernumber = By.id("lbl_order_number");
+		public static By orderdate = By.id("lbl_order_date");
+		public static By ordertotal = By.id("Orderdetail_label_order_total");
+		public static By cancelorderbutton = By.id("Orderdetail_btncancelorder");
+		public static By homedelivery = By.id("Orderdetail_label_homedelivery");
+		public static By customername = By.id("Orderdetail_label_customername");
+		public static By shippingaddress = By.id("Orderdetail_label_shipping_address");
+		public static By orderstatus = By.id("Orderdetail_label_shipping_status");
+		public static By inprocessing = By.id("Orderdetail_label_shippinginprocessing");
+		public static By shippingmethode = By.id("Orderdetail_label_shippingmethode");
+		public static By producttitle = By.id("lbl_product_title");
+		public static By productqty = By.id("lbl_productqty");
+		public static By productprice = By.id("lbl_product_price");
+		public static By skunumber = By.id("lbl_product_sku");
+
+		/* created by Nirmal - OMNI-33184 07/06/2021 */
+		public static By buttonTrackDelivery = By.id("button_track_delivery");
+		public static By narvarScreen = By.id("narvar_screen");
+		public static By inputOrderId = By.id("input_orderId");
+		public static By inputZipCode = By.id("input_zipcode");
+		public static By buttonCheck = By.id("button_check");
+		public static By labelOrderLookupOrder = By.id("label_orderlookup");
+
 		/* created by Nirmal - OMNI-28213 - 5/7/2021 */
-		public static By labelFindYourorderwithChevron=By.id("label_can_not_find_order");
-		public static By LabelAddStoreReceiptwithChevron=By.id("label_addstore_receipt");
-		
-		public static By filterAllOrder=By.id("filter_allOrder");
-		public static By filterOnline=By.id("filter_online");
-		public static By filterInStore=By.id("filter_insore");
-		
-		public static By labelOrderCount=By.id("label_orderCount");
-		public static By SortedOrder=By.id("button_sortOrder");
-		public static By OrderStatus=By.id("label_orderstatus");
-		public static By labelOrderNumber=By.id("label_order_number");
-		public static By labelOrderDate=By.id("label_orderDate");
-		public static By labelOrderTotal=By.id("label_order_total");
-		public static By OrderList=By.id("list_Order");
-    
+		public static By labelFindYourorderwithChevron = By.id("label_can_not_find_order");
+		public static By LabelAddStoreReceiptwithChevron = By.id("label_addstore_receipt");
 
-		public static By labelAddstoreReceiptScreen=By.id("label_add_store_receipt_Screen");
-		public static By NoExistingOrderMsg=By.id("no_order_message");
+		public static By filterAllOrder = By.id("filter_allOrder");
+		public static By filterOnline = By.id("filter_online");
+		public static By filterInStore = By.id("filter_insore");
 
-	
+		public static By labelOrderCount = By.id("label_orderCount");
+		public static By SortedOrder = By.id("button_sortOrder");
+		public static By OrderStatus = By.id("label_orderstatus");
+		public static By labelOrderNumber = By.id("label_order_number");
+		public static By labelOrderDate = By.id("label_orderDate");
+		public static By labelOrderTotal = By.id("label_order_total");
+		public static By OrderList = By.id("list_Order");
 
-		
+		public static By labelAddstoreReceiptScreen = By.id("label_add_store_receipt_Screen");
+		public static By NoExistingOrderMsg = By.id("no_order_message");
+
 	}
-		//   Order history page for logged in user where all order will list 
-		
-		public static class OrderHistoryloggedInuser{
-			public static By orderheading=By.id("lbl_ordersheading");
-			public static By orderlabel=By.id("lbl_order");
-			public static By lookupyourorderbutton=By.id("btn_lookup_your_order");
-			public static By addastorereciptbutton=By.id("btn_addastorereciptbutton");
-			public static By orderpurchagetype=By.id("lbl_orderpurchagetype");
-			public static By orderstatusprocessing=By.id("lbl_orderstatusprocessing");
-			public static By orderstatusdelivered=By.id("lbl_orderstatusdelivered");
-			public static By ordernumberlabel=By.id("lbl_ordernumberlabel");
-			public static By ordernumber=By.id("lbl_ordernumber");
-			public static By orderdate=By.id("lbl_orderdate");
-			public static By orderdatelabel=By.id("lbl_orderdatelabel");
-			public static By ordertotallabel=By.id("lbl_ordertotallabel");
-			public static By ordertotal=By.id("lbl_ordertotal");
-			
-			
-		
-		
-		}
-		
-		
-		
+	// Order history page for logged in user where all order will list
 
+	public static class OrderHistoryloggedInuser {
+		public static By orderheading = By.id("lbl_ordersheading");
+		public static By orderlabel = By.id("lbl_order");
+		public static By lookupyourorderbutton = By.id("btn_lookup_your_order");
+		public static By addastorereciptbutton = By.id("btn_addastorereciptbutton");
+		public static By orderpurchagetype = By.id("lbl_orderpurchagetype");
+		public static By orderstatusprocessing = By.id("lbl_orderstatusprocessing");
+		public static By orderstatusdelivered = By.id("lbl_orderstatusdelivered");
+		public static By ordernumberlabel = By.id("lbl_ordernumberlabel");
+		public static By ordernumber = By.id("lbl_ordernumber");
+		public static By orderdate = By.id("lbl_orderdate");
+		public static By orderdatelabel = By.id("lbl_orderdatelabel");
+		public static By ordertotallabel = By.id("lbl_ordertotallabel");
+		public static By ordertotal = By.id("lbl_ordertotal");
 
-   
-
-		
-
-
-
-
-	
-
+	}
 
 	public static class OrdersPage {
 		public static By orderSummarylabel = By.id("lbl_order_summary");
@@ -1034,13 +1008,14 @@ public class Locators {
 		public static By slaMessage = By.id("TODO by dev");
 		public static By packageLabel = By.id("TODO by dev");
 		public static By itemsCount = By.id("TODO by dev");
-		
+		public static By getNotificationLink = By.id("TODO by dev");
 	}
 
 	public static class SavedAddresses {
 		public static By addressesTile = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_title')]");
 		public static By radioButtonAddress = By.xpath("//XCUIElementTypeOther[contains(@name,'CheckBox')]");
-		public static By labelAddressUsername = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
+		public static By labelAddressUsername = By
+				.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
 	
@@ -1080,6 +1055,10 @@ public class Locators {
 		public static By labelPostAnswer=By.id("TODO by dev");
 		
 		
+	}
+
+	public static class Phone{
+		public static By phoneNotification= By.id("TODO by dev");
 	}
 
 }
