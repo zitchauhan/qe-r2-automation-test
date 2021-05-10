@@ -262,6 +262,10 @@ public class AccountPage {
 			}else if(btnName.equalsIgnoreCase("wishlist button")){
 				
 				tapOnElement(Locators.MyAccountwelcomePage.buttonWishlist);
+				
+			}else if(btnName.equalsIgnoreCase("orders button")){
+
+				tapOnElement(Locators.MyAccountwelcomePage.buttonOrders);
 			}else if(btnName.equalsIgnoreCase("address book")){
 
 				tapOnElement(Locators.MyAccountwelcomePage.buttonAddressbook);
@@ -269,7 +273,7 @@ public class AccountPage {
 
 				tapOnElement(Locators.MyAccountwelcomePage.buttoncontactus);
 			}else if(btnName.equalsIgnoreCase("Mobilenumber")){
-
+				
 				tapOnElement(Locators.MyAccountwelcomePage.CSMobilenumber);
 			}else if(btnName.equalsIgnoreCase("cancel")){
 
@@ -507,4 +511,127 @@ public class AccountPage {
 		return isElementDisplayed(Locators.AccountPage.greetingMessage);
 	}
 
+	public void isComponenetDisplayedOnAsoCardPage(String field) {
+		if(field.contains("CardInforMation")) {
+		GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.asoCardInforMationTile);
+		}else if(field.contains("CardNumberEditBox")) {
+			GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.cardNoEditBox);
+	public void tabOnButtonOnTrackorderPage(String btnName) {
+		if(btnName.equalsIgnoreCase("Check button")) {
+			
+			tapOnElement(Locators.AccountPage.buttonCheck);
+		}else {
+			throw new UnsupportedOperationException("Given button type not defined");
+		}
+		
+	}
+
+	public boolean VarifyElementPresenseOnOrdersPage(String elementName) {
+		if(elementName.equalsIgnoreCase("Order Details")) {
+			
+			return isElementDisplayed(Locators.OrderDetail.Orderdetailheading);
+		} else if(elementName.equalsIgnoreCase("ordernumber")) {
+			
+			return isElementDisplayed(Locators.OrderDetail.Ordernumber);
+} else if(elementName.equalsIgnoreCase("orderdate")) {
+			
+			return isElementDisplayed(Locators.OrderDetail.orderdate);
+} else if(elementName.equalsIgnoreCase("ordertotalbutton")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.ordertotal);
+} else if(elementName.equalsIgnoreCase("cancelorder")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.cancelorderbutton);
+} else if(elementName.equalsIgnoreCase("deliveryheading")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.homedelivery);
+} else if(elementName.equalsIgnoreCase("customername")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.customername);
+} else if(elementName.equalsIgnoreCase("shippingaddress")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.shippingaddress);
+} else if(elementName.equalsIgnoreCase("orderstatus")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.orderstatus);
+	
+} else if(elementName.equalsIgnoreCase("shippingmethode")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.shippingmethode);
+} else if(elementName.equalsIgnoreCase("producttitle")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.producttitle);
+} else if(elementName.equalsIgnoreCase("productqty")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.productqty);
+} else if(elementName.equalsIgnoreCase("productprice")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.productprice);
+} else if(elementName.equalsIgnoreCase("skunumber")) {
+	
+	return isElementDisplayed(Locators.OrderDetail.skunumber);
+			
+		}else {
+			throw new UnsupportedOperationException("Given element not found on order details page");
+	}
+
+}
+
+	public boolean VarifyElementPresenseOnOrdershistoryPage(String elementName) {
+		if(elementName.equalsIgnoreCase("Order heading")) {
+			
+			return isElementDisplayed(Locators.OrderHistoryloggedInuser.orderheading);
+		} else if(elementName.equalsIgnoreCase("Order label")) {
+			
+			return isElementDisplayed(Locators.OrderHistoryloggedInuser.orderlabel);
+} else if(elementName.equalsIgnoreCase("lookupyourorderbutton")) {
+			
+			return isElementDisplayed(Locators.OrderHistoryloggedInuser.lookupyourorderbutton);
+} else if(elementName.equalsIgnoreCase("addastorereciptbutton")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.addastorereciptbutton);
+} else if(elementName.equalsIgnoreCase("orderpurchagetype")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.orderpurchagetype);
+} else if(elementName.equalsIgnoreCase("orderstatusprocessing")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.orderstatusprocessing);
+} else if(elementName.equalsIgnoreCase("orderstatusdelivered")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.orderstatusdelivered);
+} else if(elementName.equalsIgnoreCase("ordernumberlabel")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.ordernumberlabel);
+} else if(elementName.equalsIgnoreCase("ordernumber")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.ordernumber);
+} else if(elementName.equalsIgnoreCase("orderdatelabel")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.orderdatelabel);
+} else if(elementName.equalsIgnoreCase("orderdate")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.orderdate);
+} else if(elementName.equalsIgnoreCase("ordertotallabel")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.ordertotallabel);
+} else if(elementName.equalsIgnoreCase("ordertotal")) {
+	
+	return isElementDisplayed(Locators.OrderHistoryloggedInuser.ordertotal);
+	
+			
+		}else {
+			throw new UnsupportedOperationException("Given element not found on order details page");
+		}
+	}
+
+	public void tabOnButtonOnorderhistoryPage(String btnName) {
+		if(btnName.equalsIgnoreCase("lookupyourorderbutton")) {
+			
+			tapOnElement(Locators.OrderHistoryloggedInuser.lookupyourorderbutton);
+			
+		}else {
+			throw new UnsupportedOperationException("Given button type not defined");
+		}
+		
+	}
 }

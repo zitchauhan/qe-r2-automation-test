@@ -60,9 +60,9 @@ Feature: Cart Add to wish list
 		When User Clicks On MaY Be Later
 		Then User taps on "account" button on login screen 
 		Then User taps on "gotologin" button on login screen 
-		When User enters "email" on login screen 
+		When User enters "emailwithexistingwithlist" on login screen 
 		And User enters "password" on login screen 
-		And User taps on "LogIn" button on login screen 
+		#And User taps on "LogIn" button on login screen 
 		When User taps on shop in bottom nav
     Then User clicks on the Search Box
     And User search for the "SearchKeyword"
