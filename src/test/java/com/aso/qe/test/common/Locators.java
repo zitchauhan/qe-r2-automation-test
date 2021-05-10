@@ -783,20 +783,6 @@ public class Locators {
 		public static By errorMsgInvalidCard = By.id("invalid_card_error");
 	}
 
-	// Use this for my account add new ASO cc section
-	public static class Addnewasocreditcard {
-		public static By buttonback = By.id("btn_payment_back");
-		public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
-		public static By Asocardtextbox = By.id("textbox_asocreditcard");
-		public static By Setasdefaultcheckbox = By.id("Checkbox_Setasdefault");
-		public static By ErrorModal = By.id("popup_errormodal");
-		public static By AreYousurewanttoleavelabel = By.id("lbl_SureWantToLeave");
-		public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
-		public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
-		public static By Continuealertbutton = By.id("btn_continuealeartbutton");
-		public static By DeleteCardbutton = By.id("btn_deletecardbutton");
-
-	}
 
 	// Use this for my account Billing address
 	public static class MyAccountBillingAddress {
@@ -812,55 +798,23 @@ public class Locators {
 
 	}
 
-	//Use this for my account Payment section
-		public static class MyAccountPayment{
-			public static By buttonback = By.id("btn_payment_back");
-			public static By Paymenttitle = By.id("lbl_payment_title");
-			public static By SavedCardslabel = By.id("lbl_SavedCard");
-			public static By savedCards = By.id("btn_saved_card");
-			public static By SavedCardsDefault = By.id("btn_saved_card_default");
-			public static By existingasocard = By.id("btn_existingaso_card");
-			public static By buttonaddacacemycard = By.id("btn_addaso_card");
-			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
-			public static By setAsDefaultCheckbox = By.id("chk_set_as_default");
-		}
-
-		//Use this for my account add new cc section
-				public static class Addnewcreditcard{
-					public static By buttonAddNewCreditCard= By.id("button_add_new_credit_card");
-					public static By buttonback = By.id("btn_payment_back");
-					public static By AddnewcrerditCardlabel = By.id("lbl_addnewcreditcard");
-					public static By imgVisa=By.id("img_visa");
-					public static By imgDisover=By.id("img_Discover");
-					public static By imgAmex=By.id("img_Amex");
-					public static By imgMasterCard=By.id("img_MasterCard");
-					public static By inputCardHolderName=By.id("input_cardholder_name");
-					public static By inputCardNumberField=By.id("input_card_number");
-					public static By inputCVV=By.id("input_cvv");
-					public static By inputExpiryDate=By.id("input_expiry_date");
-					public static By checkboxSaveForFutureAddress=By.id("checkbox_save_future_address");
-
-
-					public static By labelBillingAddress=By.id("label_billing_address");
-					public static By radioSameAsShippingAddress=By.id("radio_same_as_shipping_address");
-					public static By radioAddBillingAddress=By.id("radio_add_billing_address");
-					public static By buttonSaveCreditCard=By.id("button_save_credit_card");
-					public static By listSavedAddress=By.id("list_saved_address");
-					public static By listSavedAddressFirst=By.id("list_saved_address_first");
-
-
-					public static By popupWarning= By.id("popup_warning");
-					public static By buttonContinueWarning = By.id("button_continue_warning");
-					public static By buttonCancelWarning= By.id("button_cancel_warning");
-					public static By msgAlertPopupHeading=By.id("msg_alert_popup_heading");
-					public static By msgAlertPopupSubHeading=By.id("msg_alert_popup_subheading");
-
-					public static By errorMsgInvalidCard=By.id("invalid_card_error");
-				}
-
+		
 
 				//Use this for my account add new ASO cc section
 				public static class Addnewasocreditcard{
+					public static By buttonbackN = By.id("btn_payment_back");
+					public static By AddnewAsocrerditCardlabelN = By.id("lbl_addnewasocreditcard");
+					public static By AsocardtextboxN = By.id("textbox_asocreditcard");
+					public static By SetasdefaultcheckboxN = By.id("Checkbox_Setasdefault");
+					public static By ErrorModalN = By.id("popup_errormodal");
+					public static By AreYousurewanttoleavelabelN = By.id("lbl_SureWantToLeave");
+					public static By AreYousurewanttoleaveMsglabelN = By.id("lbl_SureWantToLeaveMsg");
+					public static By CancelalertbuttonN = By.id("btn_cancelaleartbutton");
+					public static By ContinuealertbuttonN = By.id("btn_continuealeartbutton");
+					public static By DeleteCardbuttonN = By.id("btn_deletecardbutton");
+					public static By Invalidcvverror = By.id("lbl_Invalidcvverror");
+					public static By Invalidccerror = By.id("lbl_Invalidccerror");
+					public static By Invalidexpiryerror = By.id("lbl_Invalidexpiryerror");
 					public static By buttonback = By.id("btn_payment_back");
 					public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
 					public static By Asocardtextbox = By.id("textbox_asocreditcard");
@@ -871,27 +825,11 @@ public class Locators {
 					public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
 					public static By Continuealertbutton = By.id("btn_continuealeartbutton");
 					public static By DeleteCardbutton = By.id("btn_deletecardbutton");
-					public static By Invalidcvverror = By.id("lbl_Invalidcvverror");
-					public static By Invalidccerror = By.id("lbl_Invalidccerror");
-					public static By Invalidexpiryerror = By.id("lbl_Invalidexpiryerror");
 					
 
 				}
 
-				//Use this for my account Billing address
-				public static class MyAccountBillingAddress{
-					public static By BilingFirstName = By.id("tf_first_name");
-					public static By BilingLastName = By.id("tf_last_name");
-					public static By BilingAddressText = By.id("tf_address");
-					public static By BilingAptName = By.id("tf_additional_address");
-					public static By BilingZipCode = By.id("tf_zip_code");
-					public static By BilingCity = By.id("tf_city");
-					public static By BilingPhoneNumber = By.id("tf_phone_no");
-					public static By SaveCreditcardbutton = By.id("btn_savecreditcard");
-					public static By LabelBillingAddress = By.id("lbl_billing_address");
-
-
-               }
+				
 	public static class WelcomeScreen {
 		public static By HomeButton = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 	}
