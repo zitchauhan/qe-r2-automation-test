@@ -34,7 +34,8 @@ public class GlobalMobileHelper {
 	private static PropertiesHelper propHelper = PropertiesHelper.getInstance();
 	public static AppiumDriver<MobileElement> driver;
 	public static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
-	
+
+
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
 		String udid = propHelper.getConfigPropProperty("i.udid");
@@ -160,7 +161,23 @@ public class GlobalMobileHelper {
 		}
 
 	}
-	
+
+	public static void setText(MobileElement mobileElement, String text) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+		wait.until(ExpectedConditions.visibilityOf(mobileElement)).clear();
+		wait.until(ExpectedConditions.visibilityOf(mobileElement)).sendKeys(text);
+
+		try {
+			driver.hideKeyboard();
+		}catch (Exception e){
+			// passing with the warning
+			logger.warn(e.getLocalizedMessage());
+		}
+	}
+
 	public static void setText(By locator,String text,By tapLocatorToHideKeyboard) {
 		setText(locator,text);
 		tapOnElement(tapLocatorToHideKeyboard);
@@ -326,6 +343,14 @@ public class GlobalMobileHelper {
 		}
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
+	}
+
+	public static String getElementText(MobileElement mobileElement) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+		return wait.until(ExpectedConditions.visibilityOf(mobileElement)).getText();
 	}
 
 	public static int randomInteger(int min, int max) {
