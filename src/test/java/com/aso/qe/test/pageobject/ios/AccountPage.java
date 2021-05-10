@@ -243,9 +243,38 @@ public class AccountPage {
 			setText(Locators.MyAccountBillingAddress.BilingCity, keywordValue,Locators.MyAccountBillingAddress.BilingPhoneNumber);
 		
 	 	}else if(fieldName.equalsIgnoreCase("ccmobilenumber")){
-			setText(Locators.MyAccountBillingAddress.BilingPhoneNumber, keywordValue);
+			setText(Locators.MyAccountBillingAddress.BilingPhoneNumber, keywordValue, Locators.MyAccountBillingAddress.SaveCreditcardbutton);
+	 	
+	 	}else if(fieldName.contains("validcardholdername")){
+			setText(Locators.AccountPage.creditCardHOlderName, keywordValue,Locators.AccountPage.creditCardNumber);
+			
+	 	}else if(fieldName.contains("validamexcard")){
+			setText(Locators.AccountPage.creditCardNumber, keywordValue,Locators.AccountPage.creditCardCvvNumber);
+			
+	 	}else if(fieldName.contains("validcreditcard")){
+			setText(Locators.AccountPage.creditCardNumber, keywordValue,Locators.AccountPage.creditCardCvvNumber);
+			
+			
+	 	}else if(fieldName.contains("validamexcvv")){
+			setText(Locators.AccountPage.creditCardCvvNumber, keywordValue,Locators.AccountPage.creditCardExpiry);
+	 	
+	
+	 	
+	 	}else if(fieldName.contains("validcvv")){
+			setText(Locators.AccountPage.creditCardCvvNumber, keywordValue,Locators.AccountPage.creditCardExpiry);
+			
+	 	}else if(fieldName.contains("validexpiry")){
+			setText(Locators.AccountPage.creditCardExpiry, keywordValue,Locators.Addnewasocreditcard.Asocardtextbox);
+			
+			
+	 	
+			
+			
 
 			tapOnElement(Locators.MyAccountBillingAddress.LabelBillingAddress);
+	 	}else if(fieldName.equalsIgnoreCase("save card button")) {
+			
+			tapOnElement(Locators.MyAccountBillingAddress.SaveCreditcardbutton);
 
 		}else {
 		
@@ -637,4 +666,25 @@ public class AccountPage {
 		}
 		
 	}
+
+	public boolean choosetoverifyerroroncreditcardpage(String elementname) {
+if(elementname.equalsIgnoreCase("invalidcvv")) {
+			
+	return isElementDisplayed(Locators.Addnewasocreditcard.Invalidcvverror);
+	
+}else if(elementname.equalsIgnoreCase("Invalidccerror")) {
+		
+		return isElementDisplayed(Locators.Addnewasocreditcard.Invalidccerror);
+}else if(elementname.equalsIgnoreCase("Invalidexpiryerror")) {
+	
+	return isElementDisplayed(Locators.Addnewasocreditcard.Invalidexpiryerror);
+			
+		}else {
+			throw new UnsupportedOperationException("Given button type not defined");
+		}
+
+	}
 }
+
+
+

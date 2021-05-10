@@ -114,6 +114,12 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 		assertTrue(accountPage.VarifyElementPresenseOnAsoCardsPage(pagename));
 	}
 
+	
+	@Then("^i choose to verify error \"([^\"]*)\" on credit card page$")
+	public void choosetoverifyerroroncreditcardpage(String elementname) throws Throwable {
+		assertTrue(accountPage.choosetoverifyerroroncreditcardpage(elementname));
+	}
+	
 	@Then("^User taps on the orders button$")
 	public void tapOnOrderButton() {
 		accountPage.tapOnOrderButton();

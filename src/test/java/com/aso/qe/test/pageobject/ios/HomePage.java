@@ -99,7 +99,7 @@ public class HomePage {
 
 	public boolean isSearchBoxDisplayed() {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(4000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -265,18 +265,44 @@ public class HomePage {
 	}
 
 	public void tapOnButtonOnOnboarding(String btnName) {
+		//for(int i=0;i<3;i++) {
      if(btnName.equalsIgnoreCase("guest user")) {
+    	 	for(int i=0;i<3;i++) {
 			
-			GlobalMobileHelper.tapOnElement(Locators.Onboarding.Continueasguest);
-
+    		 			if (GlobalMobileHelper.isElementDisplayed(Locators.Onboarding.Continueasguest)) {
+				
+    		 			GlobalMobileHelper.tapOnElement(Locators.Onboarding.Continueasguest);
+				
+			}
 			
+			
+    		 			else if (GlobalMobileHelper.isElementDisplayed(Locators.HomePage.maybeLaterBtn)) {
+    		 			GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
+			}
+    		 			else if (GlobalMobileHelper.isElementDisplayed(Locators.HomePage.maybeLaterBtn)) {
+    		 			GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
+			}	
+     
+     //}else if (GlobalMobileHelper.isElementDisplayed(Locators.HomePage.maybeLaterBtn)) {
+		//	GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
+		
+		
+     try {
+		Thread.sleep(3000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+    	 }
+    	 
 		}else {
 			
 			
 			throw new UnsupportedOperationException("Given button type found on Onbording screen");
  
 		}
-		
+     
+		}	
 	}
 
 	public void isPhoneSettingDisplayed() {
