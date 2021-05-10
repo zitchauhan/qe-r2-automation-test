@@ -1,6 +1,6 @@
 Feature: Verify Restrict display of SOF on app Wishlist
 
-@Sprint5 @TC-OMNI- @ST-OMNI-28622 
+@Sprint5 @TC-OMNI-36640 @ST-OMNI-28622 
 Scenario Outline: Verify user is restricted display of SOF on app Wishlist 
 	# User should have logged in with the same credentials in web and 
 	# must have a SOF/Firearm item added in to the "Wishlist"

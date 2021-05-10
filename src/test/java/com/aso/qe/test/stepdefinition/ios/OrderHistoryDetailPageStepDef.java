@@ -174,6 +174,47 @@ public void user_sees_on_cancellation_screen(String element) throws Throwable {
 	assertTrue(orderPage.isCancellationScreenElementDisplayed(element));
 }
 
+
+/* created by Nirmal Jain - OMNI-33184 - 07/05/2021 */
+
+
+@Then("^User sees track Delivery button$")
+public void user_sees_track_Delivery_button() throws Throwable {
+  assertTrue(orderDetailPage.isTrackButtonDisplay());
+}
+
+@When("^User taps on track Delivery button$")
+public void user_taps_on_track_Delivery_button() throws Throwable {
+ orderDetailPage.tapOnTrackDeliveryButton();   
+}
+
+@Then("^User navigated to Narvar Tracking screen$")
+public void user_navigated_to_Narvar_Tracking_screen() throws Throwable {
+	
+	assertTrue(orderDetailPage.isNarvarScreenDisplay());
+}
+
+@Then("^User sees order lookup$")
+public void user_sees_order_lookup() throws Throwable {
+	
+	assertTrue(orderDetailPage.isLookupOrderDisplay());
+   
+}
+
+@When("^User enter Order id as \"([^\"]*)\"$")
+public void user_enter_Order_id_as(String arg1) throws Throwable {
+   orderDetailPage.enterOrderId(arg1);
+}
+
+@When("^User enter zip code  as \"([^\"]*)\"$")
+public void user_enter_zip_code_as(String arg1) throws Throwable {
+	 orderDetailPage.enterZipCode(arg1);
+}
+
+@When("^User tap on check button$")
+public void user_tap_on_check_button() throws Throwable {
+   orderDetailPage.tapOnCheckButton(); }
+
 /* created by Nirmal Jain - OMNI-28213 07/05/2021 */
 @Then("^User sees \"([^\"]*)\" with chevron button in order tile section$")
 public void user_sees_with_chevron_button_in_order_tile_section(String element) throws Throwable {
@@ -211,6 +252,7 @@ public void user_sees_page(String element) throws Throwable {
 @Then("^User see order detail page$")
 public void user_see_order_detail_page() throws Throwable {
    
+
 }
 
 
