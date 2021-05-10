@@ -1027,6 +1027,43 @@ public class Locators {
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
 	
+	public static class BazzarVoice{
+		public static By buttonQuestionAndAnswer=By.id("TODO by dev");
+		public static By labelReview=By.id("TODO by dev");
+		public static By buttonSort=By.id("TODO by dev");
+		public static By labelQuestion=By.id("TODO by dev");
+		public static By buttonAskQuestion=By.id("TODO by dev");
+		public static By buttonBack=By.id("TODO by dev");
+		public static By buttonAnswerThisQuestion=By.id("TODO by dev");
+		public static By linkQA=By.id("TODO by dev");
+		
+		public static By labelAskQuestion=By.id("TODO by dev");
+		public static By productImage=By.id("TODO by dev");
+		public static By productName=By.id("TODO by dev");
+		public static By labelQuestions=By.id("TODO by dev");
+		public static By labelNickname=By.id("TODO by dev");
+		public static By labelLocation=By.id("TODO by dev");
+		public static By labelEmail=By.id("TODO by dev");
+		public static By chkBoxTermsCondition=By.id("TODO by dev");
+		public static By buttonPostQuestion=By.id("TODO by dev");		
+		public static By inputBoxQuestion=By.id("TODO by dev");
+		public static By inputBoxNickName=By.id("TODO by dev");
+		public static By inputBoxLocation=By.id("TODO by dev");
+		public static By inputBoxEmail=By.id("TODO by dev");
+		
+		public static By posterUsername=By.id("TODO by dev");
+		public static By labelQuestionDescription=By.id("TODO by dev");
+		public static By answerUsername=By.id("TODO by dev");
+		public static By labelAnswerDescription=By.id("TODO by dev");
+		public static By buttonYes=By.id("TODO by dev");
+		public static By buttonNo=By.id("TODO by dev");
+		public static By buttonReport=By.id("TODO by dev");
+		public static By inputBoxPostAnswer=By.id("TODO by dev");
+		public static By buttonPostAnswer=By.id("TODO by dev");
+		public static By labelPostAnswer=By.id("TODO by dev");
+		
+		
+	}
 
 	public static class Phone{
 		public static By phoneNotification= By.id("TODO by dev");
