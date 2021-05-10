@@ -236,4 +236,39 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
         /* Created By jitsingh7 on 29/04/21 */
 		tapOnElement(Locators.CheckoutPage.buttonPlaceOrder);
     }
+    
+    @Then("^User taps on \"([^\"]*)\" payment type$")
+	public void tapOnPaymentType(String type) {
+		checkoutPage.tapOnPaymentType(type);
+	}
+    
+    @Then("^User taps on next button on paypal$")
+	public void tapOnNextInPaypal() {
+		checkoutPage.tapOnNextInPaypal();
+	}
+    
+    @Then("^User enters \"([^\"]*)\"$")
+	public void enterPaypalCredentials(String type) {
+		checkoutPage.enterPaypalCredentials(type);
+	}
+    
+    @Then("^User taps on Login button on paypal$")
+	public void tapOnLoginOnPaypal() {
+		checkoutPage.tapOnLoginOnPaypal();
+	}
+    
+    @Then("^User taps on PayNow button on paypal$")
+	public void tapOnPayNowOnPaypal() {
+		checkoutPage.tapOnPayNowOnPaypal();
+	}
+    
+    @Then("^User taps on cancel button on paypal screen$")
+	public void tapOnCancelOnPaypal() {
+		checkoutPage.tapOnCancelOnPaypal();
+	}
+    
+    @Then("^User sees paypal payment type$")
+	public void isPaypalDisplayed() {
+		assertTrue(checkoutPage.isPaypalDisplayed());
+	}
 }

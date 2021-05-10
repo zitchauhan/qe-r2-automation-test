@@ -14,7 +14,7 @@ Scenario: verify when guest user sign-in from cart page
     Then User verifies guest user sign in section "is present" on cart page
     Then User taps on Sign in button on cart page
     Then User enters valid email "loginFromCart@yopmail.com"
- 	And User enters valid password "Password@123"
- 	And User taps on Login
- 	Then User is navigated To Cart Screen
- 	Then User verifies guest user sign in section "is not present" on cart page
+	 	And User enters valid password "Password@123"
+	 	And User taps on Login
+	 	Then User is navigated To Cart Screen
+	 	Then User verifies guest user sign in section "is not present" on cart page
