@@ -175,6 +175,43 @@ public class WishlistPage {
 			}
 		}
 		return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.webViewBanner);	
-	}		
+	}
+
+	public boolean VarifyElementPresenseOnexistingwishlist(String elementname) {
+if(elementname.equalsIgnoreCase("itemcount")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.itemcountinwishlist);
+}if(elementname.equalsIgnoreCase("producttitle")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.producttitlewishlist);
+}if(elementname.equalsIgnoreCase("confirmmodal")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.conformationmessage);
+}if(elementname.equalsIgnoreCase("remove")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.confirmationPopup);
+}if(elementname.equalsIgnoreCase("wishlistempty")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistempty);
+		}else {
+		
+		throw new UnsupportedOperationException("Given element not found on existing wish list ");
+
+	}	
 }
 
+	public static void clickonButtononexistingwishlist(String btnName) {
+	     if(btnName.equalsIgnoreCase("Removebutton")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.WishlistPage.Removefromwishlistbutton);
+	     }else if(btnName.equalsIgnoreCase("remove")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.WishlistPage.confirmationPopup);
+
+			}else {
+				
+				throw new UnsupportedOperationException("Given element not found onexisting wishlist");
+	 
+			}
+	}
+}

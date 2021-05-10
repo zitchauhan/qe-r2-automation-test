@@ -262,6 +262,7 @@ public class AccountPage {
 			}else if(btnName.equalsIgnoreCase("wishlist button")){
 				
 				tapOnElement(Locators.MyAccountwelcomePage.buttonWishlist);
+				
 			}else if(btnName.equalsIgnoreCase("orders button")){
 
 				tapOnElement(Locators.MyAccountwelcomePage.buttonOrders);
