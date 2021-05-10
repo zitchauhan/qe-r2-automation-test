@@ -72,4 +72,12 @@ public class OrdersStepDefs extends GlobalMobileHelper {
     	ordersPage.verifyElementsOnOrderConfirmationPage(elementList.get(0));
     	
     }
+    @Then("User sees Get notifications to track your order button$")
+    	 public void userSeesGetNotificationToTrackOrder() {
+    		 ordersPage.isGetNotificationToTrackOrderDisplayed();
+    	 }
+    @Then("User taps on Get notifications to track your order button$")
+	 public void userTapsOnGetNotificationToTrackOrder() {
+		 ordersPage.tapOnGetNotificationToTrackOrder();
+	 }
 }
