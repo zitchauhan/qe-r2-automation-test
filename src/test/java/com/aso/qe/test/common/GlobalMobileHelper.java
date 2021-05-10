@@ -161,7 +161,23 @@ public class GlobalMobileHelper {
 		}
 
 	}
-	
+
+	public static void setText(MobileElement mobileElement, String text) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+		wait.until(ExpectedConditions.visibilityOf(mobileElement)).clear();
+		wait.until(ExpectedConditions.visibilityOf(mobileElement)).sendKeys(text);
+
+		try {
+			driver.hideKeyboard();
+		}catch (Exception e){
+			// passing with the warning
+			logger.warn(e.getLocalizedMessage());
+		}
+	}
+
 	public static void setText(By locator,String text,By tapLocatorToHideKeyboard) {
 		setText(locator,text);
 		tapOnElement(tapLocatorToHideKeyboard);
