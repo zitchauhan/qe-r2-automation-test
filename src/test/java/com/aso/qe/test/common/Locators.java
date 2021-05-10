@@ -528,6 +528,13 @@ public class Locators {
 		public static By labelShippingMethods = By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
 		public static By radioButtonShippingMethods = By.xpath("//XCUIElementTypeOther[contains(@value,'checkbox') and contains(@id,'shipping_method_check_box_id')]");
         public static By buttonPlaceOrder = By.id("btn_place_order");
+		public static By paypal = By.id("btn_pay_withPaypal");
+		public static By paypalEmail = By.xpath("//*[contains(@value,'Email or mobile number')]");
+		public static By paypalNext = By.xpath("//*[contains(@label,'Next')]");
+		public static By paypalPassword = By.xpath("//*[contains(@label,'Password')]");
+		public static By paypalLoginButton = By.xpath("//*[contains(@label,'Log In')]");
+		public static By paypalPayNowButton = By.xpath("//*[contains(@label,'Pay Now')]");
+		public static By paypalCancelButton = By.xpath("//*[contains(@label,'Cancel')]");
     }
 
 	public static class storePickup{
