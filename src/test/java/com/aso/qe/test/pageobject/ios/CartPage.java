@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -569,7 +570,7 @@ public class CartPage {
 		MobileElement productParent;
 		String currentProductTitle = Context.getCurrentProductTitle();
 		boolean found=false;
-		if (currentProductTitle.isBlank() || currentProductTitle.isEmpty() || currentProductTitle == null){
+		if (currentProductTitle.isEmpty() || currentProductTitle == null){
 			// assert the first disclaimer on screen
 			assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
 		}else {
@@ -873,7 +874,54 @@ public class CartPage {
 	}
 
 }
+
+	public boolean isOrderSummaryLabelDisplayed() {
+		return GlobalMobileHelper.swipeTillElementDisplayed(Direction.UP, Locators.CartPage.orderSummaryLabel);
 	}
+
+	public static void clickonButtononcartpage(String btnName) {
+	     if(btnName.equalsIgnoreCase("Add to Wish list")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.CartPage.Addtowishlist);
+
+
+			}else {
+				
+				throw new UnsupportedOperationException("Given button type not defined");
+	 
+			}
+		
+	}
+
+	public static boolean VarifyUserisonwishlistpage(String elementName) {
+		if(elementName.equalsIgnoreCase("Wish list")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.wishlisticon);
+	}else {
+		
+		throw new UnsupportedOperationException("Given button type not defined");
+
+	}
+}
+
+	public static void clickonButtononcartwishpage (String btnName) {
+	     if(btnName.equalsIgnoreCase("login")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.CartPage.loginoncartwishlist);
+	     }else if(btnName.equalsIgnoreCase("existingwishlist")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.CartPage.existingwishlist);
+
+			}else {
+				
+				throw new UnsupportedOperationException("Given button type not defined");
+	 
+			}
+		
+	}
+
+	
+}
 	
 
 

@@ -27,10 +27,11 @@ public class SavedAddresses {
         try {
             List<MobileElement> mobileElementList = driver.findElements(Locators.SavedAddresses.labelAddressUsername);
             List<MobileElement> addressRadioButtons = driver.findElements(Locators.SavedAddresses.radioButtonAddress);
-
+            String runTimeText="";
             for(MobileElement mobileElement: mobileElementList) {
-                if (mobileElement.getText().trim().contains(address)) {
-                    if(ix==2){
+                runTimeText = mobileElement.getText().replaceAll("(\\d)\\s+","$1").trim();
+                if (runTimeText.contains(address.replaceAll("(\\d)\\s+","$1").trim())) {
+                    if(ix==3){
                         GlobalMobileHelper.swipeScreen(GlobalMobileHelper.Direction.UP);
                         ix=0; // reset the count to 0
                     }

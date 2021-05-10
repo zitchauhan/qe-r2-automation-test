@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
-
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
@@ -171,11 +171,53 @@ public class CheckoutPage {
 
     public void tapOnDefeaultShippingAddress() {
     	GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.defaultAddressLabel);
-		try {
-			Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		GlobalMobileHelper.waitForDefaultTime();
+	}
+
+	public void tapOnPaymentType(String type) {
+		switch(type) {
+		case "paypal":
+			GlobalMobileHelper.swipeTillElementDisplayed(Direction.UP, Locators.CheckoutPage.paypal, 6);
+			GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.paypal);
+			break;
+		default:
+			throw new IllegalArgumentException("Wrong option");
 		}
 	}
-}
 
+	public void enterPaypalCredentials(String type) {
+		switch(type) {
+			case "paypalEmail":
+				String email = PropertiesHelper.getInstance().getMobileTestDataProperty(type);
+				GlobalMobileHelper.setText(Locators.CheckoutPage.paypalEmail, email);
+				break;
+			case "paypalPassword":
+				String password = PropertiesHelper.getInstance().getMobileTestDataProperty(type);
+				GlobalMobileHelper.setText(Locators.CheckoutPage.paypalPassword, password);
+				break;
+			default:
+				throw new IllegalArgumentException("Wrong option");
+		}
+	}
+
+	public void tapOnNextInPaypal() {
+		GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.paypalNext);
+	}
+
+	public void tapOnLoginOnPaypal() {
+		GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.paypalLoginButton);
+	}
+
+	public void tapOnPayNowOnPaypal() {
+		GlobalMobileHelper.swipeTillElementDisplayed(Direction.UP, Locators.CheckoutPage.paypalPayNowButton, 6);
+		GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.paypalPayNowButton);
+	}
+
+	public void tapOnCancelOnPaypal() {
+		GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.paypalCancelButton);
+	}
+
+	public boolean isPaypalDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.paypal);
+	}
+}

@@ -3,6 +3,9 @@ package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.BottomNav;
+import com.aso.qe.test.pageobject.ios.PDPPage;
+import com.aso.qe.test.pageobject.ios.PLPPage;
 import org.openqa.selenium.By;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -18,6 +21,9 @@ import java.util.Locale;
 public class HomeStepDef extends GlobalMobileHelper{
 	
 	HomePage homePage = new HomePage(driver);
+	BottomNav bottomNav = new BottomNav(driver);
+	PLPPage plpPage = new PLPPage(driver);
+	PDPPage pdpPage = new PDPPage(driver);
 	
 	@Then("^User sees the homepage$")
 	public void userIsOnHomePage() {
@@ -77,15 +83,19 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnMaybelater() {
 		homePage.tapOnMayBelater();
 	}
+
+	
+	@And("^User Goes to home page$")
+	public void moveToHomePage() {
+	homePage.moveToHomePage();}
+
 	@And("^User Sees the Hero Banner$")
 	public void isHeroBannerDisplayed() {
 	assertTrue(homePage.isHeroBannerDisplayed());
 	
 	}
-	@And("^User Goes to home page$")
-	public void moveToHomePage() {
-		homePage.moveToHomePage();
-	}
+
+
 	
 	@When("^user see \"([^\"]*)\" on home page$")
 	public void user_see_on_home_page(String pagename) {
@@ -136,4 +146,35 @@ public class HomeStepDef extends GlobalMobileHelper{
 		/* Created By jitsingh7 on 21/04/21 */
 		assertTrue(getElementText(Locators.HomePage.labelInfoMessageSubtitle).toLowerCase().contains(subTitleText.toLowerCase()));
 	}
-}
+	@When("^User sees the Offer Details and terms and conditions \"([^\"]*)\"$")
+	public void user_sees_the_Offer_Details_and_terms_and_conditions(String offerDetailsTitle) throws Throwable {
+		assertTrue(getElementText(Locators.HomePage.titleOferDetails).toLowerCase().contains(offerDetailsTitle.toLowerCase()));
+	}
+	@When("^User click on Offer Details and terms and conditions$")
+	public void user_click_on_Offer_Details_and_terms_and_conditions() throws Throwable {
+	   homePage.tapOnOfferDetails();
+	}
+
+    @When("User adds product \"([^\"]*)\" using search")
+    public void userAddsProductUsingSearch(String productName) throws Throwable {
+        /* Created By jitsingh7 on 01/05/2021 */
+		bottomNav.tapOnHome();
+		searchProductByName(productName);
+		plpPage.tapOnFirstProduct();
+		waitForDefaultTime();
+		pdpPage.tapOnAddToCart();
+		tapOnElement(Locators.PDPPage.buttonViewCart);
+		waitForDefaultTime();
+    }
+    
+    
+    @When("^User continues as \"([^\"]*)\" on onboarding page$")
+    public void user_continues_as_on_onboarding_page (String btnName) throws Throwable {
+   	 homePage.tapOnButtonOnOnboarding(btnName);
+    }
+    
+    @And("^User sees phone setting$")
+    public void user_sees_phone_setting() {
+    	homePage.isPhoneSettingDisplayed();
+    	}
+    }

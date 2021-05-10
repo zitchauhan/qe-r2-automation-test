@@ -37,27 +37,27 @@ public class CommonMobileStepDef extends GlobalMobileHelper{
 	}
 	
 	@When("^User taps on home in bottom nav$")
-	public void tapOnHome() {
+	public void tapOnHome() throws Throwable {
 		bNav.tapOnHome();
 	}
 	
 	@When("^User taps on shop in bottom nav$")
-	public void tapOnShop() {
+	public void tapOnShop() throws Throwable {
 		bNav.tapOnShop();
 	}
 	
 	@When("^User taps on wishlist in bottom nav$")
-	public void tapOnWishlist() {
+	public void tapOnWishlist() throws Throwable {
 		bNav.tapOnWishList();
 	}
 	
 	@When("^User taps on cart in bottom nav$")
-	public void tapOnCart() throws InterruptedException {
+	public void tapOnCart() throws Throwable {
 		bNav.tapOnCart();
 	}
 	
 	@When("^User taps on account in bottom nav$")
-	public void tapOnAccount() throws InterruptedException {
+	public void tapOnAccount() throws Throwable {
 		bNav.tapOnAccount();
 	}
 	

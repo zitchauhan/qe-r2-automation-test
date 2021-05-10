@@ -2,6 +2,9 @@ package com.aso.qe.test.pageobject.ios;
 
 
 import org.openqa.selenium.Alert;
+
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 import org.apache.tools.ant.launch.Locator;
 
@@ -40,7 +43,7 @@ public class WishlistPage {
 			GlobalMobileHelper.getElementText(Locators.WishlistPage.cancelbtn);
 		} else if (GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton)) {
 			GlobalMobileHelper.tapOnElement(Locators.WishlistPage.wishlistAddButton);
-		}	
+		}
 	}
 
 	public void renameWishlist(String rename) {
@@ -140,5 +143,75 @@ public class WishlistPage {
 	public boolean isConfirmationPopUpDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.confirmationPopup);
 	}
+
+	public void tapOnCreatedWishList(String arg1) {
+		GlobalMobileHelper.tapOnElement(Locators.WishlistPage.createdWishlist);
+	}
+
+	public boolean varifyElementPresenseOnPage(String element) {
+			if (element.equalsIgnoreCase("Instruction banner")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.bannerTitle);
+			} else if (element.equalsIgnoreCase("Instruction Banner subtitle")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.bannerSubTitle);
+			}else {
+				throw new UnsupportedOperationException("Given Element type not defined");
+			}
+		}
+
+	public void tapOnBannerCta(String arg1) {
+			if (GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.bannerCTA)) {
+				GlobalMobileHelper.tapOnElement(Locators.WishlistPage.bannerCTA);
+			}
+		}
+
+	public boolean isNavigatedToWeb() {
+		Set<String> availableContexts = driver.getContextHandles();
+		
+		for(String context : availableContexts) {
+			if(context.contains("WEBVIEW")){
+				System.out.println("Context Name is " + context);
+				driver.context(context);
+				break;
+			}
+		}
+		return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.webViewBanner);	
+	}
+
+	public boolean VarifyElementPresenseOnexistingwishlist(String elementname) {
+if(elementname.equalsIgnoreCase("itemcount")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.itemcountinwishlist);
+}if(elementname.equalsIgnoreCase("producttitle")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.producttitlewishlist);
+}if(elementname.equalsIgnoreCase("confirmmodal")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.conformationmessage);
+}if(elementname.equalsIgnoreCase("remove")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.confirmationPopup);
+}if(elementname.equalsIgnoreCase("wishlistempty")) {
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistempty);
+		}else {
+		
+		throw new UnsupportedOperationException("Given element not found on existing wish list ");
+
+	}	
 }
 
+	public static void clickonButtononexistingwishlist(String btnName) {
+	     if(btnName.equalsIgnoreCase("Removebutton")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.WishlistPage.Removefromwishlistbutton);
+	     }else if(btnName.equalsIgnoreCase("remove")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.WishlistPage.confirmationPopup);
+
+			}else {
+				
+				throw new UnsupportedOperationException("Given element not found onexisting wishlist");
+	 
+			}
+	}
+}
