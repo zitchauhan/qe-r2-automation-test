@@ -80,4 +80,30 @@ public class OrdersStepDefs extends GlobalMobileHelper {
 	 public void userTapsOnGetNotificationToTrackOrder() {
 		 ordersPage.tapOnGetNotificationToTrackOrder();
 	 }
+    
+    @Then("^User sees payment method label$")
+	public void user_sees_payment_method_label() throws Throwable {
+    	ordersPage.verifyPaymentMethodLabel();
+	}
+
+	@Then("^User sees \"([^\"]*)\" image$")
+	public void user_sees_image(String paymentType) throws Throwable {
+		ordersPage.verifyPaymentImage(paymentType);
+	}
+
+	@Then("^User sees last four digits of \"([^\"]*)\"$")
+	public void user_sees_last_four_digits_of(String paymentType) throws Throwable {
+		ordersPage.verifyCardNumber(paymentType);
+	}
+	
+	@Then("^User sees the amount debited from the Gift Card$")
+	public void user_sees_the_amount_debited_from_the_Gift_Card() throws Throwable {
+		ordersPage.isGiftCardAmountDisplayed();
+	}
+	
+	@Then("^User sees \"([^\"]*)\" payment method$")
+	public void user_sees_payment_method(String paymentType) throws Throwable {
+		ordersPage.isPayementMethodDisplayed(paymentType);
+	}
+
 }
