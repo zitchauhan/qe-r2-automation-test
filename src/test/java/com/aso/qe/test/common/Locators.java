@@ -802,6 +802,10 @@ public class Locators {
 					public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
 					public static By Continuealertbutton = By.id("btn_continuealeartbutton");
 					public static By DeleteCardbutton = By.id("btn_deletecardbutton");
+					public static By Invalidcvverror = By.id("lbl_Invalidcvverror");
+					public static By Invalidccerror = By.id("lbl_Invalidccerror");
+					public static By Invalidexpiryerror = By.id("lbl_Invalidexpiryerror");
+					
 
 				}
 

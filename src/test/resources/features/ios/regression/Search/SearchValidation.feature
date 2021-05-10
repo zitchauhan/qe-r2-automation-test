@@ -2,9 +2,15 @@ Feature: Search Validation
 
 @Sprint5 @Regression
 Scenario: Validate the user able to redirect to a PLP
-Given User launches the application
-    And User Clicks On MaY Be Later
-    And User continues as guest user
+#Given User launches the application
+    #And User Clicks On MaY Be Later
+    #And User continues as guest user
+    
+    Given User launches the application
+    
+		And User continues as "guest user" on onboarding page
+		When User Clicks On MaY Be Later
+		When User Clicks On MaY Be Later
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
@@ -13,14 +19,15 @@ Given User launches the application
 #    Then User verifies breadcrumb is present for the product
     And User Sees the Search Box
     Then User clicks on the Search Box
-    And User can "edit" the search
+  #  And User can "edit" the search
     And User sees all products related to search keyword
     
     @Sprint5 @Regression
    Scenario: Verify user is swipe down on the screen
-Given User launches the application
-    And User Clicks On MaY Be Later
-    And User continues as guest user
+    Given User launches the application
+    And User continues as "guest user" on onboarding page
+   And User Clicks On MaY Be Later
+    #And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
