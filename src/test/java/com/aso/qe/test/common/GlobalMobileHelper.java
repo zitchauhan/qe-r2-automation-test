@@ -64,8 +64,7 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		else {
-			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
-			
+			setImplicitWaitTo(driver,DEFAULT_EXPLICIT_WAIT);
 			if(!element.isDisplayed()) {
 				throw new IllegalStateException("Element is not displayed");
 			}

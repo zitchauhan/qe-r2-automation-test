@@ -186,4 +186,43 @@ private AppiumDriver<MobileElement> driver;
 		GlobalMobileHelper.tapOnElement(Locators.OrdersPage.getNotificationLink);
 		
 	}
+	public void verifyPaymentMethodLabel() {
+		assertTrue("Payment method label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.paymentMethodLabel));
+	}
+
+	public void verifyPaymentImage(String paymentType) {
+		switch(paymentType){
+			case "Credit Card":
+				assertTrue("Credit card image is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.creditCardimage));
+			case "Gift Card":
+				assertTrue("Gift card image is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.giftCardImage));
+			case "PayPal":
+				assertTrue("PayPal image is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.paypalImage));
+			case "ApplePay":
+				assertTrue("ApplePay image is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.applePayImage));
+			default:
+				throw new IllegalStateException("Payment method didn't match"); }
+	}
+
+	public void verifyCardNumber(String paymentType) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void isGiftCardAmountDisplayed() {
+		assertTrue("Gift card amount is not displayed !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.giftCardAmount));
+	}
+
+	public void isPayementMethodDisplayed(String paymentType) {
+		switch(paymentType){
+		case "Gift Card":
+			assertTrue("Gift label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.giftCardLabel));
+		case "PayPal":
+			assertTrue("PayPal label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.paypalLabel));
+		case "ApplePay":
+			assertTrue("ApplePay label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.applePayLabel));
+		default:
+			throw new IllegalStateException("Payment method didn't match"); }
+	}
 }
+
