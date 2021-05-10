@@ -5,8 +5,8 @@ Feature: Paypal | Checkout
   	Given User launches the application
     And User continues as guest user
 		And User is on Log In screen
-    When User enters "email" on login screen 
-		And User enters "password" on login screen
+    When User enters "email1" on login screen 
+		And User enters "password1" on login screen
  		And User taps on Login
     When User Sees the Search Box
     Then User clicks on the Search Box
