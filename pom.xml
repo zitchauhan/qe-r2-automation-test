@@ -31,8 +31,8 @@
 				<configuration>
 <!--					<forkMode>never</forkMode>-->
 					<includes>
-						 <include>**/IOSTestRunner.java</include>
-<!--						<include>${testsuitnamefromci}</include>-->
+<!-- 					 <include>**/IOSTestRunner.java</include> -->
+						<include>${testsuitnamefromci}</include>-->
 					</includes>
 
 					<!-- <suiteXmlFiles> <suiteXmkFile>{$testsuitnamefromjenkins}</suiteXmkFile> 
