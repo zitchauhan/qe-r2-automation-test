@@ -324,6 +324,61 @@ public class LoginStepDef extends GlobalMobileHelper {
 		loginPage.Errormsg();
 	}
 	
+	//-----------------Sing Up For Deals
+	@Then("^User sees password field$")
+	public void user_sees_password_field() throws Throwable {
+	  }
+
+	@Then("^User tap on Sign-Up for Deals$")
+	public void user_tap_on_Sign_Up_for_Deals() throws Throwable {
+		loginPage.tapOnDealsSingUp();
+	  
+	}
+
+	@Then("^User see Sign Up for deals screen$")
+	public void user_see_Sign_Up_for_deals_screen() throws Throwable {
+		loginPage.isSingUpDealsDisplayed();
+	  
+	}
+
+	@Then("^User enters valid email as  \"([^\"]*)\"$")
+	public void user_enters_valid_email_id(String email) throws Throwable {
+		loginPage.validEmail(email);	
+	  
+	}
+
+	@Then("^User enters valid zip code as  \"([^\"]*)\"$")
+	public void user_enters_valid_zip_code(String zip) throws Throwable {
+		loginPage.validZip(zip);
+	 }
+
+	@Then("^User tap on SIGN UP$")
+	public void user_tap_on_SIGN_UP() throws Throwable {
+		loginPage.tapOnDealsSingUp();
+	 	}
+
+	@Then("^User See Message Confirmed! You are On the list$")
+	public void user_See_Message_Confirmed_You_are_On_the_list() throws Throwable {
+		loginPage.conformationMsg();
+		
+	 }
+
+	@When("^User Tap Back Navigation$")
+	public void user_Tap_Back_Navigation() throws Throwable {
+		loginPage.backNavigation();
+	 
+	}
+	@Then("^Then User get Message  Please enter valid email address$")
+	public void Then_User_get_Message_Please_enter_valid_email_address() throws Throwable {
+		loginPage.errorMsg();
+	}
+
+	@When("^User enters invalid email \"([^\"]*)\"$")
+	public void user_enters_invalid_email(String email) throws Throwable {
+		loginPage.enterinvalidEmail(email);
+	}
+		
+		
 	
-	
+	//-------------------------------------
 }

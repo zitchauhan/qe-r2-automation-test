@@ -38,7 +38,8 @@ public class Locators {
 	
 	public static class ChangePassword {
 		public static By tapOnProfile = By.id("");
-		public static By taponPassword = By.id("TODO by dev ");
+		public static By taponPassword = By.id("");
+		public static By emailEditBox = By.id("TODO by dev ");
 		public static By changeyourpassword = By.id("TODO by dev ");
 		public static By currentpassword = By.id("TODO by dev ");
 		public static By newpassword = By.id("TODO by dev ");
@@ -47,6 +48,18 @@ public class Locators {
 		public static By Changeyourpasswordtitle = By.id("TODO by dev ");
 		public static By errormsg = By.id("TODO by dev ");
 		
+		
+	}
+	public static class SignUpForDeals{
+		
+		public static By SingUpButton = By.id("");
+		public static By inputZipCode = By.id("TODO by dev ");
+		public static By emailTextBox = By.id("TODO by dev ");
+		public static By ConformationMsg = By.id("TODO by dev ");
+		public static By backNavigation = By.id("TODO by dev ");
+		public static By errorMsg = By.id("TODO by dev ");
+		public static By getMoreDeals = By.id("TODO by dev ");
+		public static By errorMsgOninvalid= By.id("TODO by dev");
 		
 	}
 	public static class HomePage{
