@@ -260,4 +260,34 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void isGreetingMessageDisplayed() {
 		assertTrue(accountPage.isGreetingMessageDisplayed());
 	}
+	@Then("^User sees the \"([^\"]*)\" at ASO card Page$")
+	public void user_sees_the_at_ASO_card_Page(String field) throws Throwable {
+	   accountPage.isComponenetDisplayedOnAsoCardPage(field);
+	}
+	
+
+	@Then("^User taps on \"([^\"]*)\" On Order Page$")
+	public void tabOnButtonOnTrackorderPage(String btnName) {
+		accountPage.tabOnButtonOnTrackorderPage(btnName);
+	}
+	
+	@Then("^user see \"([^\"]*)\" Page$")
+	public void user_see_Page(String pagename) throws Throwable {
+		assertTrue(accountPage.VarifyElementPresenseOnOrdersPage(pagename)); 
+	}
+	@When("^user see \"([^\"]*)\" on order detail page$")
+	public void user_see_on_order_detail_page(String pagename) throws Throwable {
+		assertTrue(accountPage.VarifyElementPresenseOnOrdersPage(pagename));
+}
+	
+	@When("^user see \"([^\"]*)\" on order history page$")
+	public void user_see_on_order_history_page(String elementname) throws Throwable {
+		assertTrue(accountPage.VarifyElementPresenseOnOrdershistoryPage(elementname));
+	}
+	
+	@When("^user tabs on  \"([^\"]*)\" on order history page$")
+	 public void tabOnButtonOnorderhistoryPage(String btnName) {
+		accountPage.tabOnButtonOnorderhistoryPage(btnName);
+	}
+	
 }

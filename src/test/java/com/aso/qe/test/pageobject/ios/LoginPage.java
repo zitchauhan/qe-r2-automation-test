@@ -183,6 +183,7 @@ public class LoginPage {
 
 	public static void  enterLoginDetails(String fieldName) {
 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
+		System.out.println("value of " +keywordValue);
  		String element = null;
  		if(fieldName.contains("email")){
  			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,Locators.LoginPage.passwordEditBox);
@@ -191,6 +192,12 @@ public class LoginPage {
  		}else if(fieldName.equalsIgnoreCase("password")){
 
  			GlobalMobileHelper.setText(Locators.LoginPage.passwordEditBox, keywordValue,Locators.LoginPage.loginButton);
+ 		    try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
  		}else if(fieldName.equalsIgnoreCase("emailwhichhascreditcard")){
 
  			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,Locators.LoginPage.loginButton);
