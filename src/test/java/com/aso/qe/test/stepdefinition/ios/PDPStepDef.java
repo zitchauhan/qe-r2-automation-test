@@ -364,10 +364,10 @@ public class PDPStepDef extends GlobalMobileHelper{
 		PDPPage.clickonPDP(elementname);
 	}
 
-//	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
-//	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
-//		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
-//	}
+	//@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+	//public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+		//assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
+	//}
 	@Then("^user Scroll down and click on rating and review$")
 	public void user_Scroll_down_and_click_on_rating_and_review() throws Throwable {
 	   pdp.tapOnRatingAndReview();
@@ -422,7 +422,29 @@ public class PDPStepDef extends GlobalMobileHelper{
 	    pdp.enteValuesOnReviewPage(editBoxType, value);
 	}
 
+	@Then("^user see \"([^\"]*)\" on getnotify page$")
+	public void VarifyElementPresenseOngetnotifypage(String elementname) throws Throwable {
+		assertTrue(PDPPage.VarifyElementPresenseOngetnotifypage(elementname));
 
+	}
+	
+	@Then("^i choose to enter \"([^\"]*)\" on getnotify page$")
+	public void Enteremailongetnotifypage(String elementname) throws Throwable {
+		PDPPage.Enteremailongetnotifypage(elementname);
+	}
+		
+	@Then("^User validates the share icon on PDP page and taps on it$")
+	public void user_validate_the_share_icon_onPDP_Page()throws Throwable {
+		PDPPage.tapOnShareIconPDP();
+	}
+	
+	@And("^User validates share tray is opened with product thumbnail and image$")
+	public void user_validate_share_tray_product_thumbnail_image() {
+		PDPPage.ValidateProductImgOnShareTray();
+	}
 
-
+	@Then("^i click on \"([^\"]*)\" on getnotify page$")
+	public void clickongetnotifypage(String elementname) throws Throwable {
+		PDPPage.clickongetnotifypage(elementname);
+	}
 }

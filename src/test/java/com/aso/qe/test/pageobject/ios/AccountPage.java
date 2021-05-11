@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.codehaus.plexus.logging.Logger;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 
 import com.aso.qe.framework.common.PropertiesHelper;
@@ -27,6 +27,7 @@ public class AccountPage {
 
 	public AccountPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
+
 	}
 	
 	public boolean isAccountPageDisplayed() {
@@ -667,6 +668,71 @@ public class AccountPage {
 		
 	}
 
+ //Manage Notification -------  
+	
+	public void tapOnOpenSettings() {
+		if (GlobalMobileHelper.isElementDisplayed(Locators.ManageNotificaiton.openSetting)) {
+			GlobalMobileHelper.tapOnElement(Locators.ManageNotificaiton.openSetting);
+		}
+	}
+	
+	
+	public boolean isNotificationprefrenceDisplay() {
+
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.ManageNotificaiton.notificationPref));
+	//	logger.debug("Notification prefrence displayed");
+		return false;
+		
+	}
+	
+	public void   isdisplayedalertMsgPopUp() throws InterruptedException {
+	    driver.switchTo().alert().getText();
+		Thread.sleep(5000);
+		
+	
+	}
+	
+	public void  tapOnDontAllow() throws InterruptedException {
+		 driver.switchTo().alert().dismiss();
+		Thread.sleep(5000);
+		
+		}
+	
+	public void  tapOnAllow() throws InterruptedException {
+		 driver.switchTo().alert().accept();
+		Thread.sleep(5000);
+			
+	}
+	
+	public void tapOnSwitchOn() throws Throwable {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		MobileElement switchOn = driver.findElement(Locators.ManageNotificaiton.switchOn);
+		GlobalMobileHelper.tapOnElement(switchOn);
+	}
+	public void tapOnSwitchOff() throws Throwable {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		MobileElement switchOff = driver.findElement(Locators.ManageNotificaiton.switchOff);
+		GlobalMobileHelper.tapOnElement(switchOff);
+	}
+
+	public void isDisplaySwitchOff() {
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.ManageNotificaiton.switchOff));
+			
+	}
+	public void isNotificationSettingDisplay() {
+
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.ManageNotificaiton.notificationSetting));
+	//	logger.debug("Notification prefrence displayed");
+		
+		}
+
+	public void bothEnable() {
+		assertTrue(GlobalMobileHelper.isElementEnabled((Locators.ManageNotificaiton.switchOff)));
+			
+	}
+
+
+
 	public boolean choosetoverifyerroroncreditcardpage(String elementname) {
 if(elementname.equalsIgnoreCase("invalidcvv")) {
 			
@@ -684,6 +750,7 @@ if(elementname.equalsIgnoreCase("invalidcvv")) {
 		}
 
 	}
+
 }
 
 

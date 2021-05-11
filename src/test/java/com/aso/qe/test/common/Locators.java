@@ -64,6 +64,20 @@ public class Locators {
 		public static By errorMsgOninvalid = By.id("TODO by dev");
 
 	}
+	
+	public static class ManageNotificaiton{
+
+		public static By orderstatus = By.id("TODO by dev ");
+		public static By hotMarket = By.id("TODO by dev ");
+		public static By openSetting = By.id("TODO by dev ");
+		public static By  notificationPref= By.id("TODO by dev ");
+		public static By backNavigation = By.id("TODO by dev ");
+		public static By  switchOn= By.id("TODO by dev ");
+		public static By switchOff = By.id("TODO by dev ");
+		public static By notificationSetting = By.id("TODO by dev ");
+		
+					
+	} 
 
 	public static class HomePage {
 		public static By buttonGoToPDP = By.xpath("//*[contains(@label,\"Adidas Men's Designed2Move Polo Shirt\")]");
@@ -73,6 +87,8 @@ public class Locators {
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
 		// public static By searchBox = By.id("search_bar");this is frquent change b/dev
 		public static By searchBox = By.id("btn_Search");
+		public static By searchbar = By.id("search_bar");
+		
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
 		public static By shopNewTitle = By.id("lbl_shopNew_title");
@@ -105,6 +121,8 @@ public class Locators {
 	}
 
 	public static class PLPPage {
+		// product title xpast was removed so added product title as image
+		//public static By productTitle = By.id("lbl_product_title");
 		public static By productTitle = By.id("lbl_product_title");
 		public static By PLPHeader = By.id("lbl_product_listing_header_title");
 		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
@@ -249,8 +267,8 @@ public class Locators {
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");
 		public static By storeAddress = By.id("lbl_store_address");
-		public static By storetime = By.id("lbl_time");
-		public static By storePhone = By.id("lbl_phone");
+		public static By storetime = By.id("lbl_store_timing");
+		public static By storePhone = By.id("lbl_store_phone");
 		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
 		public static By freeStorePickUpRadioBtn = By.id("rd_free_store_pickup");
 		public static By btnRadioDeliveryOption = By.id("rd_free_store_pickup");
@@ -266,6 +284,23 @@ public class Locators {
 		public static By FindAvailabilityonotherStoreCTA = By.id("btn_FindAvailabilityonotherStoreCTA");
 		public static By Notifymewhenavailablelabel = By.id("lbl_Notifymewhenavailablelabel");
 		public static By limitedstocklabel = By.id("lbl_limitedstocklabel");
+		public static By getnotifiedBOPIS = By.id("btn_get_notified");
+		public static By getnotifiedheading = By.id("lbl_page_title");
+		public static By Producttitle = By.id("lbl_product_title");
+		public static By Productprice = By.id("lbl_product_price");
+		public static By Productimage = By.id("img_product");
+		public static By emailtextbox = By.id("input_email");
+		public static By Selectedstorename = By.id("lbl_store_selected");
+		public static By submitgetnotifiedbutton = By.id("btn_submit_email");
+		public static By BOPISdeliverymethode = By.id("lbl_delivery_title");
+		public static By PICKUPanddeliveryheading = By.id("lbl_p_and_d_options");
+		public static By userisnotifiedmessage = By.id("lbl_register");
+		public static By ChangeStorebutton = By.id("btn_change_store");
+		public static By SelectStorebutton = By.id("btn_select_store");
+		
+		
+		
+		
 
 		// store label section
 		public static By OverLayCartSKU = By.id("lbl_product_sku_value");
@@ -345,6 +380,7 @@ public class Locators {
 		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
 		public static By ratingAndReviewBtn=  By.id("TODO dev");
 		public static By cardAmountList = By.xpath("//XCUIElementTypeButton[contains(@name,'price_list_item_Card_Amount')]");
+		public static By shareIcon=By.id("btn_share");
 
 
 	}
@@ -584,6 +620,10 @@ public class Locators {
 		public static By openInMaps = By.xpath("//XCUIElementTypeButton[@name='Open in Maps']");
 		public static By cancelBtn = By.id("cancel_btn_find_store");
 		public static By defaultStoreName = By.id("lbl_details_find_store");
+		public static By searchstoretextbox = By.id("search_btn_find_store");
+		public static By Store1 = By.id("lbl_check_box_find_store1");
+		
+		
 	}
 
 	public static class AddAddressPage {

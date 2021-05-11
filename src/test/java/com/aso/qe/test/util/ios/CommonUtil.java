@@ -29,7 +29,7 @@ public class CommonUtil {
 	            System.out.println(categoryList);	
 	             
 	            //Iterate over employee array
-	            categoryList.forEach( catg -> categoryObject( (JSONObject) catg ) );
+	           categoryList.forEach( catg -> categoryObject( (JSONObject) catg ) );
 	 
 	        } catch (FileNotFoundException e) {
 	            e.printStackTrace();
