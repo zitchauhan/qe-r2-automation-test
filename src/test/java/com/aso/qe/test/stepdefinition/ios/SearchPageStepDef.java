@@ -190,5 +190,13 @@ public class SearchPageStepDef extends GlobalMobileHelper {
 		assertTrue(searchPage.Varifyuserisonnoresultpage(pagename)); 
 	}
 
-
+	@And("^i choose to enter \"([^\"]*)\" In Search box$")
+	public void Searchforsku(String searchkeyword)  {
+		searchPage.Searchforsku(searchkeyword);
+	}
+	@Then("^i choose to click on \"([^\"]*)\" on Search page$")
+		public void ClickonSearcheditem(String searchkeyword)  {
+			searchPage.ClickonSearcheditem(searchkeyword);
+	}
 }
+

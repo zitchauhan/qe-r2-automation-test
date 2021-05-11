@@ -834,6 +834,18 @@ public class PDPPage {
 		else if(elementname.equalsIgnoreCase("buttonaddtowishlist")) {
 			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonaddtowishlist);
+		}
+		else if(elementname.equalsIgnoreCase("getnotifiedBOPIS")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.getnotifiedBOPIS);
+			
+		}
+		else if(elementname.equalsIgnoreCase("ChangeStorebutton")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.ChangeStorebutton);
+		}else if(elementname.equalsIgnoreCase("SelectStorebutton")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.SelectStorebutton);
 
 		}else {
 
@@ -883,7 +895,9 @@ public class PDPPage {
 if(elementname.equalsIgnoreCase("Store Delivery Heading")) {
 			
 			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.StoreDeliveryHeading);
-
+}else if(elementname.equalsIgnoreCase("PICKUPanddeliveryheading")){
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.PICKUPanddeliveryheading);
 			
 		}else if(elementname.equalsIgnoreCase("Avalability Geeen")){
 			
@@ -1071,8 +1085,48 @@ public void tabOnHelpfullReviewQn(String answer) {
 	}else {
 		GlobalMobileHelper.tapOnElement(Locators.ReviewPage.NoOption);
 	}
-	
 }
+	
+
+
+public static boolean VarifyElementPresenseOngetnotifypage(String elementname) {
+		if(elementname.equalsIgnoreCase("getnotifiedheading")) {
+					
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.getnotifiedheading);
+		} else if(elementname.equalsIgnoreCase("getnotifiedheading")) {
+				
+				    return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.emailtextbox);
+			} else if(elementname.equalsIgnoreCase("BOPISdeliverymethode")) {
+			
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.BOPISdeliverymethode);
+}
+				else if(elementname.equalsIgnoreCase("producttitle")) {
+						
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Producttitle);
+					} else if(elementname.equalsIgnoreCase("productprice")) {
+							
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Productprice);
+				} else if(elementname.equalsIgnoreCase("productimage")) {
+								
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Productimage);
+				}else if(elementname.equalsIgnoreCase("Selectedstorename")) {
+									
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Selectedstorename);
+				}else if(elementname.equalsIgnoreCase("storeaddress")) {
+										
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
+				}else if(elementname.equalsIgnoreCase("storetiming")) {
+											
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
+			 }else if(elementname.equalsIgnoreCase("storephone")) {
+												
+					  return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storePhone);
+			 }else if(elementname.equalsIgnoreCase("userisnotifiedmessage")) {
+					
+				  return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.userisnotifiedmessage);
+		  }else {
+			
+			throw new UnsupportedOperationException("Given Button not founded on get notified page ");
 
 public void tapOnShareIconPDP() {
 	if(GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shareIcon))
@@ -1087,3 +1141,33 @@ public void ValidateProductImgOnShareTray() {
 }
 	
 }
+									
+}
+
+public static void Enteremailongetnotifypage(String fieldName) {
+	String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
+
+	String element = null;
+	if (fieldName.contains("email")) {
+		GlobalMobileHelper.setText(Locators.PDPPage.emailtextbox, keywordValue);
+	} else {
+
+		
+		throw new UnsupportedOperationException("Given Input type not defined on get notify page ");
+}
+}
+
+public static void clickongetnotifypage(String btnName) {
+	
+		if (btnName.equalsIgnoreCase("submitgetnotifiedbutton")) {
+
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.submitgetnotifiedbutton);
+		} else {
+
+			
+			throw new UnsupportedOperationException("Given Input type not defined on get notify page ");
+	
+}
+}
+}
+												
