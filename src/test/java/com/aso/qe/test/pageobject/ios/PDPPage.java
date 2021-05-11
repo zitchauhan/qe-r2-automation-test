@@ -1073,5 +1073,17 @@ public void tabOnHelpfullReviewQn(String answer) {
 	}
 	
 }
+
+public void tapOnShareIconPDP() {
+	if(GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shareIcon))
+		{
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.shareIcon);
+		}
+}
+
+public void ValidateProductImgOnShareTray() {
+	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
+	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.overLayProductImage);
+}
 	
 }

@@ -358,6 +358,7 @@ public class Locators {
 		public static By labelItemCount  = By.id("lbl_cart");
 		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
 		public static By ratingAndReviewBtn=  By.id("TODO dev");
+		public static By shareIcon=By.id("btn_share");
 
 
 	}
