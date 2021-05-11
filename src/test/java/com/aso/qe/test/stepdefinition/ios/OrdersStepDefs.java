@@ -105,5 +105,24 @@ public class OrdersStepDefs extends GlobalMobileHelper {
 	public void user_sees_payment_method(String paymentType) throws Throwable {
 		ordersPage.isPayementMethodDisplayed(paymentType);
 	}
+	@Then("^user click on the listed order \"([^\"]*)\" at Orders Page$")
+	public void user_click_on_the_listed_order_at_Orders_Page(String order) throws Throwable {
+	   ordersPage.tapOnListedOrders(order);
+	}
+	@Then("^User sees the component \"([^\"]*)\" at order details page$")
+	public void user_sees_the_component_at_order_details_page(String field) throws Throwable {
+	    ordersPage.isFieldDisplayedOnOrderDetailsPage(field);
+	}
+	@Then("^User Enter the \"([^\"]*)\" at orders Page$")
+	public void user_Enter_the_at_orders_Page(String value) throws Throwable {
+	    ordersPage.enterValuesOnOrdersPage( value);
+	}
+	@Then("^User click on Check button at orders Page$")
+	public void user_click_on_Check_button_at_orders_Page() throws Throwable {
+	    ordersPage.tapOnCheckBtn();
+	}
+
+	
+	
 
 }
