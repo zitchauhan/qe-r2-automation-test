@@ -185,7 +185,7 @@ public class LoginPage {
 		String element = null;
 		if (fieldName.contains("email")) {
 			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,
-					Locators.LoginPage.passwordEditBox);
+				Locators.LoginPage.passwordEditBox);
 		System.out.println("value of " +keywordValue);
  		//String element = null;
  		if(fieldName.contains("email")){
