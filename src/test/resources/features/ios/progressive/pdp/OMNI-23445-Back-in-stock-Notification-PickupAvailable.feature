@@ -1,6 +1,6 @@
 Feature: Back in Stock Get notified 
 
-@ST-omni-23445  @TC-OMNI-37754
+@ST-OMNI-23445  @TC-OMNI-37754
 Scenario: user is able to add him self in oos notification list 
 		Given User launches the application
 		And User continues as "guest user" on onboarding page
