@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.common.Locators.ManageNotificaiton;
 import com.aso.qe.test.pageobject.ios.AccountPage;
 import com.aso.qe.test.pageobject.ios.OrdersPage;
 import com.aso.qe.test.pageobject.ios.SignUpPage;
@@ -12,8 +13,10 @@ import com.aso.qe.test.pageobject.ios.WishlistPage;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.appium.java_client.MobileElement;
 
 public class AccountPageStepDef extends GlobalMobileHelper{
 	
@@ -295,5 +298,94 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	 public void tabOnButtonOnorderhistoryPage(String btnName) {
 		accountPage.tabOnButtonOnorderhistoryPage(btnName);
 	}
+	// Manage Notification  -------------
+	
+	@Then("^User sees the Notification prefrence$")
+	public boolean user_sees_the_Notification_prefrence() throws Throwable {
+		
+		MobileElement switchOnEnable = driver.findElement(Locators.ManageNotificaiton.notificationPref);
+		return switchOnEnable.isDisplayed();
+	}
+
+	@When("^User Tap on Open Settings Button$")
+	public void user_Tap_on_Open_Settings_Button() throws Throwable {
+		
+		  accountPage.tapOnOpenSettings();
+	}
+
+	@Then("^User navigate to Notificaion Setting$")
+	public void user_navigate_to_Notificaion_Setting() throws Throwable {
+		
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+	accountPage.isNotificationSettingDisplay();
+	}
+
+	@Then("^User sees the status as  toggled OFF$")
+	public void user_sees_the_status_as_toggled_OFF() throws Throwable {
+
+	}
+
+	@When("^User Sees Order status and  Hot market OFF$")
+	public void user_Sees_Order_status_and_Hot_market_OFF() throws Throwable {
+	accountPage.isDisplaySwitchOff();
+	}
+
+	@Then("^User tap on Toggle  ON Order Status and HotMarket$")
+	public void user_tap_on_Toggle_ON_Order_Status_and_HotMarket() throws Throwable {
+	   accountPage.tapOnSwitchOn();
+	}
+
+	@Then("^User sees the alert Msg Pop Up$")
+	public void user_sees_the_alert_Msg_Pop_Up() throws Throwable {
+accountPage.isAlertPopUpDisplayed();
+	}
+
+	@When("^User Tap on Don't allow$")
+	public void user_Tap_on_Don_t_allow() throws Throwable {
+	  accountPage.tapOnDontAllow();
+	}
+
+	@Then("^User sees Toggle OFF in Notification$")
+	public void user_sees_Toggle_OFF_in_Notification() throws Throwable {
+	
+	}
+
+	@Then("^User sees Message display$")
+	public void user_sees_Message_display() throws Throwable {
+	
+	}
+
+	@When("^User Tap on Allow$")
+	public void user_Tap_on_Allow() throws Throwable {
+	accountPage.tapOnAllow();
+	}
+
+	@Then("^User seeToggle ON in Notification$")
+	public void user_seeToggle_ON_in_Notification() throws Throwable {
+	
+	}
+
+	@Then("^User see Status is ON$")
+	public boolean user_see_Status_is_ON() throws Throwable {
+		MobileElement switchOnEnable = driver.findElement(Locators.ManageNotificaiton.switchOff);
+		return switchOnEnable.isEnabled();
+		
+	}
+
+	@Then("^User seed  Order status and  Hot market Toogle OFF$")
+	public void user_seed_Order_status_and_Hot_market_Toogle_OFF() throws Throwable {
+		accountPage.isDisplaySwitchOff();
+	}
+
+	@When("^User tap on Enable Notification Toggle OFF$")
+	public void user_tap_on_Enable_Notification_Toggle_OFF() throws Throwable {
+	 accountPage.tapOnSwitchOn();
+	}
+
+	@Then("^User Sees Order status and  Hot market Toggle ON By deafault$")
+	public void user_Sees_Order_status_and_Hot_market_Toggle_ON_By_deafault() throws Throwable {
+	 accountPage.bothEnable();
+	}
+//-----------------------------------
 	
 }

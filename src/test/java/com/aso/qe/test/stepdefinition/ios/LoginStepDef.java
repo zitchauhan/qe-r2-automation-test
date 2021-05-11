@@ -376,8 +376,7 @@ public class LoginStepDef extends GlobalMobileHelper {
 	@When("^User enters invalid email \"([^\"]*)\"$")
 	public void user_enters_invalid_email(String email) throws Throwable {
 		loginPage.enterinvalidEmail(email);
-	}
-		
+		}
 		
 	
 	//-------------------------------------

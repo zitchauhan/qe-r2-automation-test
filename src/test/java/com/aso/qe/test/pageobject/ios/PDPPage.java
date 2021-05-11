@@ -1127,6 +1127,18 @@ public static boolean VarifyElementPresenseOngetnotifypage(String elementname) {
 		  }else {
 			
 			throw new UnsupportedOperationException("Given Button not founded on get notified page ");
+
+public void tapOnShareIconPDP() {
+	if(GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shareIcon))
+		{
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.shareIcon);
+		}
+}
+
+public void ValidateProductImgOnShareTray() {
+	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
+	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.overLayProductImage);
+}
 	
 }
 									

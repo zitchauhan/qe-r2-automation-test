@@ -427,6 +427,14 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@Then("^i choose to enter \"([^\"]*)\" on getnotify page$")
 	public void Enteremailongetnotifypage(String elementname) throws Throwable {
 		PDPPage.Enteremailongetnotifypage(elementname);
+	@Then("^User validates the share icon on PDP page and taps on it$")
+	public void user_validate_the_share_icon_onPDP_Page()throws Throwable {
+		pdp.tapOnShareIconPDP();
+	}
+	
+	@And("^User validates share tray is opened with product thumbnail and image$")
+	public void user_validate_share_tray_product_thumbnail_image() {
+		pdp.ValidateProductImgOnShareTray();
 	}
 
 	@Then("^i click on \"([^\"]*)\" on getnotify page$")
