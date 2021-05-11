@@ -343,7 +343,7 @@ assertTrue("Option Add new Billing address not displayed",GlobalMobileHelper.isE
 	 */
     public void verifyDeliveryOptionsForWhiteProductBulkyItem() {
 		/* Created By jitsingh7 on 11/04/21 */
-	String WhiteGloveBulkyShippingMethods = PropertiesHelper.getInstance().getMobileTestDataProperty("WhiteGloveBulkyShippingMethods");
+	//String WhiteGloveBulkyShippingMethods = PropertiesHelper.getInstance().getMobileTestDataProperty("WhiteGloveBulkyShippingMethods");
 		List<MobileElement> shippingMethodsElements = driver
 				.findElements(Locators.CheckoutPage.labelShippingMethods);
 
