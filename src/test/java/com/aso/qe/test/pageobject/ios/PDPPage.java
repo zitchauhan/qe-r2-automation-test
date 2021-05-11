@@ -1128,21 +1128,7 @@ public static boolean VarifyElementPresenseOngetnotifypage(String elementname) {
 			
 			throw new UnsupportedOperationException("Given Button not founded on get notified page ");
 
-public void tapOnShareIconPDP() {
-	if(GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shareIcon))
-		{
-			GlobalMobileHelper.tapOnElement(Locators.PDPPage.shareIcon);
-		}
-}
-
-public void ValidateProductImgOnShareTray() {
-	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
-	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.overLayProductImage);
-}
-	
-}
-									
-}
+		  }}
 
 public static void Enteremailongetnotifypage(String fieldName) {
 	String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
@@ -1168,6 +1154,19 @@ public static void clickongetnotifypage(String btnName) {
 			throw new UnsupportedOperationException("Given Input type not defined on get notify page ");
 	
 }
+}
+
+public static void tapOnShareIconPDP() {
+	// TODO Auto-generated method stub
+	if(GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shareIcon))
+	{
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.shareIcon);
+	}
+}
+
+public static void ValidateProductImgOnShareTray() {
+	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
+	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.overLayProductImage);
 }
 }
 												
