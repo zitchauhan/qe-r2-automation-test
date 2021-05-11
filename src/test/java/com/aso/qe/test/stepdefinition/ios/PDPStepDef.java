@@ -417,6 +417,10 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_click_on_on_Helpfull_Review_qn(String answer) throws Throwable {
 	   pdp.tabOnHelpfullReviewQn(answer);
 	}
+	@Then("^User Enter the \"([^\"]*)\"  Value \"([^\"]*)\" on Review page$")
+	public void user_Enter_the_Value_on_Review_page(String editBoxType, String value){
+	    pdp.enteValuesOnReviewPage(editBoxType, value);
+	}
 
 	@Then("^user see \"([^\"]*)\" on getnotify page$")
 	public void VarifyElementPresenseOngetnotifypage(String elementname) throws Throwable {

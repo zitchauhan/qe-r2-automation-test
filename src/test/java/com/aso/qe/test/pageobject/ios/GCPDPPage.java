@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
 
@@ -612,6 +614,18 @@ public class GCPDPPage {
 
 	public String getShippingType() {		
 		return GlobalMobileHelper.getElementText(Locators.PDPPage.overLayShippingInformation);
+	}
+
+	public void tapOnAmountListed(String amount) {
+		String actualamount = "Select Card Amount "+amount+", by tapping on the button";
+		
+		List<MobileElement> amountLs = driver.findElements(Locators.PDPPage.cardAmountList);
+		System.out.println(amountLs.size());
+		for(int i =1; i<=amountLs.size()-1;i++) {
+			if(amountLs.get(i).getText().contains(actualamount)) {
+				amountLs.get(i).click();	
+			}
+		}
 	}
 	
 	

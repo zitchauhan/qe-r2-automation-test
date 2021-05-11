@@ -379,6 +379,7 @@ public class Locators {
 		public static By labelItemCount  = By.id("lbl_cart");
 		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
 		public static By ratingAndReviewBtn=  By.id("TODO dev");
+		public static By cardAmountList = By.xpath("//XCUIElementTypeButton[contains(@name,'price_list_item_Card_Amount')]");
 		public static By shareIcon=By.id("btn_share");
 
 
@@ -1082,6 +1083,19 @@ public class Locators {
 		public static By giftCardLabel=By.id("lbl_giftCard");
 		public static By paypalLabel=By.id("lbl_paypal");
 		public static By applePayLabel=By.id("lbl_applePay");
+		public static By orderListItem=By.id("TODO by dev");
+		public static By orderDetailPageTitle=By.id("TODO by dev");
+		public static By orderLabel=By.id("TODO by dev");
+		public static By dateOrderPlacedLabel=By.id("TODO by dev");
+		public static By orderTotalLabel=By.id("TODO by dev");
+		public static By homeDeliveryTitle=By.id("TODO by dev");
+		public static By userName=By.id("TODO by dev");
+		public static By orderStatus=By.id("TODO by dev");
+		public static By deliveryServiceType=By.id("TODO by dev");
+		public static By trackPackageLabel=By.id("TODO by dev");
+		public static By orderNumberEditbox=By.id("TODO by dev");
+		public static By billingZipcodeEditbox=By.id("TODO by dev");
+		public static By checkBtn=By.id("TODO by dev");
 	}
 
 	public static class SavedAddresses {
