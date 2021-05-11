@@ -64,6 +64,20 @@ public class Locators {
 		public static By errorMsgOninvalid = By.id("TODO by dev");
 
 	}
+	
+	public static class ManageNotificaiton{
+
+		public static By orderstatus = By.id("TODO by dev ");
+		public static By hotMarket = By.id("TODO by dev ");
+		public static By openSetting = By.id("TODO by dev ");
+		public static By  notificationPref= By.id("TODO by dev ");
+		public static By backNavigation = By.id("TODO by dev ");
+		public static By  switchOn= By.id("TODO by dev ");
+		public static By switchOff = By.id("TODO by dev ");
+		public static By notificationSetting = By.id("TODO by dev ");
+		
+					
+	} 
 
 	public static class HomePage {
 		public static By buttonGoToPDP = By.xpath("//*[contains(@label,\"Adidas Men's Designed2Move Polo Shirt\")]");
