@@ -2,6 +2,7 @@ package com.aso.qe.test.common;
 
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class Locators {
 
@@ -354,8 +355,10 @@ public class Locators {
 		public static By productTite = By.id("lbl_product_title");
 		public static By backBtn = By.id("btn_back");
 
-		public static By labelItemCount = By.id("lbl_cart");
-		public static By CounterBadgeOnCartIcon = By.id("TODO dev");
+		public static By labelItemCount  = By.id("lbl_cart");
+		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
+		public static By ratingAndReviewBtn=  By.id("TODO dev");
+
 
 	}
 
@@ -797,20 +800,6 @@ public class Locators {
 		public static By errorMsgInvalidCard = By.id("invalid_card_error");
 	}
 
-	// Use this for my account add new ASO cc section
-	public static class Addnewasocreditcard {
-		public static By buttonback = By.id("btn_payment_back");
-		public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
-		public static By Asocardtextbox = By.id("textbox_asocreditcard");
-		public static By Setasdefaultcheckbox = By.id("Checkbox_Setasdefault");
-		public static By ErrorModal = By.id("popup_errormodal");
-		public static By AreYousurewanttoleavelabel = By.id("lbl_SureWantToLeave");
-		public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
-		public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
-		public static By Continuealertbutton = By.id("btn_continuealeartbutton");
-		public static By DeleteCardbutton = By.id("btn_deletecardbutton");
-
-	}
 
 	// Use this for my account Billing address
 	public static class MyAccountBillingAddress {
@@ -826,6 +815,38 @@ public class Locators {
 
 	}
 
+		
+
+				//Use this for my account add new ASO cc section
+				public static class Addnewasocreditcard{
+					public static By buttonbackN = By.id("btn_payment_back");
+					public static By AddnewAsocrerditCardlabelN = By.id("lbl_addnewasocreditcard");
+					public static By AsocardtextboxN = By.id("textbox_asocreditcard");
+					public static By SetasdefaultcheckboxN = By.id("Checkbox_Setasdefault");
+					public static By ErrorModalN = By.id("popup_errormodal");
+					public static By AreYousurewanttoleavelabelN = By.id("lbl_SureWantToLeave");
+					public static By AreYousurewanttoleaveMsglabelN = By.id("lbl_SureWantToLeaveMsg");
+					public static By CancelalertbuttonN = By.id("btn_cancelaleartbutton");
+					public static By ContinuealertbuttonN = By.id("btn_continuealeartbutton");
+					public static By DeleteCardbuttonN = By.id("btn_deletecardbutton");
+					public static By Invalidcvverror = By.id("lbl_Invalidcvverror");
+					public static By Invalidccerror = By.id("lbl_Invalidccerror");
+					public static By Invalidexpiryerror = By.id("lbl_Invalidexpiryerror");
+					public static By buttonback = By.id("btn_payment_back");
+					public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
+					public static By Asocardtextbox = By.id("textbox_asocreditcard");
+					public static By Setasdefaultcheckbox = By.id("Checkbox_Setasdefault");
+					public static By ErrorModal = By.id("popup_errormodal");
+					public static By AreYousurewanttoleavelabel = By.id("lbl_SureWantToLeave");
+					public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
+					public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
+					public static By Continuealertbutton = By.id("btn_continuealeartbutton");
+					public static By DeleteCardbutton = By.id("btn_deletecardbutton");
+					
+
+				}
+
+				
 	public static class WelcomeScreen {
 		public static By HomeButton = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 	}
@@ -918,6 +939,10 @@ public class Locators {
 		public static By productqty = By.id("lbl_productqty");
 		public static By productprice = By.id("lbl_product_price");
 		public static By skunumber = By.id("lbl_product_sku");
+		
+		public static By msgOrderCancel=By.id("TODO by dev");
+		public static By msgConfirmationEmail=By.id("TODO by dev");
+		public static By labelcancelOrderDate=By.id("TODO by dev");	
 
 		/* created by Nirmal - OMNI-33184 07/06/2021 */
 		public static By buttonTrackDelivery = By.id("button_track_delivery");
@@ -1023,6 +1048,14 @@ public class Locators {
 		public static By packageLabel = By.id("TODO by dev");
 		public static By itemsCount = By.id("TODO by dev");
 		public static By getNotificationLink = By.id("TODO by dev");
+		public static By creditCardimage=By.id("img_creditCard");
+		public static By giftCardImage=By.id("img_giftCard");
+		public static By paypalImage=By.id("img_paypal");
+		public static By applePayImage=By.id("img_applePay");
+		public static By giftCardAmount=By.id("text_giftCard_amount");
+		public static By giftCardLabel=By.id("lbl_giftCard");
+		public static By paypalLabel=By.id("lbl_paypal");
+		public static By applePayLabel=By.id("lbl_applePay");
 	}
 
 	public static class SavedAddresses {
@@ -1032,9 +1065,80 @@ public class Locators {
 				.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
+	
+	public static class BazzarVoice{
+		public static By buttonQuestionAndAnswer=By.id("TODO by dev");
+		public static By labelReview=By.id("TODO by dev");
+		public static By buttonSort=By.id("TODO by dev");
+		public static By labelQuestion=By.id("TODO by dev");
+		public static By buttonAskQuestion=By.id("TODO by dev");
+		public static By buttonBack=By.id("TODO by dev");
+		public static By buttonAnswerThisQuestion=By.id("TODO by dev");
+		public static By linkQA=By.id("TODO by dev");
+		
+		public static By labelAskQuestion=By.id("TODO by dev");
+		public static By productImage=By.id("TODO by dev");
+		public static By productName=By.id("TODO by dev");
+		public static By labelQuestions=By.id("TODO by dev");
+		public static By labelNickname=By.id("TODO by dev");
+		public static By labelLocation=By.id("TODO by dev");
+		public static By labelEmail=By.id("TODO by dev");
+		public static By chkBoxTermsCondition=By.id("TODO by dev");
+		public static By buttonPostQuestion=By.id("TODO by dev");		
+		public static By inputBoxQuestion=By.id("TODO by dev");
+		public static By inputBoxNickName=By.id("TODO by dev");
+		public static By inputBoxLocation=By.id("TODO by dev");
+		public static By inputBoxEmail=By.id("TODO by dev");
+		
+		public static By posterUsername=By.id("TODO by dev");
+		public static By labelQuestionDescription=By.id("TODO by dev");
+		public static By answerUsername=By.id("TODO by dev");
+		public static By labelAnswerDescription=By.id("TODO by dev");
+		public static By buttonYes=By.id("TODO by dev");
+		public static By buttonNo=By.id("TODO by dev");
+		public static By buttonReport=By.id("TODO by dev");
+		public static By inputBoxPostAnswer=By.id("TODO by dev");
+		public static By buttonPostAnswer=By.id("TODO by dev");
+		public static By labelPostAnswer=By.id("TODO by dev");
+		
+		
+	}
 
 	public static class Phone{
 		public static By phoneNotification= By.id("TODO by dev");
 	}
+
+	public static class ReviewPage {
+
+		public static By LocationEditBox = By.id("TODO by dev");
+		public static By ratingsAndReview= By.id("TODO by dev");
+		public static By writeReviewBtn= By.id("TODO by dev");
+		public static By ReviewPageTitle=By.id("TODO by dev");
+		public static By ratingValue = By.id("TODO by dev");
+		public static By reviewTitleEditBox= By.id("TODO by dev");
+		public static By reviewDetailsEditBox=By.id("TODO by dev");
+		public static By nickNameEditBox=By.id("TODO by dev");
+		public static By emailEditBox=By.id("TODO by dev");
+		public static By sweepstackDropdown= By.id("TODO by dev");
+		public static By dropdownOptionYes= By.id("TODO by dev");
+		public static By fitValue= By.id("TODO by dev");
+		public static By yesOption= By.id("TODO by dev");
+		public static By NoOption= By.id("TODO by dev");
+		public static By sweepstackTermCondCheckbox= By.id("TODO by dev");
+		public static By termCondCheckbox= By.id("TODO by dev");
+		public static By postReviewBtn= By.id("TODO by dev");
+		public static By reviewDetailsPageTitle= By.id("TODO by dev");
+		public static By sortOption= By.id("TODO by dev");
+		public static By reviewerName= By.id("TODO by dev");
+		public static By postedTimeText= By.id("TODO by dev");
+		public static By starRatingValue= By.id("TODO by dev");
+		public static By reviewTitle= By.id("TODO by dev");
+		public static By verifiedPurchaserMark= By.id("TODO by dev");
+		public static By yesIRecommend= By.id("TODO by dev");
+		public static By helpfullquestion= By.id("TODO by dev");
+		
+		
+	}
+	
 
 }

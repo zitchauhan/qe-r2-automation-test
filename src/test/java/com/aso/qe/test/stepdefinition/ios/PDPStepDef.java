@@ -368,5 +368,57 @@ public class PDPStepDef extends GlobalMobileHelper{
 //	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
 //		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
 //	}
+	@Then("^user Scroll down and click on rating and review$")
+	public void user_Scroll_down_and_click_on_rating_and_review() throws Throwable {
+	   pdp.tapOnRatingAndReview();
+	}
+	@Then("^User sees the All rating and review on rating and review page$")
+	public void user_sees_the_All_rating_and_review_on_rating_and_review_page() throws Throwable {
+	    pdp.isRatingsAndReviewDisplayed();
+	    
+	}
+	@Then("^User clicks on Write a review Button$")
+	public void user_clicks_on_Write_a_review_Button() throws Throwable {
+	    pdp.tapOnWriteReviewBtn();
+	}
+	@Then("^User sees the Review Page$")
+	public void user_sees_the_Review_Page() throws Throwable {
+	  assertTrue( pdp.isReviewPageDisplayed());
+	}
+	@Then("^User Enter the Rating (\\d+)$")
+	public void user_Enter_the_Rating(int ratingValue) throws Throwable {
+	    pdp.enterRatingValue(ratingValue);
+	}
+	@Then("^User Enter the \"([^\"]*)\"  Value \"([^\"]*)\" on Review Page$")
+	public void user_Enter_the_Value_on_Review_Page(String editBoxType, String value) throws Throwable {
+	    pdp.enteValuesOnReviewPage(editBoxType, value);
+	}
+	@Then("^user click on the checkbox \"([^\"]*)\"$")
+	public void user_click_on_the_checkbox(String checkBoxType) throws Throwable {
+	    pdp.clickOnCheckBox(checkBoxType);
+	}
+	@Then("^User click on Post Review button$")
+	public void user_click_on_Post_Review_button() throws Throwable {
+	   pdp.tapOnPostReviewBtn();
+	}
+	@Then("^user redirected to Ratings & Review details page$")
+	public void user_redirected_to_Ratings_Review_details_page() throws Throwable {
+	   assertTrue( pdp.isRatingAndReviewDetailsPageDisplayed());
+	}
+	@Then("^User sees the \"([^\"]*)\" on Review Details Page$")
+	public void user_sees_the_on_Review_Details_Page(String fieldType) throws Throwable {
+	    pdp.isFieldDisplayedOnReviewDetailsPage(fieldType);
+	}
+	@Then("^user sees the yes \"([^\"]*)\" No \"([^\"]*)\" And Report \"([^\"]*)\" at Helpfull review qn$")
+	public void user_sees_the_yes_No_And_Report_at_Helpfull_review_qn(String yesStat, String noStat, String reportStat) throws Throwable {
+	   pdp.isElementEnabled(yesStat, noStat, reportStat);
+	}
+	@Then("^user click on \"([^\"]*)\" on Helpfull Review qn$")
+	public void user_click_on_on_Helpfull_Review_qn(String answer) throws Throwable {
+	   pdp.tabOnHelpfullReviewQn(answer);
+	}
+
+
+
 
 }
