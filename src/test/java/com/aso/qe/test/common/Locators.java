@@ -167,6 +167,10 @@ public class Locators {
 		public static By ratingFilter = By.id("filter_rating");
 		public static By dealsFilter = By.id("filter_deals");
 		public static By promoAdImage = By.id("img_promo_ad_0");
+		public static By promotionaltooltip = By.id("btn-promotionaltoolti");
+		public static By promotionalmessage =By.id("lbl-promotionalmessage");
+		
+		
 	}
 
 	public static class SearchPage {
