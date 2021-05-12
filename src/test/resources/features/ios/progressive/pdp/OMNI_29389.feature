@@ -12,6 +12,7 @@ When User Clicks On MaY Be Later
 	And I choose to navigate to PDP 
 	And User sees Product title
 	Then User sees card amount section
+	#Tapping on the other option provide ""
 	Then User tap on the card Amount option as ""
 	Then User see the instruction message
 	Then User see the Enter Amount field

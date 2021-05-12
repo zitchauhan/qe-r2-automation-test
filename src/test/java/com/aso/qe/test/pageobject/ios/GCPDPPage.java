@@ -626,11 +626,11 @@ public class GCPDPPage {
 		String actualamount = "Select Card Amount "+amount+", by tapping on the button";
 		
 		List<MobileElement> amountLs = driver.findElements(Locators.PDPPage.cardAmountList);
-		System.out.println(amountLs.size());
+		//System.out.println(amountLs.size());
 		for(int i =1; i<=amountLs.size()-1;i++) {
-			System.out.println(amountLs.get(i).getText());
+			//System.out.println(amountLs.get(i).getText());
 			if(amountLs.get(i).getText().contains(actualamount)) {
-			System.out.println(amountLs.get(i).getText());
+			//System.out.println(amountLs.get(i).getText());
 				amountLs.get(i).click();	
 			}
 		}
