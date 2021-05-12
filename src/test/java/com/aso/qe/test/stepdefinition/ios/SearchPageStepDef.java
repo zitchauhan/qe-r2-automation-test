@@ -198,5 +198,10 @@ public class SearchPageStepDef extends GlobalMobileHelper {
 		public void ClickonSearcheditem(String searchkeyword)  {
 			searchPage.ClickonSearcheditem(searchkeyword);
 	}
+	
+	@Then("^i choose to See \"([^\"]*)\" on Search page$")
+	public void verifyelementonsearchpage(String Elementname) throws Throwable  {
+		assertTrue(searchPage.verifyelementonsearchpage(Elementname));
+}
 }
 
