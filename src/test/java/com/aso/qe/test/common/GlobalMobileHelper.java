@@ -556,16 +556,22 @@ public class GlobalMobileHelper {
 	 */
 	public static boolean isPatternExistInElementText(String patternText, By locator) {
 		// Pattern matching can be further made into a method
+		boolean result = false;
 		String elementText = getElementText(locator);
 		try {
 			Pattern pattern = Pattern.compile(patternText);
 			Matcher matcher = pattern.matcher(elementText);
-			logger.debug("successfully found the pattern in Element " + locator.toString() + " and in text " + elementText);
-			return matcher.matches(); // TODO: Regex patten matching is failing for Shipping price information under Oder Summary
+			result = matcher.matches(); // TODO: Regex patten matching is failing for Shipping price information under Oder Summary
+			if (result){
+				logger.debug("successfully found the pattern in Element " + locator.toString() + " and in text " + elementText);
+			}else {
+				logger.debug("Not found the pattern in Element " + locator.toString() + " and in text " + elementText);
+			}
+			return result;
 		}catch (Exception e){
 			logger.error("Exception occured while searching for pattern in the element text "+ elementText + "\n" + e.getLocalizedMessage());
 		}
-		return false;
+		return result;
 	}
 }
 

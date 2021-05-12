@@ -223,7 +223,7 @@ public class Locators {
 		public static By labelProductTitle = By.id("lbl_product_title");
 		public static By labelProductPrice = By.id("lbl_product_price");
 		public static By buttonAddToCart = By.id("btn_add_to_cart");
-		public static By buttonViewCart = By.id("btn_view_cart");
+		public static By buttonViewCart = By.id("btn_cart");
 //		public static By qtyIncrementStepper = By.id("btn_quantity_increment");
 		public static By qtyIncrementStepper = By.id("plus_btn_id");
 //		public static By qtyDecrementStepper = By.id("btn_quantity_decrement");
@@ -887,27 +887,27 @@ public class Locators {
 	}
 
 	public static class OrderSummary {
-		public static By orderSummaryHeading = By.id("lbl_orderSummaryHeading");
-		public static By subTotalLabel = By.id("lbl_SubTotal");
-		public static By orderTotalLabel = By.id("lbl_OrderTotal");
-		public static By shippingLabel = By.id("lbl_Shipping");
-		public static By shippingToLabel = By.id("lbl_ShippingTo");
+		public static By orderSummaryHeading = By.id("lbl_order_summary");
+		public static By subTotalLabel = By.id("lbl_subtotal_price");
+		public static By orderTotalLabel = By.id("lbl_order_total_price");
+		public static By shippingLabel = By.id("lbl_shipping_price");
+		public static By shippingToLabel = By.id("lbl_shipping_price");
 		public static By shippingToZip = By.id("lbl_ShippingToZip");
 		public static By storepickup = By.id("lbl_Storepickup");
 		public static By changezipcodecta = By.id("cta_Changezipcodecta");
 		public static By changestorecta = By.id("cta_Changestorecta");
 		public static By eDeliveryLabel = By.id("lbl_eDelivery");
-		public static By taxesLabel = By.id("lbl_Taxes");
+		public static By taxesLabel = By.id("lbl_taxes_price");
 		public static By discountsLabel = By.id("lbl_Discounts");
 		public static By promocodeLabel = By.id("lbl_Promocode");
 		public static By restrictionmessage = By.id("lbl_Restrictionmessage");
 		// Value of each label of order summary y
 
-		public static By subTotalPrice = By.id("lbl_SubTotalValue");
-		public static By orderTotalPrice = By.id("lbl_OrderTotalValueValue");
-		public static By shippingPrice = By.id("lbl_ShippingValue");
+		public static By subTotalPrice = By.id("lbl_subtotal_price");
+		public static By orderTotalPrice = By.id("lbl_order_total_price");
+		public static By shippingPrice = By.id("lbl_shipping_price");
 		public static By eDeliveryPrice = By.id("lbl_eDeliveryValue");
-		public static By taxesPrice = By.id("lbl_TaxesValue");
+		public static By taxesPrice = By.id("lbl_taxes_price");
 		public static By discountsPrice = By.id("lbl_DiscountsValue");
 		public static By promocodePrice = By.id("lbl_PromocodeValue");
 		public static By storepickupatstorename = By.id("lbl_Storepickupatstorename");
