@@ -417,8 +417,26 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_click_on_on_Helpfull_Review_qn(String answer) throws Throwable {
 	   pdp.tabOnHelpfullReviewQn(answer);
 	}
+//---Out of stock gift card
+	@Then("^I  varify Out of Stock product$")
+	public void i_varify_Out_of_Stock_product() throws Throwable {
+	  
+	}
 
+	@When("^inventory is not available$")
+	public void inventory_is_not_available() throws Throwable {
+	   
+	  
+	}
 
+	@Then("^Verify display Out of Stock as per design$")
+	public void display_Out_of_Stock_as_per_design() throws Throwable {
+	  
+		pdp.outOfStockitem();
+		
+	}
+
+//----------
 
 
 }

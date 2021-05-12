@@ -340,7 +340,60 @@ if(pagename.equalsIgnoreCase("see No product found")) {
 	  public void swipeDown() {
 		  GlobalMobileHelper.swipeScreen(Direction.DOWN, 5);
 	  }
+	  
+	  
+	  public void Searchforproduct(String keyword) 
+		{   try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+			GlobalMobileHelper.searchByKeyword(keyword);
+			driver.findElement(Locators.SearchPage.goBtn).click();
+		}
+	public void insertProductInSearchBox(String insert) {
+		// TODO Auto-generated method stub
+		
+		
+		//public void tapOnSearchKeyword(String keyword) 
+		{   try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		MobileElement searchbox = driver.findElement(Locators.HomePage.searchBox);
+		GlobalMobileHelper.tapOnElement(searchbox);
+		{   try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+	   MobileElement insertinserchbox = driver.findElement(Locators.HomePage.searchBox);
+	   insertinserchbox.sendKeys(insert);
+	   
+		//MobileElement prod = GlobalMobileHelper.getLocator(locators, replacement);
+//				SearchPage.findElement(Locators.HomePage.searchBox);
+//		{   try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+		//driver.findElement(Locators.HomePage.searchBox)
+		//GlobalMobileHelper.searchProductByName(insert);
+	   {   try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+			driver.findElement(Locators.SearchPage.goBtn).click();
+		}
+		
+		
 	}
+	}}}
 
 
 	

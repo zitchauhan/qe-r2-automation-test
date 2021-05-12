@@ -190,5 +190,9 @@ public class SearchPageStepDef extends GlobalMobileHelper {
 		assertTrue(searchPage.Varifyuserisonnoresultpage(pagename)); 
 	}
 
+	@Then("^User Search for the \"([^\"]*)\"$")
+	public void user_Search_for_the(String insert) throws Throwable {
+	   searchPage.insertProductInSearchBox(insert);
+	}
 
 }

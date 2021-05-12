@@ -85,7 +85,7 @@ public class Locators {
 		// public static By homeBtn = By.id("lbl_home");
 		// public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
-		// public static By searchBox = By.id("search_bar");this is frquent change b/dev
+		//public static By searchBox = By.id("search_bar");this is frquent change b/dev
 		public static By searchBox = By.id("btn_Search");
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
@@ -115,6 +115,7 @@ public class Locators {
 		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 		public static By titleOferDetails = By.id("TODO by dev");
 		public static By offerDetailsBanner = By.id("TODO by dev");
+		
 
 	}
 
@@ -358,6 +359,8 @@ public class Locators {
 		public static By labelItemCount  = By.id("lbl_cart");
 		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
 		public static By ratingAndReviewBtn=  By.id("TODO dev");
+		public static By outOfStockMsg =  By.id("TODO dev");
+	
 
 
 	}
