@@ -299,11 +299,14 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_sees_the_Bulk_gift_card_button() throws Throwable {
 	   assertTrue(pdp.isBulkGiftCardBtnDisplayed());
 	}
-
-
-
-
-	
+	@And("^User click on Done Button$")
+	public void tapOnDoneBtn() {
+		pdp.tapOnDoneBtn();
+	}
+	@And("^User sees Exceeded Amount Error message$")
+	public void isErrorMsgDisplayed() {
+	assertTrue(	pdp.isAmountErrorMessageDisplayed());
+	}
 
 	//OMNO-26981
 	@Then("^I choose to click on \"([^\"]*)\" in PDP page$")
@@ -447,4 +450,12 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void clickongetnotifypage(String elementname) throws Throwable {
 		PDPPage.clickongetnotifypage(elementname);
 	}
+    @And("^user click on cancel button on Alert PopUp$")
+    public void tapOnCancelOnAlertmsg() {
+    	pdp.tapOnCancelOnAlertMsg();
+    }
+    @Then("^User sees the Alert Pop Up type \"([^\"]*)\"$")
+    public void user_sees_the_Alert_Pop_Up_type(String alertType) throws Throwable {
+        pdp.isAlertDisplayed(alertType);
+    }
 }

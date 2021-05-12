@@ -767,7 +767,7 @@ public class PDPPage {
 	}
 
 	public boolean isAlertPopUpDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.alertGiftCardError);
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.liveChatBtn);
 		
 	}
 
@@ -1167,6 +1167,38 @@ public static void tapOnShareIconPDP() {
 public static void ValidateProductImgOnShareTray() {
 	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
 	GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.overLayProductImage);
+}
+
+public void tapOnDoneBtn() {
+	GlobalMobileHelper.tapOnElement(Locators.PDPPage.doneBtn);
+	
+}
+
+public boolean isAmountErrorMessageDisplayed() {
+	
+	try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	GlobalMobileHelper.swipeScreen(Direction.UP, 1);
+	return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.amountErrormsg);
+	
+}
+
+public void tapOnCancelOnAlertMsg() {
+	GlobalMobileHelper.tapOnElement(Locators.PDPPage.cancelAlertBtn);
+	
+}
+
+public boolean isAlertDisplayed(String alertType) {
+	if(alertType.contains("liveChat")) {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.liveChatBtn);
+	}else {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGiftCardBtnAlert);
+	}
+	
 }
 }
 												
