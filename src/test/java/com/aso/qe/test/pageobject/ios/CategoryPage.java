@@ -357,13 +357,13 @@ public boolean verifyColourVarientprod() throws Exception {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	 if(!ProductPrice()) {
+		/*	 if(!ProductPrice()) {
 			list.add ( new Exception("Product Price not present"));	
 		 }
 	 if(!isPLP_ProductTitleDisplayed()) {
 			list.add ( new Exception("ProductTitle not present"));	
 		 }
-/*
+
 	 if(!isPLP_ImageDisplayed()) {
 			list.add ( new Exception("Image  not present"));	
 		 }
@@ -591,26 +591,27 @@ public boolean OurPriceIncart() throws Exception {
 			e.printStackTrace();
 		}
 
-	 if(!isPLP_ProductTitleDisplayed()) {
+/*	 if(!isPLP_ProductTitleDisplayed()) {
 			list.add ( new Exception("ProductTitle not present"));	
 		 }
-/*
+
 	 if(!isPLP_ImageDisplayed()) {
 			list.add ( new Exception("Image  not present"));	
 		 }		 
 	 
-*/	 	 
+	 	 
 	 if(!isPLP_BadgeDisplayed()) {
 			list.add ( new Exception("Badge not present in PLP"));	
 		 }
-	 
+
+ */
 	 if(!isPLP_OurPriceInCartDisplayed()) {
 			list.add ( new Exception("Our price in cart Text  not present in PLP"));	
 		 }	 
-	 if(!isPLP_OurPriceInCartToolTipDisplayed()) {
-			list.add ( new Exception("PLP our price in cart tool tip msg  not present in PLP"));	
-		 }
-	 
+		/*
+		 * if(!isPLP_OurPriceInCartToolTipDisplayed()) { list.add ( new
+		 * Exception("PLP our price in cart tool tip msg  not present in PLP")); }
+		 */	 
 	 if(!list.isEmpty()) {
 		 flag=false;
 			String s=null;
@@ -620,17 +621,7 @@ public boolean OurPriceIncart() throws Exception {
 			throw new Exception(s);
 		
 	    }
-	return flag;
-
-	
-
-	
-
-	
-	
-	
-	
-	
+	return flag;	
 }
 
 
@@ -647,18 +638,19 @@ public boolean verifyUnitPrice() throws Exception {
 			e.printStackTrace();
 		}
 
-	 if(!isPLP_ProductTitleDisplayed()) {
+		/*	 if(!isPLP_ProductTitleDisplayed()) {
 			list.add ( new Exception("ProductTitle not present"));	
 		 }
-/*
+
 	 if(!isPLP_ImageDisplayed()) {
 			list.add ( new Exception("Image  not present"));	
 		 }		 
 	 
-	 */
+
 	 if(!ProductPrice()) {
 			list.add ( new Exception("ProductPrice  not present"));	
-		 }		 
+		 }	
+	 */	 
 	 if(!isPLP__PPU_MSGDisplayed()) {
 			list.add ( new Exception("PPU MSg  not present"));	
 			
@@ -776,19 +768,20 @@ boolean flag=true;
 			e.printStackTrace();
 		}
 
-	 if(!isPLP_ProductTitleDisplayed()) {
+/*	 if(!isPLP_ProductTitleDisplayed()) {
 			list.add ( new Exception("ProductTitle not present"));	
 		 }
 	 if(!ProductPrice()) {
 			list.add ( new Exception("Product Price not present"));	
 		 }
-/*
+
 	 if(!isPLP_ImageDisplayed()) {
 			list.add ( new Exception("Image  not present"));	
 		 }		 
 	 
 	 */
-	 if(!isPLP_PromotionMessageDisplayed()) {
+		
+	 if(!isPLP_Clearance_Styles_AvailableDisplayed()) {
 			list.add ( new Exception("promotion message not present"));	
 		 }		 
 	

@@ -1,7 +1,7 @@
 Feature: Verify Details of PLP for product
   
    
- @Regression 	@Sprint01 @TC-OMNI-20338_2
+ @Regression @Sprint01 @TC-OMNI-20338_2
     Scenario Outline:: validate PLP badges
   	Given User launches the application
     And User continues as guest user
@@ -10,10 +10,10 @@ Feature: Verify Details of PLP for product
     Then User clicks on the Search Box
     And User search for the "<SearchKeyword>"
 #   Then User sees all products related to search Keyword    
-  Then verify the "<SearchKeyword>" of product in PLP page attributes
+    Then verify the "<SearchKeyword>" of product in PLP page attributes
  Examples: 
 |	 SearchKeyword                          | 
-#|   colour_varient_prod                    |
+|   colour_varient_prod                    |
 #|   Unitprice_Prod                         |
 #|   Price_Range_Prod                       |
 #|	clearence_Prod                          |	
@@ -21,8 +21,8 @@ Feature: Verify Details of PLP for product
 |	ammunitionProd                          |
 #   |	specialprice                        |
 # |	Promotion_data                          | 
-	|Clearance_Styles_Available             |
-|	Some_styles_only_available_online_prod  |
+| Clearance_Styles_Available             |
+#|	Some_styles_only_available_online_prod  |
 
  
  
