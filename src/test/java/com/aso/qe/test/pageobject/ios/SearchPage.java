@@ -395,13 +395,35 @@ if(pagename.equalsIgnoreCase("see No product found")) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+				}else if(searchkeyword.equalsIgnoreCase("promotionaltooltip")) {
+					
+			GlobalMobileHelper.tapOnElement(Locators.PLPPage.promotionaltooltip);
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 					
 				}else {
 		 			
 					throw new UnsupportedOperationException("Given Element type not defined on Search page ");
 		}
+		}
+
+		
+		public boolean verifyelementonsearchpage(String elementname) {
+			if(elementname.equalsIgnoreCase("promotionalmessage")) {
+				
+				return GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.promotionalmessage);
+		}else {
+ 			
+			throw new UnsupportedOperationException("Given Element type not defined on Search page ");
 }
-}
+		
+			
+		}
+		}
 
 
 	
