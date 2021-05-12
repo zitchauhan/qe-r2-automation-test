@@ -471,6 +471,70 @@ public class GlobalMobileHelper {
 		waitForDefaultTime();
 	}
 
+
+	/**
+	 * Method to trigger field level error on the UI using one element of type MobileElement
+	 * @param mobileElement of type MobileElement, generally an input.
+	 */
+	public static void tapOutOfAnElement(MobileElement mobileElement){
+
+		try {
+
+			TouchAction touchAction  = new TouchAction(driver);
+			Dimension dimension = mobileElement.getSize();
+			Point startPointOfElement = mobileElement.getLocation();
+			int xPoint = startPointOfElement.x + dimension.width / 2 ;
+			int yPoint = startPointOfElement.y + dimension.height + 2 ; // add 2 points below y
+
+			PointOption offSetXYOption = PointOption.point(xPoint, yPoint);
+			touchAction.tap(offSetXYOption).perform();
+
+		}catch (Exception e){
+			logger.error(e.getLocalizedMessage());
+		}
+
+	}
+
+	/**
+	 * Method to trigger field level error on the UI using 2 elements of type MobileElement
+	 * @param mobileElement1 of type MobileElement, generally an input
+	 * @param mobileElement2 of type MobileElement, can be an input, or any other element on the page that registers a tap
+	 */
+	public static void tapOutOfAnElement(MobileElement mobileElement1, MobileElement mobileElement2){
+
+		try {
+			mobileElement1.click(); //
+			mobileElement2.click();
+		}catch (Exception e){
+			logger.error(e.getLocalizedMessage());
+		}
+
+	}
+
+	/**
+	 * Method to trigger field level error on the UI using one locator
+	 * @param locator of type By created using Locators Class under common package
+	 */
+	public static void tapOutOfAnElement(By locator){
+		MobileElement mobileElement = driver.findElement(locator);
+		tapOutOfAnElement(mobileElement);
+	}
+
+	/**
+	 * Method to trigger field level error for Element1 on the UI using 2 elements/locators of type By
+	 * @param locator1 of type By, generally an input
+	 * @param locator2 of type By, can be an input, or any other element on the page that registers a tap
+	 */
+	public static void tapOutOfAnElement(By locator1, By locator2){
+		try {
+			MobileElement mobileElement1 = driver.findElement(locator1);
+			MobileElement mobileElement2 = driver.findElement(locator2);
+			tapOutOfAnElement(mobileElement1, mobileElement2);
+
+		}catch (Exception e){
+			logger.error(e.getLocalizedMessage());
+		}
+	}
 }
 
 
