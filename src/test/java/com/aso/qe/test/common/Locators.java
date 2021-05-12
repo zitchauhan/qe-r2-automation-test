@@ -331,8 +331,8 @@ public class Locators {
 		public static By labelDefaultCardAmount = By.id("");
 		public static By btncardOptionAsAmount = By.id("");
 		public static By btncartOptionOther = By.id("");
-		public static By labelInstructionMsg = By.id("");
-		public static By inputEnterAmount = By.id("");
+		public static By labelInstructionMsg = By.id("lbl_input_title");
+		public static By inputEnterAmount = By.id("input_price");
 		public static By inputEnterAmountDefaultValue = By.id("");
 		public static By labelErrorMessage = By.id("");
 
@@ -357,9 +357,9 @@ public class Locators {
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
 		public static By alertGiftCardError;
-		public static By liveChatBtn;
+		public static By liveChatBtn=By.xpath("//*[contains(@label,'Open Live Chat')]");
 		public static By liveChatUrlTitle;
-		public static By bulkGiftCardBtnAlert;
+		public static By bulkGiftCardBtnAlert=By.xpath("//*[contains(@label,'Open Bulk Gift Card')]");
 		public static By purchaseBtn = By.id("lbl_purchase_btn");
 
 		// alert modal on pdp
@@ -381,6 +381,10 @@ public class Locators {
 		public static By ratingAndReviewBtn=  By.id("TODO dev");
 		public static By cardAmountList = By.xpath("//XCUIElementTypeButton[contains(@name,'price_list_item_Card_Amount')]");
 		public static By shareIcon=By.id("btn_share");
+		public static By doneBtn= By.xpath("//*[contains(@label, 'Done')]");
+		public static By amountErrormsg= By.id("ere_input_price");
+		public static By cancelAlertBtn= By.xpath("//*[contains(@label, 'Cancel')]");
+		
 
 
 	}
