@@ -6,6 +6,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.time.Duration;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -534,6 +536,42 @@ public class GlobalMobileHelper {
 		}catch (Exception e){
 			logger.error(e.getLocalizedMessage());
 		}
+	}
+
+
+	/**
+	 * Method to swipe up untill an element is displayed
+	 * @param locator of type By
+	 */
+	public static void swipeUpTillElementDisplayed(By locator) {
+		swipeTillElementDisplayed(Direction.UP, locator, 10);
+		swipeScreen(Direction.UP, 1); // an additional swipe to bring element in the view
+	}
+
+	/**
+	 * Method to search for a substring using regular expression
+	 * @param patternText as String
+	 * @param locator as By
+	 * @return true if the pattern is successfully found
+	 */
+	public static boolean isPatternExistInElementText(String patternText, By locator) {
+		// Pattern matching can be further made into a method
+		boolean result = false;
+		String elementText = getElementText(locator);
+		try {
+			Pattern pattern = Pattern.compile(patternText);
+			Matcher matcher = pattern.matcher(elementText);
+			result = matcher.matches(); // TODO: Regex patten matching is failing for Shipping price information under Oder Summary
+			if (result){
+				logger.debug("successfully found the pattern in Element " + locator.toString() + " and in text " + elementText);
+			}else {
+				logger.debug("Not found the pattern in Element " + locator.toString() + " and in text " + elementText);
+			}
+			return result;
+		}catch (Exception e){
+			logger.error("Exception occured while searching for pattern in the element text "+ elementText + "\n" + e.getLocalizedMessage());
+		}
+		return result;
 	}
 }
 
