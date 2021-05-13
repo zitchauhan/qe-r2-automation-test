@@ -40,7 +40,7 @@ public class GlobalMobileHelper {
 
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
-		//String udid = propHelper.getConfigPropProperty("i.udid");
+		String udid = propHelper.getConfigPropProperty("i.udid");
 		String platformVersion = propHelper.getConfigPropProperty("i.platformVersion");
 		String deviceName = propHelper.getConfigPropProperty("i.deviceName");
 		String url = propHelper.getConfigPropProperty("appiumServerURL");
@@ -48,7 +48,7 @@ public class GlobalMobileHelper {
 		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME,platform);
-	//	caps.setCapability(MobileCapabilityType.UDID,udid);
+		caps.setCapability(MobileCapabilityType.UDID,udid);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);

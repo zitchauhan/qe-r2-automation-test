@@ -1,6 +1,6 @@
 Feature: My Account - Save Address as Default
 
-  @Sprint3 @Regression_1
+  @Sprint3 @Regression
   Scenario:	Verify set as default checkbox is not present when registered user doesn't has any existing address and user adds a new address
     Given User launches the application 
     And User continues as "guest user" on onboarding page
