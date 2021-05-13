@@ -751,6 +751,15 @@ if(elementname.equalsIgnoreCase("invalidcvv")) {
 
 	}
 
+	public boolean isAddressBookDisplayed() {
+		return isElementDisplayed(Locators.AddressBook.labelSavedAddresses);
+	}
+
+	public void tapOnAddressBookPlaceholder() {
+		tapOnElement(Locators.AccountPage.addressBookButton);
+		
+	}
+
 }
 
 

@@ -386,6 +386,14 @@ accountPage.isAlertPopUpDisplayed();
 	public void user_Sees_Order_status_and_Hot_market_Toggle_ON_By_deafault() throws Throwable {
 	 accountPage.bothEnable();
 	}
-//-----------------------------------
+
+	@Then("^User is taken to add address screen$")
+	public void user_is_taken_to_add_address_screen() throws Throwable {
+		assertTrue(accountPage.isAddressBookDisplayed());
+	}
 	
+	@When("^User taps on the address book placeholder$")
+	public void user_taps_on_the_address_book_placeholder() throws Throwable {
+		accountPage.tapOnAddressBookPlaceholder();
+	}
 }

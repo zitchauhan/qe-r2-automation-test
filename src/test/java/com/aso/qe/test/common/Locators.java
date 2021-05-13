@@ -708,7 +708,7 @@ public class Locators {
 		public static By labelProductTitle = By.id("lbl_product_title");
 		// public static By labelratingsReviews = By.id("lbl_category_list_item");
 		public static By labelImage = By.id("RNE__Image");
-		public static By labelProductCoLourVariantSwatch = By.id("lbl_color_swatch_count");
+		public static By labelProductCoLourVariantSwatch = By.id("view_color_swatch_0");
 		public static By label_PLPbadge = By.id("lbl_badge_text");
 		public static By lbl_cart_msg = By.id("lbl_cart_msg");
 		public static By lbl_cart_msg_toolTipIcon = By.id("");

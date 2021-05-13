@@ -1,6 +1,5 @@
 Feature: Verify Details of PLP for product badging
 
- 
   @Regression 	@Sprint01 @TC-OMNI-20886_2
     Scenario Outline:: validate PLP badges
   	Given User launches the application
