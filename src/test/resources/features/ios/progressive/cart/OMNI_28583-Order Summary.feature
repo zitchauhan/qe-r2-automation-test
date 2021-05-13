@@ -12,8 +12,9 @@ Feature: Validate that User see order summary on cart page
     And user click on Product
     When User taps on add to cart button
     And User taps on View Cart button
-    And User is on "Cart" screen
-    Then User scrolls down to the bottom
+#    And User is on "Cart" screen
+    And User is on the cart screen
+    Then User scrolls down to the order summary on the cart screen
     And User sees "order summary" on cart page  
     Then User sees "OrderSummaryHeading" on OrderSummary
     Then User sees "SubTotalLabel" on OrderSummary

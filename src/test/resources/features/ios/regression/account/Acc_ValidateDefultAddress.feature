@@ -2,9 +2,11 @@ Feature: My Account - Save Address as Default
 
   @Sprint3 @Regression
   Scenario:	Verify set as default checkbox is not present when registered user doesn't has any existing address and user adds a new address
- 	Given User launches the application
-    Then User Clicks On MaY Be Later
-    And User continues as guest user
+    Given User launches the application 
+    And User continues as "guest user" on onboarding page
+    When User Clicks On MaY Be Later
+    When User Clicks On MaY Be Later
+    Then User sees the homepage
 	And User is on Log In screen
 	Then User sees email address field
 	And User sees passwordd field
@@ -19,10 +21,11 @@ Feature: My Account - Save Address as Default
     
     @Sprint3 @Regression
   Scenario:	Verify set as default checkbox is not selected when registered user has an existing addresses and user adds a new address
- 	Given User launches the application
-	Then User Clicks On MaY Be Later
-    And User continues as guest user
-	And User is on Log In screen
+     Given User launches the application 
+    And User continues as "guest user" on onboarding page
+    When User Clicks On MaY Be Later
+    When User Clicks On MaY Be Later
+    Then User sees the homepage
 	Then User sees email address field
 	And User sees passwordd field
     Then User enters valid email "verifiedAddressList@yopmail.com"
@@ -35,9 +38,11 @@ Feature: My Account - Save Address as Default
     
     @Sprint3 @Regression
   Scenario:	Verify set as default checkbox is not present when registered user has only one existing address and user edits that address
- 	Given User launches the application
-	Then User Clicks On MaY Be Later
-    And User continues as guest user
+    Given User launches the application 
+    And User continues as "guest user" on onboarding page
+    When User Clicks On MaY Be Later
+    When User Clicks On MaY Be Later
+    Then User sees the homepage
 	And User is on Log In screen
 	Then User sees email address field
 	And User sees passwordd field
@@ -51,9 +56,11 @@ Feature: My Account - Save Address as Default
     
     @Sprint3 @Regression
     Scenario: Verify set as default checkbox is disabled when registered user has some existing addresses and user edits the default address
- 	Given User launches the application
-	Then User Clicks On MaY Be Later
-    And User continues as guest user
+    Given User launches the application 
+    And User continues as "guest user" on onboarding page
+    When User Clicks On MaY Be Later
+    When User Clicks On MaY Be Later
+    Then User sees the homepage
 	And User is on Log In screen
 	Then User sees email address field
 	And User sees passwordd field
@@ -67,9 +74,11 @@ Feature: My Account - Save Address as Default
     
      @Sprint3 @Regression
      Scenario: Verify set as default checkbox is not selected when registered user has some existing addresses and user edits a non default address
- 	Given User launches the application
-	Then User Clicks On MaY Be Later
-    And User continues as guest user
+    Given User launches the application 
+    And User continues as "guest user" on onboarding page
+    When User Clicks On MaY Be Later
+    When User Clicks On MaY Be Later
+    Then User sees the homepage
 	And User is on Log In screen
 	Then User sees email address field
 	And User sees passwordd field

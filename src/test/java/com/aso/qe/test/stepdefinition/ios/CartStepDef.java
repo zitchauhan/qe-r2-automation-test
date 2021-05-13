@@ -32,6 +32,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	CartPage cartPage = new CartPage(driver);
 	PDPPage pdpPage = new PDPPage(driver);
 	BottomNav bottomNav = new BottomNav(driver);
+	OrderSummary orderSummary = new OrderSummary(driver);
 
 	private int previousQuantity = 1;
 	private String productDisclaimer;
@@ -39,6 +40,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
+		waitForDefaultTime();
 		assertTrue(cartPage.isYourCartLabelDisplayed());
 	}
 	
@@ -142,7 +144,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@And("^User sees the order summary label$")
 	public void isOrderSummaryLabelDisplayed() throws Throwable {
-		assertTrue(cartPage.isOrderSummaryLabelDisplayed());
+		assertTrue(orderSummary.isOrderSummaryLabelDisplayed());
 	}
 	
 	@And("^User sees the order total label$")
@@ -494,7 +496,11 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_scrolls_down_to_the_bottom() throws Throwable {		
 	swipeScreen(Direction.UP,3);
 	}
-	
+
+	@Then("^User scrolls down to the order summary on the cart screen$")
+	public void user_scrolls_down_to_the_order_summary_on_the_cart_screen() throws Throwable {
+		swipeUpTillElementDisplayed(Locators.CartPage.orderSummaryLabel);
+	}
 	
 	@Then("^User does not see item total$")
 	public void user_does_not_see_item_total() throws Throwable {
@@ -642,7 +648,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	// Order Summary Code , need to make it global as order summary is global component from cart to order history 
 	@Then("^User sees \"([^\"]*)\" on OrderSummary$")
 	public void user_sees_on_OrderSummary(String ElementName) throws Throwable {
-		assertTrue(cartPage.IsShowingOnOrderSummary(ElementName));
+		assertTrue(orderSummary.IsShowingOnOrderSummary(ElementName));
 	}
 
     @And("User has an empty cart")
