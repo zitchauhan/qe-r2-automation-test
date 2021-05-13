@@ -299,11 +299,14 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_sees_the_Bulk_gift_card_button() throws Throwable {
 	   assertTrue(pdp.isBulkGiftCardBtnDisplayed());
 	}
-
-
-
-
-	
+	@And("^User click on Done Button$")
+	public void tapOnDoneBtn() {
+		pdp.tapOnDoneBtn();
+	}
+	@And("^User sees Exceeded Amount Error message$")
+	public void isErrorMsgDisplayed() {
+	assertTrue(	pdp.isAmountErrorMessageDisplayed());
+	}
 
 	//OMNO-26981
 	@Then("^I choose to click on \"([^\"]*)\" in PDP page$")
@@ -364,10 +367,10 @@ public class PDPStepDef extends GlobalMobileHelper{
 		PDPPage.clickonPDP(elementname);
 	}
 
-//	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
-//	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
-//		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
-//	}
+	//@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+	//public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+		//assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
+	//}
 	@Then("^user Scroll down and click on rating and review$")
 	public void user_Scroll_down_and_click_on_rating_and_review() throws Throwable {
 	   pdp.tapOnRatingAndReview();
@@ -417,6 +420,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_click_on_on_Helpfull_Review_qn(String answer) throws Throwable {
 	   pdp.tabOnHelpfullReviewQn(answer);
 	}
+
 //---Out of stock gift card
 	@Then("^I  varify Out of Stock product$")
 	public void i_varify_Out_of_Stock_product() throws Throwable {
@@ -438,5 +442,42 @@ public class PDPStepDef extends GlobalMobileHelper{
 
 //----------
 
+	@Then("^User Enter the \"([^\"]*)\"  Value \"([^\"]*)\" on Review page$")
+	public void user_Enter_the_Value_on_Review_page(String editBoxType, String value){
+	    pdp.enteValuesOnReviewPage(editBoxType, value);
+	}
 
+	@Then("^user see \"([^\"]*)\" on getnotify page$")
+	public void VarifyElementPresenseOngetnotifypage(String elementname) throws Throwable {
+		assertTrue(PDPPage.VarifyElementPresenseOngetnotifypage(elementname));
+
+	}
+	
+	@Then("^i choose to enter \"([^\"]*)\" on getnotify page$")
+	public void Enteremailongetnotifypage(String elementname) throws Throwable {
+		PDPPage.Enteremailongetnotifypage(elementname);
+	}
+		
+	@Then("^User validates the share icon on PDP page and taps on it$")
+	public void user_validate_the_share_icon_onPDP_Page()throws Throwable {
+		PDPPage.tapOnShareIconPDP();
+	}
+	
+	@And("^User validates share tray is opened with product thumbnail and image$")
+	public void user_validate_share_tray_product_thumbnail_image() {
+		PDPPage.ValidateProductImgOnShareTray();
+	}
+
+	@Then("^i click on \"([^\"]*)\" on getnotify page$")
+	public void clickongetnotifypage(String elementname) throws Throwable {
+		PDPPage.clickongetnotifypage(elementname);
+	}
+    @And("^user click on cancel button on Alert PopUp$")
+    public void tapOnCancelOnAlertmsg() {
+    	pdp.tapOnCancelOnAlertMsg();
+    }
+    @Then("^User sees the Alert Pop Up type \"([^\"]*)\"$")
+    public void user_sees_the_Alert_Pop_Up_type(String alertType) throws Throwable {
+        pdp.isAlertDisplayed(alertType);
+    }
 }

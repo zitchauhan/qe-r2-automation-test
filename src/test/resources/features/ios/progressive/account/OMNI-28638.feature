@@ -1,6 +1,6 @@
 Feature: User I want to signup for email notifications for special offers, deals
 
-  @Sprint6  @ST-OMNI-28638 @TC_OMNI-37337
+  @Sprint6 @ST-OMNI-28638 @TC_OMNI-37337
   Scenario: User Sign in With valid Email and password and changing the password
     Given User launches the application
     And User continues as guest user
@@ -19,8 +19,8 @@ Feature: User I want to signup for email notifications for special offers, deals
     Then User tap on Upated
     Then User Redirect to Profile Screen
     And User is on Log In screen
-    
-@TC_OMNI-37334
+
+  @TC_OMNI-37334
   Scenario: User Sign in With valid Email and password and  changing the password with invalid Password
     Given User launches the application
     And User continues as guest user
@@ -42,10 +42,10 @@ Feature: User I want to signup for email notifications for special offers, deals
     Then User Enter inValid Current Password
     Then User Enter Valid new Password
     Then User tap on Upated
-    
-@TC-OMNI-37340
-Scenario:  Password entered is same as entered email address
-Given User launches the application
+
+  @TC-OMNI-37340
+  Scenario: Password entered is same as entered email address
+    Given User launches the application
     And User continues as guest user
     When User taps on account in bottom nav
     And User is on Log In screen
@@ -60,4 +60,3 @@ Given User launches the application
     Then User Enter  Valid Same new Password
     Then User tap on Upated
     Then User will get Error massge
-    

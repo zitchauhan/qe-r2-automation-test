@@ -190,9 +190,25 @@ public class SearchPageStepDef extends GlobalMobileHelper {
 		assertTrue(searchPage.Varifyuserisonnoresultpage(pagename)); 
 	}
 
+
 	@Then("^User Search for the \"([^\"]*)\"$")
 	public void user_Search_for_the(String insert) throws Throwable {
 	   searchPage.insertProductInSearchBox(insert);
 	}
 
+	@And("^i choose to enter \"([^\"]*)\" In Search box$")
+	public void Searchforsku(String searchkeyword)  {
+		searchPage.Searchforsku(searchkeyword);
+	}
+	@Then("^i choose to click on \"([^\"]*)\" on Search page$")
+		public void ClickonSearcheditem(String searchkeyword)  {
+			searchPage.ClickonSearcheditem(searchkeyword);
+	}
+	
+	@Then("^i choose to See \"([^\"]*)\" on Search page$")
+	public void verifyelementonsearchpage(String Elementname) throws Throwable  {
+		assertTrue(searchPage.verifyelementonsearchpage(Elementname));
 }
+
+}
+

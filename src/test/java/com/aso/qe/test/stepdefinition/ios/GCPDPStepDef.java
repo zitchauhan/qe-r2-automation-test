@@ -390,6 +390,15 @@ public void user_see_shipping_as_label_as(String expectedShippingType) throws Th
 public void user_see_Add_to_cart_button_is_disable() throws Throwable {
     assertTrue(pdp.isDisabledAddtoCart());
 }
+@When("^User tap on the card Amount option as \"([^\"]*)\"$")
+public void tapOnCardAmountOptionWithAmount(String amount) throws Throwable {
+	gcpdp.tapOnAmountListed(amount);
+}
+@Then("^User Enter an Amount as \"([^\"]*)\"$")
+public void user_Enter_an_amount_As(String amount) throws Throwable {
+	gcpdp.EnterAmountOnEditBox(amount);
+	
+}
 
 
 

@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
 
@@ -590,6 +592,12 @@ public class GCPDPPage {
 	}
 	
 	public boolean isEnterAmountFieldDisplay() {
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.inputEnterAmount);
 	}
 	
@@ -612,6 +620,32 @@ public class GCPDPPage {
 
 	public String getShippingType() {		
 		return GlobalMobileHelper.getElementText(Locators.PDPPage.overLayShippingInformation);
+	}
+
+	public void tapOnAmountListed(String amount) {
+		String actualamount = "Select Card Amount "+amount+", by tapping on the button";
+		
+		List<MobileElement> amountLs = driver.findElements(Locators.PDPPage.cardAmountList);
+		//System.out.println(amountLs.size());
+		for(int i =1; i<=amountLs.size()-1;i++) {
+			//System.out.println(amountLs.get(i).getText());
+			if(amountLs.get(i).getText().contains(actualamount)) {
+			//System.out.println(amountLs.get(i).getText());
+				amountLs.get(i).click();	
+			}
+		}
+	}
+
+	public void EnterAmountOnEditBox(String amount) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(Locators.PDPPage.inputEnterAmount).clear();
+		GlobalMobileHelper.setText(Locators.PDPPage.inputEnterAmount, amount);
+		
 	}
 	
 	

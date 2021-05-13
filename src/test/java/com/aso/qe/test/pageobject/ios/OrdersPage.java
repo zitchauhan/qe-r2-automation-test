@@ -2,6 +2,7 @@ package com.aso.qe.test.pageobject.ios;
 
 import org.openqa.selenium.support.PageFactory;
 
+import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
@@ -224,5 +225,68 @@ private AppiumDriver<MobileElement> driver;
 		default:
 			throw new IllegalStateException("Payment method didn't match"); }
 	}
-}
+
+	public void tapOnListedOrders(String order) {
+		List<MobileElement> orderList = driver.findElements(Locators.OrdersPage.orderListItem);
+		for(int i =1; i<=orderList.size();i++) {
+			if(i==Integer.parseInt(order)) {
+				orderList.get(i).click();
+			}
+		}
+	}
+
+	public void isFieldDisplayedOnOrderDetailsPage(String fieldtype) {
+		switch(fieldtype){
+		case "OrderDetailPageTitle":
+			assertTrue("Order Details Page has not displayed", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.orderDetailPageTitle));
+		case "OrderLabel":
+			assertTrue("Order label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.orderLabel));
+		case "Date Order Placed":
+			assertTrue("Date label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.dateOrderPlacedLabel));
+		case "Order Total":
+			assertTrue("Order Total label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.orderTotalLabel));
+		case "Home Delivery Bucket":
+			assertTrue("PayPal label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.homeDeliveryTitle));
+		case "User Name":
+			assertTrue("User Name label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.userName));
+		case "Shipping Address":
+			assertTrue("Shipping Address label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.shippingAddress));
+		case "order status":
+			assertTrue("order status label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.orderStatus));
+		case "Delivery Service":
+			assertTrue("Delivery Service label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.deliveryServiceType));
+		case "Track Package":
+			assertTrue("Track Package label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.trackPackageLabel));
+		case "Product Thumbnail":
+			assertTrue("Product Thumbnail is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.productImage));
+		case "SKU Id":
+			assertTrue("SKU Id is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.skuID));
+		case "Quantity":
+			assertTrue("Quantity label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.quantity));
+		case "Product Name":
+			assertTrue("Product Name is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.productName));
+		case "Price":
+			assertTrue("Price label is not present !", GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.price));
+		default:
+			throw new IllegalStateException("field not displayed"); }
+	}
+
+	public void enterValuesOnOrdersPage(String value) {
+		String valueText= PropertiesHelper.getInstance().getMobileTestDataProperty(value);
+	
+		switch(value){
+		case "Order Number":
+			GlobalMobileHelper.setText(Locators.OrdersPage.orderNumberEditbox, valueText);
+		case "BillingZipcode":
+			GlobalMobileHelper.setText(Locators.OrdersPage.billingZipcodeEditbox, valueText);	
+		}
+		
+	}
+
+	public void tapOnCheckBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.OrdersPage.checkBtn);
+		
+	}
+	}
+
 

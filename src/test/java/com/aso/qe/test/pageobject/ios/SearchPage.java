@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static com.aso.qe.test.common.GlobalMobileHelper.setText;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -340,6 +342,7 @@ if(pagename.equalsIgnoreCase("see No product found")) {
 	  public void swipeDown() {
 		  GlobalMobileHelper.swipeScreen(Direction.DOWN, 5);
 	  }
+
 	  
 	  
 	  public void Searchforproduct(String keyword) 
@@ -393,7 +396,90 @@ if(pagename.equalsIgnoreCase("see No product found")) {
 		
 		
 	}
-	}}}
+	}}
+
+	
+		public void Searchforsku(String searchkeyword) {
+	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(searchkeyword);
+	 		String element = null;
+	 		if(searchkeyword.contains("SKU")){
+	 			setText(Locators.HomePage.searchbar, keywordValue );
+	 			try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	 					/////////,Locators.SearchPage.goBtn)
+	 			//GlobalMobileHelper.tapOnElement(Locators.SearchPage.goBtn);
+	 			try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	 		}else  if(searchkeyword.contains("OOSStore")){
+	 			setText(Locators.storePickup.searchstoretextbox, keywordValue );
+	 			try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	 			GlobalMobileHelper.tapOnElement(Locators.storePickup.Store1);
+	 			try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	 			
+	 		}else {
+	 			
+				throw new UnsupportedOperationException("Given Element type not defined on Search page ");
+		
+	}
+	}
+		public void ClickonSearcheditem(String searchkeyword) {
+			
+				if(searchkeyword.equalsIgnoreCase("Searcheditem")) {
+							
+					GlobalMobileHelper.tapOnElement(Locators.PLPPage.productTitle);
+					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}else if(searchkeyword.equalsIgnoreCase("promotionaltooltip")) {
+					
+			GlobalMobileHelper.tapOnElement(Locators.PLPPage.promotionaltooltip);
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+					
+				}else {
+		 			
+					throw new UnsupportedOperationException("Given Element type not defined on Search page ");
+		}
+		}
+
+		
+		public boolean verifyelementonsearchpage(String elementname) {
+			if(elementname.equalsIgnoreCase("promotionalmessage")) {
+				
+				return GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.promotionalmessage);
+		}else {
+ 			
+			throw new UnsupportedOperationException("Given Element type not defined on Search page ");
+}
+		
+			
+		}
+		}
 
 
 	

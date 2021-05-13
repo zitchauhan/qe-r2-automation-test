@@ -113,7 +113,12 @@ public class PDPPage {
 	}
 
 	public void tapOnViewCart() {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonViewCart);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonViewCart);}
 
 	}
 
@@ -756,7 +761,10 @@ public class PDPPage {
 	}
 
 	public boolean isAlertPopUpDisplayed() {
+
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.alertGiftCardError);
+
+		// return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.liveChatBtn);
 
 	}
 
@@ -824,6 +832,16 @@ public class PDPPage {
 		} else if (elementname.equalsIgnoreCase("buttonaddtowishlist")) {
 
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonaddtowishlist);
+		} else if (elementname.equalsIgnoreCase("getnotifiedBOPIS")) {
+
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.getnotifiedBOPIS);
+
+		} else if (elementname.equalsIgnoreCase("ChangeStorebutton")) {
+
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.ChangeStorebutton);
+		} else if (elementname.equalsIgnoreCase("SelectStorebutton")) {
+
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.SelectStorebutton);
 
 		} else {
 
@@ -875,6 +893,12 @@ public class PDPPage {
 
 		} else if (elementname.equalsIgnoreCase("Avalability Geeen")) {
 
+		} else if (elementname.equalsIgnoreCase("PICKUPanddeliveryheading")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.PICKUPanddeliveryheading);
+
+		} else if (elementname.equalsIgnoreCase("Avalability Geeen")) {
+
 			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.AvalabilityGeeenlabel);
 
 		} else if (elementname.equalsIgnoreCase("OOS red label")) {
@@ -913,6 +937,7 @@ public class PDPPage {
 			throw new UnsupportedOperationException("Given Button not founded on PDP");
 
 		}
+		return false;
 	}
 
 	public void tapOnRatingAndReview() {
@@ -1077,4 +1102,114 @@ public class PDPPage {
 		}
 
 	}
+
+	public static boolean VarifyElementPresenseOngetnotifypage(String elementname) {
+		if (elementname.equalsIgnoreCase("getnotifiedheading")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.getnotifiedheading);
+		} else if (elementname.equalsIgnoreCase("getnotifiedheading")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.emailtextbox);
+		} else if (elementname.equalsIgnoreCase("BOPISdeliverymethode")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.BOPISdeliverymethode);
+		} else if (elementname.equalsIgnoreCase("producttitle")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Producttitle);
+		} else if (elementname.equalsIgnoreCase("productprice")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Productprice);
+		} else if (elementname.equalsIgnoreCase("productimage")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Productimage);
+		} else if (elementname.equalsIgnoreCase("Selectedstorename")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Selectedstorename);
+		} else if (elementname.equalsIgnoreCase("storeaddress")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
+		} else if (elementname.equalsIgnoreCase("storetiming")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
+		} else if (elementname.equalsIgnoreCase("storephone")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storePhone);
+		} else if (elementname.equalsIgnoreCase("userisnotifiedmessage")) {
+
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.userisnotifiedmessage);
+		} else {
+
+			throw new UnsupportedOperationException("Given Button not founded on get notified page ");
+
+		}
+	}
+
+	public static void Enteremailongetnotifypage(String fieldName) {
+		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
+
+		String element = null;
+		if (fieldName.contains("email")) {
+			GlobalMobileHelper.setText(Locators.PDPPage.emailtextbox, keywordValue);
+		} else {
+
+			throw new UnsupportedOperationException("Given Input type not defined on get notify page ");
+		}
+	}
+
+	public static void clickongetnotifypage(String btnName) {
+
+		if (btnName.equalsIgnoreCase("submitgetnotifiedbutton")) {
+
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.submitgetnotifiedbutton);
+		} else {
+
+			throw new UnsupportedOperationException("Given Input type not defined on get notify page ");
+
+		}
+	}
+
+	public static void tapOnShareIconPDP() {
+		// TODO Auto-generated method stub
+		if (GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shareIcon)) {
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.shareIcon);
+		}
+	}
+
+	public static void ValidateProductImgOnShareTray() {
+		GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
+		GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.overLayProductImage);
+	}
+
+	public void tapOnDoneBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.doneBtn);
+
+	}
+
+	public boolean isAmountErrorMessageDisplayed() {
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		GlobalMobileHelper.swipeScreen(Direction.UP, 1);
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.amountErrormsg);
+
+	}
+
+	public void tapOnCancelOnAlertMsg() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cancelAlertBtn);
+
+	}
+
+	public boolean isAlertDisplayed(String alertType) {
+		if (alertType.contains("liveChat")) {
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.liveChatBtn);
+		} else {
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGiftCardBtnAlert);
+		}
+
+	}
+
 }
