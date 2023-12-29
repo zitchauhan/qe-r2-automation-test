@@ -2,9 +2,9 @@ package com.aso.qe.test.common;
 
 public class POMConstants {
 
-	//HOME PAGE LOCATOR VALUES
-	public static final String Clothing ="//button[@id='root-clothing']";// "//a[.='Clothing']";
-	public static final String Shoes = "//button[@id='root-shoes']";////a[.='Shoes']";
+	// HOME PAGE LOCATOR VALUES
+	public static final String Clothing = "//button[@id='root-clothing']";// "//a[.='Clothing']";
+	public static final String Shoes = "//button[@id='root-shoes']";//// a[.='Shoes']";
 	public static final String Sports = "//a[.='Sports']";
 	public static final String Clearance = "//a[.='Clearance']";
 	public static final String Wishlist = "//a[.='Wishlist']";
@@ -16,7 +16,7 @@ public class POMConstants {
 	public static final String SubMenu = ".//*[@id='tn_clothing_mensapparel_pants']";
 	public static final String SearchPage = "//*[@class='orderBy']";
 	public static final String Pricing = ".//*[@class='z-pricing']";
-	public static final String Product_Description= "//a[.='Magellan Outdoors Men's Back Country Zipoff Nylon Pant']";
+	public static final String Product_Description = "//a[.='Magellan Outdoors Men's Back Country Zipoff Nylon Pant']";
 	public static final String Color_Option = ".//*[@class='icon-color-wheel']";
 	public static final String PDP = ".//*[@id='add2CartBtn']";
 	public static final String Required_Product = "//input[@id='rh-search-text']";
@@ -28,6 +28,5 @@ public class POMConstants {
 	public static final String Weekly_Ad_Link = "//a[@id='rh-header']";
 	public static final String Find_a_Store_Link = "//button[@id='findStoreLinkBlue']";
 	public static final String Search_Bar = "//input[@id='rh-search-text']";
-
 
 }

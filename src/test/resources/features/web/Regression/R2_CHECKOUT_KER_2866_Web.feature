@@ -9,7 +9,7 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#When user click on Add to cart button 
 	And user click on ship it button 
-	And user click on view cart
+	And user click on view cart 
 	Then user select in store pickup option
 	And user verify the selected store in cart page
 	And user click on checkout button
